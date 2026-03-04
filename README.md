@@ -9,7 +9,7 @@ performance.
 - `ClimaAtmos.jl`: `pb/rm-nvtx`
 - `ClimaAtmos.jl-mod`: `pb/localgeo`
 
-## Running JupyterLab on `clima` with a GPU
+## Running Julia Jupyter notebooks interactively on `clima` with a GPU
 
 First, start an `srun` bash terminal with one GPU requested, then run:
 
