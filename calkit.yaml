@@ -154,13 +154,16 @@ notebooks:
     stage: analyze-logs
   - path: notebooks/compare-kernels.ipynb
     title: Compare kernels
-    description: Compares the CUDA kernels between the baseline and modified runs
+    description:
+      Compares the CUDA kernels between the baseline and modified runs
       using the Nsight profiling results to identify any performance differences.
     stage: compare-kernels
   - path: notebooks/benchmark-localgeom.ipynb
     title: Benchmark LocalGeometry
-    description: Benchmarks the performance of the original and modified LocalGeometry
+    description:
+      Benchmarks the performance of the original and modified LocalGeometry
       struct implementations to assess potential speedups.
+    environment: main
 
 figures:
   - path: figures/sypd-time-series.png
