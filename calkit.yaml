@@ -128,7 +128,7 @@ pipeline:
       args:
         - --project=ClimaAtmos.jl-mod/.buildkite
         - scripts/run_progedmf_1m.jl
-      sbatch_options: # Could just be slurm_options
+      sbatch_options: # Could just be slurm_options?
         - --gpus=1
         - --time=120
       inputs:
@@ -156,7 +156,7 @@ pipeline:
       environment: clima:main
       html_storage: git
       executed_ipynb_storage: git
-      slurm_options:
+      srun_options:
         - --gpus=1
         - --time=15
 

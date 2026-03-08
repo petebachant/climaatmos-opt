@@ -215,3 +215,5 @@ output
 
 *.DS_Store
 mod.diff
+
+.calkit/notebooks/cleaned/notebooks/benchmark-localgeom.ipynb

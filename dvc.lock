@@ -297,3 +297,21 @@ stages:
       md5: 261698988e9ad35362013216a81944d0
       size: 583
       isexec: true
+  benchmark-notebook:
+    cmd: calkit nb execute --environment clima:main --no-check --to html 
+      --srun-option --gpus=1 --srun-option --time=15 
+      "notebooks/benchmark-localgeom.ipynb"
+    deps:
+    - path: .calkit/notebooks/cleaned/notebooks/benchmark-localgeom.ipynb
+      hash: md5
+      md5: b94a378107d3cb01fd8498fe93f0789e
+      size: 72995
+    outs:
+    - path: .calkit/notebooks/executed/notebooks/benchmark-localgeom.ipynb
+      hash: md5
+      md5: cb5d013411aa248dea23788482ea4c7c
+      size: 122218
+    - path: .calkit/notebooks/html/notebooks/benchmark-localgeom.html
+      hash: md5
+      md5: 06bcbbb20d16a34d38eea7c7c64477cc
+      size: 628377
