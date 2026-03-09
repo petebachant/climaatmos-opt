@@ -255,8 +255,8 @@ stages:
       size: 98212
     - path: .calkit/notebooks/cleaned/notebooks/compare-kernels.ipynb
       hash: md5
-      md5: 7552e536be3b0eea7fc43ed2bf6cf10f
-      size: 27345
+      md5: 4acbc887e9e76fffccf5e69cf67a3947
+      size: 28463
     - path: results/nsys/baseline.sqlite
       hash: md5
       md5: bf23ae87d54c41226d37e49b591a63c5
@@ -268,12 +268,12 @@ stages:
     outs:
     - path: .calkit/notebooks/executed/notebooks/compare-kernels.ipynb
       hash: md5
-      md5: cfeac34d082ec1e6287f3c541c93c447
-      size: 41451
+      md5: ae4e03a19b625b1df8a7a90aa72842b7
+      size: 44578
     - path: .calkit/notebooks/html/notebooks/compare-kernels.html
       hash: md5
-      md5: 69b92d9e9cf7a71cfd09b2e4e03c7266
-      size: 366890
+      md5: 7b18963cbb06de17723497b5ebe88b93
+      size: 371948
   sync-atmos-mod-core:
     cmd: ' bash --noprofile --norc scripts/sync-atmos-mod-core.sh'
     deps:
