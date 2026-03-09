@@ -16,9 +16,6 @@ environments:
   clima:
     kind: slurm
     host: clima.gps.caltech.edu
-    default_options:
-      - --gpus=1
-      - --time=120
   py:
     kind: uv
     path: .calkit/envs/py/pyproject.toml
@@ -148,17 +145,17 @@ pipeline:
           storage: git
       html_storage: git
       executed_ipynb_storage: git
-    # Need to implement this stage type
-    # - Auto-generate sbatch script or srun command
+    # LocalGeometry benchmarks notebook
     benchmark-notebook:
       kind: jupyter-notebook
       notebook_path: notebooks/benchmark-localgeom.ipynb
       environment: clima:main
       html_storage: git
       executed_ipynb_storage: git
-      srun_options:
-        - --gpus=1
-        - --time=15
+      slurm:
+        options:
+          - --gpus=1
+          - --time=15
 
 notebooks:
   - path: notebooks/analyze-logs.ipynb

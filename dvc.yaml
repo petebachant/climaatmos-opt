@@ -166,11 +166,15 @@ stages:
     desc: Automatically generated from the 'analyze-logs' stage in 
       calkit.yaml. Changes made here will be overwritten.
   benchmark-notebook:
-    cmd: calkit nb execute --environment clima:main --no-check --to 
-      html --srun-option --gpus=1 --srun-option --time=15 
-      "notebooks/benchmark-localgeom.ipynb"
+    cmd: calkit slurm batch --name benchmark-notebook --environment 
+      clima --dep 
+      .calkit/notebooks/cleaned/notebooks/benchmark-localgeom.ipynb 
+      --dep .calkit/envs/main/Manifest.toml -s --gpus=1 -s --time=15 
+      --command -- calkit nb execute --environment main --no-check 
+      --to html "notebooks/benchmark-localgeom.ipynb"
     deps:
       - .calkit/notebooks/cleaned/notebooks/benchmark-localgeom.ipynb
+      - .calkit/envs/main/Manifest.toml
     outs:
       - .calkit/notebooks/executed/notebooks/benchmark-localgeom.ipynb:
           cache: false
