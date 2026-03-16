@@ -1,0 +1,36 @@
+Using julia as notebook language
+Registered IJulia kernel 'clima-local-geometry_-main-1.11' at: /home/pbachant/.local/share/jupyter/kernels/clima-local-geometry_-main-1.11
+Executing:   0%|          | 0/11 [00:00<?, ?cell/s]Starting kernel event loops.
+┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/cuda/lib64/libcublasLt.so.13`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDA ~/.julia/packages/CUDA/TPbi4/src/initialization.jl:218
+┌ Warning: CUDA runtime library `libnvJitLink.so.13` was loaded from a system path, `/usr/local/cuda/lib64/libnvJitLink.so.13`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDA ~/.julia/packages/CUDA/TPbi4/src/initialization.jl:218
+
+┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/cuda/lib64/libcusparse.so.12`.
+│ This may cause errors.
+│ 
+│ If you're running under a profiler, this situation is expected. Otherwise,
+│ ensure that your library path environment variable (e.g., `PATH` on Windows
+│ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
+│ 
+│ In any other case, please file an issue.
+└ @ CUDA ~/.julia/packages/CUDA/TPbi4/src/initialization.jl:218
+
+Executing:   9%|▉         | 1/11 [00:51<08:35, 51.51s/cell]Executing:  18%|█▊        | 2/11 [00:55<03:30, 23.37s/cell]Executing:  27%|██▋       | 3/11 [01:13<02:49, 21.22s/cell]Executing:  36%|███▋      | 4/11 [01:18<01:43, 14.74s/cell]Executing:  45%|████▌     | 5/11 [01:25<01:12, 12.04s/cell]Executing:  55%|█████▍    | 6/11 [01:36<00:58, 11.69s/cell]Executing:  64%|██████▎   | 7/11 [01:50<00:49, 12.41s/cell]Executing:  73%|███████▎  | 8/11 [02:08<00:42, 14.16s/cell]Executing:  82%|████████▏ | 9/11 [02:30<00:32, 16.43s/cell]Executing:  91%|█████████ | 10/11 [02:56<00:19, 19.48s/cell]Executing: 100%|██████████| 11/11 [03:26<00:00, 22.69s/cell][0mExecuting: 100%|██████████| 11/11 [03:27<00:00, 18.85s/cell]
+Exporting html
+[NbConvertApp] Converting notebook .calkit/notebooks/executed/notebooks/benchmark-localgeom-tr.ipynb to html
+[NbConvertApp] Writing 397922 bytes to .calkit/notebooks/html/notebooks/benchmark-localgeom-tr.html

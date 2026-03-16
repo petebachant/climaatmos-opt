@@ -185,3 +185,24 @@ stages:
           cache: false
     desc: Automatically generated from the 'benchmark-notebook' stage 
       in calkit.yaml. Changes made here will be overwritten.
+  benchmark-notebook-tr:
+    cmd: calkit slurm batch --name benchmark-notebook-tr --environment
+      clima --dep 
+      .calkit/notebooks/cleaned/notebooks/benchmark-localgeom-tr.ipynb
+      --dep .calkit/envs/main/Manifest.toml --out 
+      .calkit/notebooks/executed/notebooks/benchmark-localgeom-tr.ipynb
+      --out 
+      .calkit/notebooks/html/notebooks/benchmark-localgeom-tr.html -s 
+      --gpus=1 -s --time=30 --command -- calkit nb execute 
+      --environment main --no-check --to html 
+      "notebooks/benchmark-localgeom-tr.ipynb"
+    deps:
+      - .calkit/notebooks/cleaned/notebooks/benchmark-localgeom-tr.ipynb
+      - .calkit/envs/main/Manifest.toml
+    outs:
+      - .calkit/notebooks/executed/notebooks/benchmark-localgeom-tr.ipynb:
+          cache: false
+      - .calkit/notebooks/html/notebooks/benchmark-localgeom-tr.html:
+          cache: false
+    desc: Automatically generated from the 'benchmark-notebook-tr' 
+      stage in calkit.yaml. Changes made here will be overwritten.

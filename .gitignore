@@ -217,3 +217,5 @@ output
 mod.diff
 
 .calkit/notebooks/cleaned/notebooks/benchmark-localgeom.ipynb
+
+.calkit/notebooks/cleaned/notebooks/benchmark-localgeom-tr.ipynb
