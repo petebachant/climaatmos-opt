@@ -338,14 +338,14 @@ stages:
       size: 107403
     - path: .calkit/notebooks/cleaned/notebooks/benchmark-localgeom-tr.ipynb
       hash: md5
-      md5: 3f1f1cbf5439769e86485a2eb965a280
-      size: 18022
+      md5: 33886cd77987b2e27d000bf200c899ed
+      size: 20275
     outs:
     - path: .calkit/notebooks/executed/notebooks/benchmark-localgeom-tr.ipynb
       hash: md5
-      md5: d160eecb3c91edef61af273f9ab23271
-      size: 61585
+      md5: bf8fdacf8707f8c38d009d813a1e2995
+      size: 85853
     - path: .calkit/notebooks/html/notebooks/benchmark-localgeom-tr.html
       hash: md5
-      md5: c1c3d6648f842551c0eb7e4a908643b2
-      size: 410230
+      md5: 13fc1e4c72396a8cd0308fb0be30c63b
+      size: 454468

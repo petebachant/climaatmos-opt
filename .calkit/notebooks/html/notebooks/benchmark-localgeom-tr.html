@@ -7990,13 +7990,7 @@ a.anchor-link {
 <span class="ansi-yellow-intense-fg ansi-bold">│ </span>
 <span class="ansi-yellow-intense-fg ansi-bold">│ </span>In any other case, please file an issue.
 <span class="ansi-yellow-intense-fg ansi-bold">└ </span><span class="ansi-black-intense-fg">@ CUDA ~/.julia/packages/CUDA/TPbi4/src/initialization.jl:218</span>
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-yellow-intense-fg ansi-bold">┌ </span><span class="ansi-yellow-intense-fg ansi-bold">Warning: </span>CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/cuda/lib64/libcusparse.so.12`.
+<span class="ansi-yellow-intense-fg ansi-bold">┌ </span><span class="ansi-yellow-intense-fg ansi-bold">Warning: </span>CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/cuda/lib64/libcusparse.so.12`.
 <span class="ansi-yellow-intense-fg ansi-bold">│ </span>This may cause errors.
 <span class="ansi-yellow-intense-fg ansi-bold">│ </span>
 <span class="ansi-yellow-intense-fg ansi-bold">│ </span>If you're running under a profiler, this situation is expected. Otherwise,
@@ -8130,12 +8124,160 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=47d44fc3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ef3cdc14">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
+<span class="w">    </span><span class="nd">@.</span><span class="w"> </span><span class="p">((</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">8</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">9</span><span class="p">]))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tri</span>
+<span class="w">    </span><span class="nd">@.</span><span class="w"> </span><span class="p">((</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">8</span><span class="p">]))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tri</span>
+<span class="w">    </span><span class="nd">@.</span><span class="w"> </span><span class="p">((</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">7</span><span class="p">]))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tri</span>
+<span class="w">    </span><span class="nd">@.</span><span class="w"> </span><span class="p">((</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">6</span><span class="p">]))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tri</span>
+<span class="w">    </span><span class="nd">@.</span><span class="w"> </span><span class="p">((</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">5</span><span class="p">]))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tri</span>
+<span class="w">    </span><span class="nd">@.</span><span class="w"> </span><span class="p">((</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tri</span>
+<span class="w">    </span><span class="nd">@.</span><span class="w"> </span><span class="p">((</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tri</span>
+<span class="w">    </span><span class="nd">@.</span><span class="w"> </span><span class="p">((</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tri</span>
+<span class="w">    </span><span class="nd">@.</span><span class="w"> </span><span class="p">((</span><span class="n">bi_fs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">di_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bi_cs</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tri</span>
+<span class="k">end</span>
+
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Profiler ran for 136.25 s, capturing 1082 events.
+
+Host-side activity: calling CUDA APIs took 12.69 ms (0.01% of the trace)
+┌──────┬───────────┬───────────┬─────────────────────┬───────────────────────────┐
+│<span class="ansi-bold">   ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
+├──────┼───────────┼───────────┼─────────────────────┼───────────────────────────┤
+│    6 │ 957.57 ms │<span class="ansi-yellow-fg"> 540.02 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
+│  151 │   29.67 s │   29.8 µs │ cuCtxSynchronize    │                         - │
+│  155 │   29.67 s │ 172.62 µs │ cuModuleLoadDataEx  │                         - │
+│  160 │   29.67 s │ 201.94 µs │ cuModuleGetFunction │                         - │
+│  164 │   29.67 s │  52.69 µs │ cuLaunchKernel      │                         - │
+│  169 │   30.34 s │ 159.26 µs │ cuMemGetInfo        │                         - │
+│  174 │   30.34 s │<span class="ansi-yellow-fg"> 605.11 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
+│  294 │   55.41 s │   1.19 µs │ cuCtxSetCurrent     │                         - │
+│  295 │   55.41 s │ 476.84 ns │ cuCtxGetDevice      │                         - │
+│  296 │   55.41 s │ 238.42 ns │ cuDeviceGetCount    │                         - │
+│  299 │   55.41 s │<span class="ansi-red-fg"> 633.72 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
+│  310 │   55.69 s │  10.97 µs │ cuCtxSynchronize    │                         - │
+│  314 │   55.69 s │ 150.44 µs │ cuModuleLoadDataEx  │                         - │
+│  319 │   55.69 s │ 125.65 µs │ cuModuleGetFunction │                         - │
+│  323 │   55.69 s │   36.0 µs │ cuLaunchKernel      │                         - │
+│  328 │   56.33 s │ 124.45 µs │ cuMemGetInfo        │                         - │
+│  333 │   56.33 s │<span class="ansi-yellow-fg"> 511.88 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
+│  443 │   77.68 s │<span class="ansi-red-fg"> 671.63 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
+│  454 │   77.94 s │  17.88 µs │ cuCtxSynchronize    │                         - │
+│  458 │   77.94 s │ 155.45 µs │ cuModuleLoadDataEx  │                         - │
+│  463 │   77.94 s │ 168.09 µs │ cuModuleGetFunction │                         - │
+│  467 │   77.94 s │  38.86 µs │ cuLaunchKernel      │                         - │
+│  472 │   78.56 s │ 127.32 µs │ cuMemGetInfo        │                         - │
+│  477 │   78.56 s │<span class="ansi-yellow-fg"> 574.35 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
+│  575 │   95.94 s │<span class="ansi-yellow-fg"> 520.23 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
+│  586 │   96.16 s │  18.12 µs │ cuCtxSynchronize    │                         - │
+│  590 │   96.16 s │ 100.85 µs │ cuModuleLoadDataEx  │                         - │
+│  595 │   96.16 s │  97.04 µs │ cuModuleGetFunction │                         - │
+│  599 │   96.16 s │  25.51 µs │ cuLaunchKernel      │                         - │
+│  604 │   96.71 s │ 122.55 µs │ cuMemGetInfo        │                         - │
+│  609 │   96.71 s │<span class="ansi-yellow-fg"> 470.64 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
+│  695 │  110.19 s │<span class="ansi-yellow-fg">  570.3 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
+│  706 │  110.37 s │   9.54 µs │ cuCtxSynchronize    │                         - │
+│  710 │  110.37 s │ 120.64 µs │ cuModuleLoadDataEx  │                         - │
+│  715 │  110.37 s │  85.83 µs │ cuModuleGetFunction │                         - │
+│  719 │  110.37 s │  30.04 µs │ cuLaunchKernel      │                         - │
+│  724 │  110.89 s │  126.6 µs │ cuMemGetInfo        │                         - │
+│  729 │  110.89 s │<span class="ansi-red-fg"> 705.96 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
+│  803 │  121.45 s │<span class="ansi-yellow-fg"> 552.89 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
+│  814 │  121.59 s │  10.73 µs │ cuCtxSynchronize    │                         - │
+│  818 │  121.59 s │ 107.53 µs │ cuModuleLoadDataEx  │                         - │
+│  823 │  121.59 s │ 153.54 µs │ cuModuleGetFunction │                         - │
+│  827 │   121.6 s │  29.33 µs │ cuLaunchKernel      │                         - │
+│  832 │  122.09 s │ 117.54 µs │ cuMemGetInfo        │                         - │
+│  837 │  122.09 s │<span class="ansi-yellow-fg"> 457.76 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
+│  906 │  128.82 s │  27.66 µs │ cuCtxSynchronize    │                         - │
+│  910 │  128.82 s │ 153.78 µs │ cuModuleLoadDataEx  │                         - │
+│  915 │  128.82 s │ 158.07 µs │ cuModuleGetFunction │                         - │
+│  919 │  128.82 s │  58.41 µs │ cuLaunchKernel      │                         - │
+│  925 │   129.3 s │<span class="ansi-red-fg">  624.9 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
+│  975 │  133.96 s │<span class="ansi-yellow-fg">  564.1 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
+│  979 │  133.96 s │<span class="ansi-yellow-fg"> 245.33 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
+│  990 │  134.05 s │   9.54 µs │ cuCtxSynchronize    │                         - │
+│  994 │  134.05 s │ 126.12 µs │ cuModuleLoadDataEx  │                         - │
+│  999 │  134.05 s │  66.76 µs │ cuModuleGetFunction │                         - │
+│ 1003 │  134.05 s │   26.7 µs │ cuLaunchKernel      │                         - │
+│ 1008 │  134.48 s │  91.31 µs │ cuMemGetInfo        │                         - │
+│ 1013 │  134.48 s │<span class="ansi-yellow-fg"> 405.55 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
+│ 1058 │  136.25 s │  10.25 µs │ cuCtxSynchronize    │                         - │
+│ 1062 │  136.25 s │ 121.59 µs │ cuModuleLoadDataEx  │                         - │
+│ 1067 │  136.25 s │  53.17 µs │ cuModuleGetFunction │                         - │
+│ 1071 │  136.25 s │  25.75 µs │ cuLaunchKernel      │                         - │
+└──────┴───────────┴───────────┴─────────────────────┴───────────────────────────┘
+
+Device-side activity: GPU was busy for 14.44 ms (0.01% of the trace)
+┌──────┬──────────┬───────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
+│<span class="ansi-bold">   ID </span>│<span class="ansi-bold">    Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
+├──────┼──────────┼───────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
+│  164 │  29.67 s │<span class="ansi-red-fg">   2.94 ms </span>│      64 │ 4×4×5400 │   58 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+│  323 │  55.69 s │<span class="ansi-yellow-fg">   2.52 ms </span>│      64 │ 4×4×5400 │   54 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+│  467 │  77.94 s │<span class="ansi-yellow-fg">   2.22 ms </span>│      64 │ 4×4×5400 │   52 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+│  599 │  96.16 s │   1.86 ms │      64 │ 4×4×5400 │   48 │ _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 │
+│  719 │ 110.37 s │   1.58 ms │      64 │ 4×4×5400 │   48 │ _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 │
+│  827 │  121.6 s │   1.31 ms │      64 │ 4×4×5400 │   46 │ _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 │
+│  919 │ 128.82 s │  995.4 µs │      64 │ 4×4×5400 │   40 │ _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 │
+│ 1003 │ 134.05 s │ 689.27 µs │      64 │ 4×4×5400 │   37 │ _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 │
+│ 1071 │ 136.25 s │  314.0 µs │      64 │ 4×4×5400 │   36 │ _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 │
+└──────┴──────────┴───────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e972b8d5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="n">res</span><span class="o">.</span><span class="n">device</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div><div style="float: left;"><span>10×14 DataFrame</span></div><div style="clear: both;"></div></div><div class="data-frame" style="overflow-x: scroll;"><table class="data-frame" style="margin-bottom: 6px;"><thead><tr class="header"><th class="rowNumber" style="font-weight: bold; text-align: right;">Row</th><th style="text-align: left;">id</th><th style="text-align: left;">start</th><th style="text-align: left;">stop</th><th style="text-align: left;">name</th><th style="text-align: left;">device</th><th style="text-align: left;">context</th><th style="text-align: left;">stream</th><th style="text-align: left;">grid</th><th style="text-align: left;">block</th><th style="text-align: left;">registers</th><th style="text-align: left;">shared_mem</th><th style="text-align: left;">local_mem</th><th style="text-align: left;">size</th><th style="text-align: left;">details</th></tr><tr class="subheader headerLastRow"><th class="rowNumber" style="font-weight: bold; text-align: right;"></th><th style="text-align: left;" title="Int64">Int64</th><th style="text-align: left;" title="Float64">Float64</th><th style="text-align: left;" title="Float64">Float64</th><th style="text-align: left;" title="AbstractString">Abstract…</th><th style="text-align: left;" title="Int64">Int64</th><th style="text-align: left;" title="Int64">Int64</th><th style="text-align: left;" title="Int64">Int64</th><th style="text-align: left;" title="Union{Missing, CUDA.CuDim3}">CuDim3?</th><th style="text-align: left;" title="Union{Missing, CUDA.CuDim3}">CuDim3?</th><th style="text-align: left;" title="Union{Missing, Int64}">Int64?</th><th style="text-align: left;" title="Union{Missing, @NamedTuple{static::Int64, dynamic::Int64}}">NamedTup…?</th><th style="text-align: left;" title="Union{Missing, @NamedTuple{thread::Int64, total::Int64}}">NamedTup…?</th><th style="text-align: left;" title="Union{Missing, UInt64}">UInt64?</th><th style="text-align: left;" title="Union{Missing, String}">String?</th></tr></thead><tbody><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">1</td><td style="text-align: right;">34</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">[copy pageable to device memory]</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="font-style: italic; text-align: left;">missing</td><td style="font-style: italic; text-align: left;">missing</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td><td style="font-style: italic; text-align: left;">missing</td><td style="text-align: right;">8</td><td style="font-style: italic; text-align: left;">missing</td></tr><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">2</td><td style="text-align: right;">201</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">_FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="text-align: left;">CuDim3(0x00000004, 0x00000004, 0x00001518)</td><td style="text-align: left;">CuDim3(0x00000040, 0x00000001, 0x00000001)</td><td style="text-align: right;">58</td><td style="text-align: left;">(static = 0, dynamic = 0)</td><td style="text-align: left;">(thread = 0, total = 399900672)</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td></tr><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">3</td><td style="text-align: right;">360</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">_FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="text-align: left;">CuDim3(0x00000004, 0x00000004, 0x00001518)</td><td style="text-align: left;">CuDim3(0x00000040, 0x00000001, 0x00000001)</td><td style="text-align: right;">54</td><td style="text-align: left;">(static = 0, dynamic = 0)</td><td style="text-align: left;">(thread = 0, total = 375128064)</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td></tr><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">4</td><td style="text-align: right;">504</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">_FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="text-align: left;">CuDim3(0x00000004, 0x00000004, 0x00001518)</td><td style="text-align: left;">CuDim3(0x00000040, 0x00000001, 0x00000001)</td><td style="text-align: right;">52</td><td style="text-align: left;">(static = 0, dynamic = 0)</td><td style="text-align: left;">(thread = 0, total = 350355456)</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td></tr><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">5</td><td style="text-align: right;">636</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">_FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="text-align: left;">CuDim3(0x00000004, 0x00000004, 0x00001518)</td><td style="text-align: left;">CuDim3(0x00000040, 0x00000001, 0x00000001)</td><td style="text-align: right;">48</td><td style="text-align: left;">(static = 0, dynamic = 0)</td><td style="text-align: left;">(thread = 0, total = 325582848)</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td></tr><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">6</td><td style="text-align: right;">756</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">_FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="text-align: left;">CuDim3(0x00000004, 0x00000004, 0x00001518)</td><td style="text-align: left;">CuDim3(0x00000040, 0x00000001, 0x00000001)</td><td style="text-align: right;">48</td><td style="text-align: left;">(static = 0, dynamic = 0)</td><td style="text-align: left;">(thread = 0, total = 300810240)</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td></tr><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">7</td><td style="text-align: right;">864</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">_FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="text-align: left;">CuDim3(0x00000004, 0x00000004, 0x00001518)</td><td style="text-align: left;">CuDim3(0x00000040, 0x00000001, 0x00000001)</td><td style="text-align: right;">46</td><td style="text-align: left;">(static = 0, dynamic = 0)</td><td style="text-align: left;">(thread = 0, total = 276037632)</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td></tr><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">8</td><td style="text-align: right;">956</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">_FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="text-align: left;">CuDim3(0x00000004, 0x00000004, 0x00001518)</td><td style="text-align: left;">CuDim3(0x00000040, 0x00000001, 0x00000001)</td><td style="text-align: right;">40</td><td style="text-align: left;">(static = 0, dynamic = 0)</td><td style="text-align: left;">(thread = 0, total = 251265024)</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td></tr><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">9</td><td style="text-align: right;">1040</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">_FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="text-align: left;">CuDim3(0x00000004, 0x00000004, 0x00001518)</td><td style="text-align: left;">CuDim3(0x00000040, 0x00000001, 0x00000001)</td><td style="text-align: right;">37</td><td style="text-align: left;">(static = 0, dynamic = 0)</td><td style="text-align: left;">(thread = 0, total = 226492416)</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td></tr><tr><td class="rowNumber" style="font-weight: bold; text-align: right;">10</td><td style="text-align: right;">1108</td><td style="text-align: right;">1.77369e9</td><td style="text-align: right;">1.77369e9</td><td style="text-align: left;">_FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66</td><td style="text-align: right;">0</td><td style="text-align: right;">1</td><td style="text-align: right;">13</td><td style="text-align: left;">CuDim3(0x00000004, 0x00000004, 0x00001518)</td><td style="text-align: left;">CuDim3(0x00000040, 0x00000001, 0x00000001)</td><td style="text-align: right;">36</td><td style="text-align: left;">(static = 0, dynamic = 0)</td><td style="text-align: left;">(thread = 0, total = 201719808)</td><td style="font-style: italic; text-align: right;">missing</td><td style="font-style: italic; text-align: left;">missing</td></tr></tbody></table></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=47d44fc3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
@@ -8151,27 +8293,24 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Profiler ran for 4.12 s, capturing 71 events.
+<pre>Profiler ran for 792.26 µs, capturing 47 events.
 
-Host-side activity: calling CUDA APIs took 798.94 µs (0.02% of the trace)
-┌────┬───────────┬───────────┬─────────────────────┬───────────────────────────┐
-│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
-├────┼───────────┼───────────┼─────────────────────┼───────────────────────────┤
-│  6 │ 598.75 ms │<span class="ansi-red-fg"> 594.38 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
-│ 55 │    4.12 s │    9.3 µs │ cuCtxSynchronize    │                         - │
-│ 59 │    4.12 s │<span class="ansi-yellow-fg">  76.06 µs </span>│<span class="ansi-bold"> cuModuleLoadDataEx  </span>│                         - │
-│ 64 │    4.12 s │  43.63 µs │ cuModuleGetFunction │                         - │
-│ 68 │    4.12 s │  28.61 µs │ cuLaunchKernel      │                         - │
-└────┴───────────┴───────────┴─────────────────────┴───────────────────────────┘
+Host-side activity: calling CUDA APIs took 398.4 µs (50.29% of the trace)
+┌────┬───────────┬───────────┬────────────────┬───────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name           </span>│<span class="ansi-bold">                   Details </span>│
+├────┼───────────┼───────────┼────────────────┼───────────────────────────┤
+│  6 │  21.46 µs │<span class="ansi-red-fg"> 369.07 µs </span>│<span class="ansi-bold"> cuMemAlloc     </span>│ 63.281 MiB, device memory │
+│ 44 │ 445.13 µs │   24.8 µs │ cuLaunchKernel │                         - │
+└────┴───────────┴───────────┴────────────────┴───────────────────────────┘
 
-Device-side activity: GPU was busy for 323.53 µs (0.01% of the trace)
-┌────┬────────┬───────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
-│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">  Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
-├────┼────────┼───────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
-│ 68 │ 4.12 s │<span class="ansi-red-fg"> 323.53 µs </span>│      64 │ 4×4×5400 │   36 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
-└────┴────────┴───────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
+Device-side activity: GPU was busy for 317.34 µs (40.05% of the trace)
+┌────┬───────────┬───────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
+├────┼───────────┼───────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
+│ 44 │ 470.64 µs │<span class="ansi-red-fg"> 317.34 µs </span>│      64 │ 4×4×5400 │   36 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+└────┴───────────┴───────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
 </pre>
 </div>
 </div>
@@ -8182,7 +8321,7 @@ Device-side activity: GPU was busy for 323.53 µs (0.01% of the trace)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
@@ -8198,27 +8337,24 @@ Device-side activity: GPU was busy for 323.53 µs (0.01% of the trace)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Profiler ran for 4.72 s, capturing 79 events.
+<pre>Profiler ran for 1.15 ms, capturing 59 events.
 
-Host-side activity: calling CUDA APIs took 747.68 µs (0.02% of the trace)
-┌────┬───────────┬───────────┬─────────────────────┬───────────────────────────┐
-│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
-├────┼───────────┼───────────┼─────────────────────┼───────────────────────────┤
-│  6 │ 451.81 ms │<span class="ansi-red-fg">  379.8 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
-│ 63 │    4.72 s │  28.13 µs │ cuCtxSynchronize    │                         - │
-│ 67 │    4.72 s │ 123.02 µs │ cuModuleLoadDataEx  │                         - │
-│ 72 │    4.72 s │<span class="ansi-yellow-fg"> 130.89 µs </span>│<span class="ansi-bold"> cuModuleGetFunction </span>│                         - │
-│ 76 │    4.72 s │  41.96 µs │ cuLaunchKernel      │                         - │
-└────┴───────────┴───────────┴─────────────────────┴───────────────────────────┘
+Host-side activity: calling CUDA APIs took 390.05 µs (33.96% of the trace)
+┌────┬───────────┬───────────┬────────────────┬───────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name           </span>│<span class="ansi-bold">                   Details </span>│
+├────┼───────────┼───────────┼────────────────┼───────────────────────────┤
+│  6 │   21.7 µs │<span class="ansi-red-fg"> 358.58 µs </span>│<span class="ansi-bold"> cuMemAlloc     </span>│ 63.281 MiB, device memory │
+│ 56 │ 432.97 µs │  27.42 µs │ cuLaunchKernel │                         - │
+└────┴───────────┴───────────┴────────────────┴───────────────────────────┘
 
-Device-side activity: GPU was busy for 687.84 µs (0.01% of the trace)
-┌────┬────────┬───────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
-│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">  Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
-├────┼────────┼───────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
-│ 76 │ 4.72 s │<span class="ansi-red-fg"> 687.84 µs </span>│      64 │ 4×4×5400 │   37 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
-└────┴────────┴───────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
+Device-side activity: GPU was busy for 684.02 µs (59.55% of the trace)
+┌────┬───────────┬───────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
+├────┼───────────┼───────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
+│ 56 │ 460.15 µs │<span class="ansi-red-fg"> 684.02 µs </span>│      64 │ 4×4×5400 │   37 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+└────┴───────────┴───────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
 </pre>
 </div>
 </div>
@@ -8229,7 +8365,7 @@ Device-side activity: GPU was busy for 687.84 µs (0.01% of the trace)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
@@ -8246,29 +8382,24 @@ Device-side activity: GPU was busy for 687.84 µs (0.01% of the trace)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Profiler ran for 7.13 s, capturing 99 events.
+<pre>Profiler ran for 1.55 ms, capturing 71 events.
 
-Host-side activity: calling CUDA APIs took 1.72 ms (0.02% of the trace)
-┌────┬──────────┬───────────┬─────────────────────┬───────────────────────────┐
-│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">    Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
-├────┼──────────┼───────────┼─────────────────────┼───────────────────────────┤
-│  6 │ 487.2 ms │<span class="ansi-yellow-fg"> 568.87 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
-│ 68 │   7.01 s │<span class="ansi-red-fg"> 904.32 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
-│ 72 │   7.01 s │  25.75 µs │ cuMemFree           │    8 bytes, device memory │
-│ 83 │   7.12 s │   9.54 µs │ cuCtxSynchronize    │                         - │
-│ 87 │   7.12 s │  91.79 µs │ cuModuleLoadDataEx  │                         - │
-│ 92 │   7.12 s │  65.33 µs │ cuModuleGetFunction │                         - │
-│ 96 │   7.12 s │  25.75 µs │ cuLaunchKernel      │                         - │
-└────┴──────────┴───────────┴─────────────────────┴───────────────────────────┘
+Host-side activity: calling CUDA APIs took 450.37 µs (29.00% of the trace)
+┌────┬───────────┬───────────┬────────────────┬───────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name           </span>│<span class="ansi-bold">                   Details </span>│
+├────┼───────────┼───────────┼────────────────┼───────────────────────────┤
+│  6 │  37.43 µs │<span class="ansi-red-fg"> 417.71 µs </span>│<span class="ansi-bold"> cuMemAlloc     </span>│ 63.281 MiB, device memory │
+│ 68 │ 517.13 µs │  25.99 µs │ cuLaunchKernel │                         - │
+└────┴───────────┴───────────┴────────────────┴───────────────────────────┘
 
-Device-side activity: GPU was busy for 1.02 ms (0.01% of the trace)
-┌────┬────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
-│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">  Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
-├────┼────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
-│ 96 │ 7.12 s │<span class="ansi-red-fg"> 1.02 ms </span>│      64 │ 4×4×5400 │   40 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
-└────┴────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
+Device-side activity: GPU was busy for 1.01 ms (64.75% of the trace)
+┌────┬───────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
+├────┼───────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
+│ 68 │ 543.59 µs │<span class="ansi-red-fg"> 1.01 ms </span>│      64 │ 4×4×5400 │   40 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+└────┴───────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
 </pre>
 </div>
 </div>
@@ -8279,7 +8410,7 @@ Device-side activity: GPU was busy for 1.02 ms (0.01% of the trace)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
@@ -8296,29 +8427,24 @@ Device-side activity: GPU was busy for 1.02 ms (0.01% of the trace)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Profiler ran for 10.92 s, capturing 111 events.
+<pre>Profiler ran for 2.47 ms, capturing 83 events.
 
-Host-side activity: calling CUDA APIs took 1.26 ms (0.01% of the trace)
-┌─────┬───────────┬───────────┬─────────────────────┬───────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
-├─────┼───────────┼───────────┼─────────────────────┼───────────────────────────┤
-│   6 │ 536.71 ms │<span class="ansi-yellow-fg"> 471.35 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
-│  80 │   10.77 s │<span class="ansi-red-fg"> 494.48 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
-│  84 │   10.77 s │  21.22 µs │ cuMemFree           │    8 bytes, device memory │
-│  95 │   10.92 s │   9.78 µs │ cuCtxSynchronize    │                         - │
-│  99 │   10.92 s │ 119.45 µs │ cuModuleLoadDataEx  │                         - │
-│ 104 │   10.92 s │  80.11 µs │ cuModuleGetFunction │                         - │
-│ 108 │   10.92 s │  31.23 µs │ cuLaunchKernel      │                         - │
-└─────┴───────────┴───────────┴─────────────────────┴───────────────────────────┘
+Host-side activity: calling CUDA APIs took 1.07 ms (43.29% of the trace)
+┌────┬──────────┬──────────┬────────────────┬───────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">    Start </span>│<span class="ansi-bold">     Time </span>│<span class="ansi-bold"> Name           </span>│<span class="ansi-bold">                   Details </span>│
+├────┼──────────┼──────────┼────────────────┼───────────────────────────┤
+│  6 │ 27.42 µs │<span class="ansi-red-fg">  1.03 ms </span>│<span class="ansi-bold"> cuMemAlloc     </span>│ 63.281 MiB, device memory │
+│ 80 │  1.12 ms │ 34.09 µs │ cuLaunchKernel │                         - │
+└────┴──────────┴──────────┴────────────────┴───────────────────────────┘
 
-Device-side activity: GPU was busy for 1.3 ms (0.01% of the trace)
-┌─────┬─────────┬────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">   Start </span>│<span class="ansi-bold">   Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
-├─────┼─────────┼────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
-│ 108 │ 10.92 s │<span class="ansi-red-fg"> 1.3 ms </span>│      64 │ 4×4×5400 │   46 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
-└─────┴─────────┴────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
+Device-side activity: GPU was busy for 1.33 ms (53.64% of the trace)
+┌────┬─────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">   Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
+├────┼─────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
+│ 80 │ 1.14 ms │<span class="ansi-red-fg"> 1.33 ms </span>│      64 │ 4×4×5400 │   46 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+└────┴─────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
 </pre>
 </div>
 </div>
@@ -8329,7 +8455,7 @@ Device-side activity: GPU was busy for 1.3 ms (0.01% of the trace)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
@@ -8347,29 +8473,24 @@ Device-side activity: GPU was busy for 1.3 ms (0.01% of the trace)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Profiler ran for 13.78 s, capturing 123 events.
+<pre>Profiler ran for 2.26 ms, capturing 95 events.
 
-Host-side activity: calling CUDA APIs took 1.57 ms (0.01% of the trace)
-┌─────┬───────────┬───────────┬─────────────────────┬───────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
-├─────┼───────────┼───────────┼─────────────────────┼───────────────────────────┤
-│   6 │ 559.69 ms │<span class="ansi-yellow-fg"> 402.21 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
-│  92 │    13.6 s │<span class="ansi-red-fg"> 718.59 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
-│  96 │    13.6 s │  81.06 µs │ cuMemFree           │    8 bytes, device memory │
-│ 107 │   13.78 s │  18.84 µs │ cuCtxSynchronize    │                         - │
-│ 111 │   13.78 s │ 143.29 µs │ cuModuleLoadDataEx  │                         - │
-│ 116 │   13.78 s │ 124.69 µs │ cuModuleGetFunction │                         - │
-│ 120 │   13.78 s │  38.39 µs │ cuLaunchKernel      │                         - │
-└─────┴───────────┴───────────┴─────────────────────┴───────────────────────────┘
+Host-side activity: calling CUDA APIs took 575.54 µs (25.45% of the trace)
+┌────┬───────────┬──────────┬────────────────┬───────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">     Time </span>│<span class="ansi-bold"> Name           </span>│<span class="ansi-bold">                   Details </span>│
+├────┼───────────┼──────────┼────────────────┼───────────────────────────┤
+│  6 │   45.3 µs │<span class="ansi-red-fg"> 537.4 µs </span>│<span class="ansi-bold"> cuMemAlloc     </span>│ 63.281 MiB, device memory │
+│ 92 │ 658.51 µs │ 29.33 µs │ cuLaunchKernel │                         - │
+└────┴───────────┴──────────┴────────────────┴───────────────────────────┘
 
-Device-side activity: GPU was busy for 1.56 ms (0.01% of the trace)
-┌─────┬─────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">   Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
-├─────┼─────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
-│ 120 │ 13.78 s │<span class="ansi-red-fg"> 1.56 ms </span>│      64 │ 4×4×5400 │   48 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
-└─────┴─────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
+Device-side activity: GPU was busy for 1.57 ms (69.37% of the trace)
+┌────┬───────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
+│<span class="ansi-bold"> ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
+├────┼───────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
+│ 92 │ 688.31 µs │<span class="ansi-red-fg"> 1.57 ms </span>│      64 │ 4×4×5400 │   48 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+└────┴───────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
 </pre>
 </div>
 </div>
@@ -8380,7 +8501,7 @@ Device-side activity: GPU was busy for 1.56 ms (0.01% of the trace)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
@@ -8398,29 +8519,24 @@ Device-side activity: GPU was busy for 1.56 ms (0.01% of the trace)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Profiler ran for 17.8 s, capturing 135 events.
+<pre>Profiler ran for 3.03 ms, capturing 107 events.
 
-Host-side activity: calling CUDA APIs took 1.41 ms (0.01% of the trace)
-┌─────┬───────────┬───────────┬─────────────────────┬───────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
-├─────┼───────────┼───────────┼─────────────────────┼───────────────────────────┤
-│   6 │ 575.08 ms │<span class="ansi-red-fg"> 542.16 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
-│ 104 │   17.58 s │<span class="ansi-yellow-fg"> 508.79 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
-│ 108 │   17.58 s │  26.23 µs │ cuMemFree           │    8 bytes, device memory │
-│ 119 │    17.8 s │   9.78 µs │ cuCtxSynchronize    │                         - │
-│ 123 │    17.8 s │ 160.22 µs │ cuModuleLoadDataEx  │                         - │
-│ 128 │    17.8 s │  94.89 µs │ cuModuleGetFunction │                         - │
-│ 132 │    17.8 s │  25.03 µs │ cuLaunchKernel      │                         - │
-└─────┴───────────┴───────────┴─────────────────────┴───────────────────────────┘
+Host-side activity: calling CUDA APIs took 1.03 ms (33.84% of the trace)
+┌─────┬──────────┬──────────┬────────────────┬───────────────────────────┐
+│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">    Start </span>│<span class="ansi-bold">     Time </span>│<span class="ansi-bold"> Name           </span>│<span class="ansi-bold">                   Details </span>│
+├─────┼──────────┼──────────┼────────────────┼───────────────────────────┤
+│   6 │ 61.99 µs │<span class="ansi-red-fg"> 992.3 µs </span>│<span class="ansi-bold"> cuMemAlloc     </span>│ 63.281 MiB, device memory │
+│ 104 │  1.13 ms │ 26.23 µs │ cuLaunchKernel │                         - │
+└─────┴──────────┴──────────┴────────────────┴───────────────────────────┘
 
-Device-side activity: GPU was busy for 1.86 ms (0.01% of the trace)
-┌─────┬────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">  Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
-├─────┼────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
-│ 132 │ 17.8 s │<span class="ansi-red-fg"> 1.86 ms </span>│      64 │ 4×4×5400 │   48 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
-└─────┴────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
+Device-side activity: GPU was busy for 1.87 ms (61.77% of the trace)
+┌─────┬─────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
+│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">   Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
+├─────┼─────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
+│ 104 │ 1.16 ms │<span class="ansi-red-fg"> 1.87 ms </span>│      64 │ 4×4×5400 │   48 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+└─────┴─────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
 </pre>
 </div>
 </div>
@@ -8431,7 +8547,7 @@ Device-side activity: GPU was busy for 1.86 ms (0.01% of the trace)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
@@ -8450,29 +8566,24 @@ Device-side activity: GPU was busy for 1.86 ms (0.01% of the trace)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Profiler ran for 21.31 s, capturing 147 events.
+<pre>Profiler ran for 2.84 ms, capturing 119 events.
 
-Host-side activity: calling CUDA APIs took 1.61 ms (0.01% of the trace)
-┌─────┬───────────┬───────────┬─────────────────────┬───────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
-├─────┼───────────┼───────────┼─────────────────────┼───────────────────────────┤
-│   6 │ 660.13 ms │<span class="ansi-yellow-fg"> 499.01 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
-│ 116 │   21.05 s │<span class="ansi-red-fg"> 601.53 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
-│ 120 │   21.05 s │  79.87 µs │ cuMemFree           │    8 bytes, device memory │
-│ 131 │    21.3 s │  20.03 µs │ cuCtxSynchronize    │                         - │
-│ 135 │    21.3 s │ 156.16 µs │ cuModuleLoadDataEx  │                         - │
-│ 140 │    21.3 s │ 147.34 µs │ cuModuleGetFunction │                         - │
-│ 144 │    21.3 s │  57.94 µs │ cuLaunchKernel      │                         - │
-└─────┴───────────┴───────────┴─────────────────────┴───────────────────────────┘
+Host-side activity: calling CUDA APIs took 467.78 µs (16.47% of the trace)
+┌─────┬───────────┬───────────┬────────────────┬───────────────────────────┐
+│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name           </span>│<span class="ansi-bold">                   Details </span>│
+├─────┼───────────┼───────────┼────────────────┼───────────────────────────┤
+│   6 │  87.02 µs │<span class="ansi-red-fg"> 431.54 µs </span>│<span class="ansi-bold"> cuMemAlloc     </span>│ 63.281 MiB, device memory │
+│ 116 │ 602.01 µs │   26.7 µs │ cuLaunchKernel │                         - │
+└─────┴───────────┴───────────┴────────────────┴───────────────────────────┘
 
-Device-side activity: GPU was busy for 2.22 ms (0.01% of the trace)
-┌─────┬────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">  Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
-├─────┼────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
-│ 144 │ 21.3 s │<span class="ansi-red-fg"> 2.22 ms </span>│      64 │ 4×4×5400 │   52 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
-└─────┴────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
+Device-side activity: GPU was busy for 2.21 ms (77.67% of the trace)
+┌─────┬───────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
+│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
+├─────┼───────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
+│ 116 │ 629.43 µs │<span class="ansi-red-fg"> 2.21 ms </span>│      64 │ 4×4×5400 │   52 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+└─────┴───────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
 </pre>
 </div>
 </div>
@@ -8483,7 +8594,7 @@ Device-side activity: GPU was busy for 2.22 ms (0.01% of the trace)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
@@ -8502,28 +8613,23 @@ Device-side activity: GPU was busy for 2.22 ms (0.01% of the trace)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Profiler ran for 26.17 s, capturing 159 events.
+<pre>Profiler ran for 3.7 ms, capturing 131 events.
 
-Host-side activity: calling CUDA APIs took 1.53 ms (0.01% of the trace)
-┌─────┬──────────┬───────────┬─────────────────────┬───────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">    Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
-├─────┼──────────┼───────────┼─────────────────────┼───────────────────────────┤
-│   6 │ 648.0 ms │<span class="ansi-red-fg"> 620.13 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
-│ 128 │  25.88 s │<span class="ansi-yellow-fg"> 618.46 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
-│ 132 │  25.88 s │  25.75 µs │ cuMemFree           │    8 bytes, device memory │
-│ 143 │  26.16 s │  10.01 µs │ cuCtxSynchronize    │                         - │
-│ 147 │  26.16 s │ 101.57 µs │ cuModuleLoadDataEx  │                         - │
-│ 152 │  26.16 s │  93.46 µs │ cuModuleGetFunction │                         - │
-│ 156 │  26.16 s │  26.46 µs │ cuLaunchKernel      │                         - │
-└─────┴──────────┴───────────┴─────────────────────┴───────────────────────────┘
+Host-side activity: calling CUDA APIs took 1.02 ms (27.56% of the trace)
+┌─────┬──────────┬───────────┬────────────────┬───────────────────────────┐
+│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">    Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name           </span>│<span class="ansi-bold">                   Details </span>│
+├─────┼──────────┼───────────┼────────────────┼───────────────────────────┤
+│   6 │ 71.76 µs │<span class="ansi-red-fg"> 982.52 µs </span>│<span class="ansi-bold"> cuMemAlloc     </span>│ 63.281 MiB, device memory │
+│ 128 │  1.14 ms │  27.18 µs │ cuLaunchKernel │                         - │
+└─────┴──────────┴───────────┴────────────────┴───────────────────────────┘
 
-Device-side activity: GPU was busy for 2.52 ms (0.01% of the trace)
+Device-side activity: GPU was busy for 2.53 ms (68.36% of the trace)
 ┌─────┬─────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
 │<span class="ansi-bold">  ID </span>│<span class="ansi-bold">   Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
 ├─────┼─────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
-│ 156 │ 26.16 s │<span class="ansi-red-fg"> 2.52 ms </span>│      64 │ 4×4×5400 │   54 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+│ 128 │ 1.17 ms │<span class="ansi-red-fg"> 2.53 ms </span>│      64 │ 4×4×5400 │   54 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
 └─────┴─────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
 </pre>
 </div>
@@ -8535,7 +8641,7 @@ Device-side activity: GPU was busy for 2.52 ms (0.01% of the trace)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-julia"><pre><span></span><span class="n">CUDA</span><span class="o">.</span><span class="nd">@profile</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">begin</span>
@@ -8555,29 +8661,24 @@ Device-side activity: GPU was busy for 2.52 ms (0.01% of the trace)
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>Profiler ran for 29.85 s, capturing 171 events.
+<pre>Profiler ran for 3.67 ms, capturing 143 events.
 
-Host-side activity: calling CUDA APIs took 1.53 ms (0.01% of the trace)
-┌─────┬───────────┬───────────┬─────────────────────┬───────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name                </span>│<span class="ansi-bold">                   Details </span>│
-├─────┼───────────┼───────────┼─────────────────────┼───────────────────────────┤
-│   6 │ 719.61 ms │<span class="ansi-yellow-fg"> 600.34 µs </span>│<span class="ansi-bold"> cuMemAlloc          </span>│ 63.281 MiB, device memory │
-│ 140 │   29.54 s │<span class="ansi-red-fg"> 601.77 µs </span>│<span class="ansi-bold"> cuMemFree           </span>│ 63.281 MiB, device memory │
-│ 144 │   29.54 s │   21.7 µs │ cuMemFree           │    8 bytes, device memory │
-│ 155 │   29.85 s │  10.49 µs │ cuCtxSynchronize    │                         - │
-│ 159 │   29.85 s │ 108.24 µs │ cuModuleLoadDataEx  │                         - │
-│ 164 │   29.85 s │  103.0 µs │ cuModuleGetFunction │                         - │
-│ 168 │   29.85 s │  35.05 µs │ cuLaunchKernel      │                         - │
-└─────┴───────────┴───────────┴─────────────────────┴───────────────────────────┘
+Host-side activity: calling CUDA APIs took 560.52 µs (15.28% of the trace)
+┌─────┬───────────┬───────────┬────────────────┬───────────────────────────┐
+│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">      Time </span>│<span class="ansi-bold"> Name           </span>│<span class="ansi-bold">                   Details </span>│
+├─────┼───────────┼───────────┼────────────────┼───────────────────────────┤
+│   6 │  97.27 µs │<span class="ansi-red-fg"> 520.23 µs </span>│<span class="ansi-bold"> cuMemAlloc     </span>│ 63.281 MiB, device memory │
+│ 140 │ 710.25 µs │  29.56 µs │ cuLaunchKernel │                         - │
+└─────┴───────────┴───────────┴────────────────┴───────────────────────────┘
 
-Device-side activity: GPU was busy for 2.95 ms (0.01% of the trace)
-┌─────┬─────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
-│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">   Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
-├─────┼─────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
-│ 168 │ 29.85 s │<span class="ansi-red-fg"> 2.95 ms </span>│      64 │ 4×4×5400 │   58 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
-└─────┴─────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
+Device-side activity: GPU was busy for 2.92 ms (79.67% of the trace)
+┌─────┬───────────┬─────────┬─────────┬──────────┬──────┬─────────────────────────────────────────────────────┐
+│<span class="ansi-bold">  ID </span>│<span class="ansi-bold">     Start </span>│<span class="ansi-bold">    Time </span>│<span class="ansi-bold"> Threads </span>│<span class="ansi-bold">   Blocks </span>│<span class="ansi-bold"> Regs </span>│<span class="ansi-bold"> Name                                                </span>│
+├─────┼───────────┼─────────┼─────────┼──────────┼──────┼─────────────────────────────────────────────────────┤
+│ 140 │ 740.77 µs │<span class="ansi-red-fg"> 2.92 ms </span>│      64 │ 4×4×5400 │   58 │<span class="ansi-bold"> _FILE__julia_packages_CUDA_TPbi4_src_profile_jl_L66 </span>│
+└─────┴───────────┴─────────┴─────────┴──────────┴──────┴─────────────────────────────────────────────────────┘
 </pre>
 </div>
 </div>
