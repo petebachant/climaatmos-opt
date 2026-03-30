@@ -207,15 +207,6 @@ marimo/_lsp/
 __marimo__/
 output
 
-.calkit/notebooks/cleaned/notebooks/analyze-logs.ipynb
-!.calkit/notebooks/executed/notebooks/analyze-logs.ipynb
-!.calkit/notebooks/html/notebooks/analyze-logs.html
-!figures/sypd-time-series.png
-.calkit/notebooks/cleaned/notebooks/compare-kernels.ipynb
-
+.calkit/notebooks/cleaned
 *.DS_Store
 mod.diff
-
-.calkit/notebooks/cleaned/notebooks/benchmark-localgeom.ipynb
-
-.calkit/notebooks/cleaned/notebooks/benchmark-localgeom-tr.ipynb

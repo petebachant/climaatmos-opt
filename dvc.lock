@@ -1,0 +1,220 @@
+schema: '2.0'
+stages:
+  nsys-baseline:
+    cmd: calkit slurm batch --name nsys-baseline --environment clima --dep 
+      ClimaAtmos.jl/.buildkite/Manifest-v1.11.toml --dep ClimaAtmos.jl/src --dep
+      config/climaatmos_progedmf_1m.yml --dep 
+      ClimaAtmos.jl/perf/benchmark_step.jl --out results/nsys/baseline.nsys-rep 
+      --out results/nsys/baseline.sqlite -s --gpus=1 -s --time=120 -- 
+      scripts/run-nsys.sh --output=results/nsys/baseline julia 
+      --project=ClimaAtmos.jl/.buildkite ClimaAtmos.jl/perf/benchmark_step.jl 
+      --config_file=config/climaatmos_progedmf_1m.yml
+    deps:
+    - path: ClimaAtmos.jl/.buildkite/Manifest-v1.11.toml
+      hash: md5
+      md5: 9b692a737555e739d3c4f38d6e08d6b8
+      size: 111693
+    - path: ClimaAtmos.jl/perf/benchmark_step.jl
+      hash: md5
+      md5: e4e56e0353b6c5130c4e3fc03082c211
+      size: 2082
+    - path: ClimaAtmos.jl/src
+      hash: md5
+      md5: e54ab48a653bd4031e34cb698c07d4a8.dir
+      size: 1506174
+      nfiles: 133
+    - path: config/climaatmos_progedmf_1m.yml
+      hash: md5
+      md5: dbfaa1f845ee248689bf738f5266cf6d
+      size: 1342
+    - path: scripts/run-nsys.sh
+      hash: md5
+      md5: c83d8939e62284ff1cff8ea8253de4ac
+      size: 1692
+    outs:
+    - path: .calkit/slurm/logs/nsys-baseline.out
+      hash: md5
+      md5: 2a49315a39ac08298c9da6d83a24509a
+      size: 134582
+    - path: results/nsys/baseline.nsys-rep
+      hash: md5
+      md5: 8c15698f3b4517c44e465508b8ab5d74
+      size: 25017686
+    - path: results/nsys/baseline.sqlite
+      hash: md5
+      md5: db3aeaaa675c48985436f9592ac0b939
+      size: 51892224
+  nsys-mod:
+    cmd: calkit slurm batch --name nsys-mod --environment clima --dep 
+      ClimaAtmos.jl-mod/.buildkite/Manifest-v1.11.toml --dep 
+      ClimaAtmos.jl-mod/src --dep config/climaatmos_progedmf_1m.yml --dep 
+      ClimaAtmos.jl-mod/perf/benchmark_step.jl --out results/nsys/mod.nsys-rep 
+      --out results/nsys/mod.sqlite -s --gpus=1 -s --time=120 -- 
+      scripts/run-nsys.sh --output=results/nsys/mod julia 
+      --project=ClimaAtmos.jl-mod/.buildkite 
+      ClimaAtmos.jl-mod/perf/benchmark_step.jl 
+      --config_file=config/climaatmos_progedmf_1m.yml
+    deps:
+    - path: ClimaAtmos.jl-mod/.buildkite/Manifest-v1.11.toml
+      hash: md5
+      md5: 9b692a737555e739d3c4f38d6e08d6b8
+      size: 111693
+    - path: ClimaAtmos.jl-mod/perf/benchmark_step.jl
+      hash: md5
+      md5: e4e56e0353b6c5130c4e3fc03082c211
+      size: 2082
+    - path: ClimaAtmos.jl-mod/src
+      hash: md5
+      md5: e54ab48a653bd4031e34cb698c07d4a8.dir
+      size: 1506174
+      nfiles: 133
+    - path: config/climaatmos_progedmf_1m.yml
+      hash: md5
+      md5: dbfaa1f845ee248689bf738f5266cf6d
+      size: 1342
+    - path: scripts/run-nsys.sh
+      hash: md5
+      md5: c83d8939e62284ff1cff8ea8253de4ac
+      size: 1692
+    outs:
+    - path: .calkit/slurm/logs/nsys-mod.out
+      hash: md5
+      md5: e5748bfe431056bd76b90ec3a3c9f8ba
+      size: 97812
+    - path: results/nsys/mod.nsys-rep
+      hash: md5
+      md5: 9043038141947703772ccc31511f8ab6
+      size: 25024780
+    - path: results/nsys/mod.sqlite
+      hash: md5
+      md5: ffa5d819b5435cfadb501b87f2d23669
+      size: 51929088
+  compare-kernels:
+    cmd: calkit nb execute --environment py --no-check --to html 
+      "notebooks/compare-kernels.ipynb"
+    deps:
+    - path: .calkit/envs/py/uv.lock
+      hash: md5
+      md5: 0882eaf66a48e31088a716a1d1bc8aa8
+      size: 98212
+    - path: .calkit/notebooks/cleaned/notebooks/compare-kernels.ipynb
+      hash: md5
+      md5: 07a8dd133cb6eafb7c6f52de0246df09
+      size: 38763
+    - path: results/nsys/baseline.sqlite
+      hash: md5
+      md5: db3aeaaa675c48985436f9592ac0b939
+      size: 51892224
+    - path: results/nsys/mod.sqlite
+      hash: md5
+      md5: ffa5d819b5435cfadb501b87f2d23669
+      size: 51929088
+    outs:
+    - path: .calkit/notebooks/executed/notebooks/compare-kernels.ipynb
+      hash: md5
+      md5: 08ab5308fab9bb060e3dd89a88b3772e
+      size: 55086
+    - path: .calkit/notebooks/html/notebooks/compare-kernels.html
+      hash: md5
+      md5: 9466dd1fcbc639910b02b23fcb6c92c5
+      size: 406079
+  amip-baseline:
+    cmd: calkit slurm batch --name amip-baseline --environment clima --dep 
+      config/climaatmos_progedmf_1m.yml --dep scripts/run_progedmf_1m.jl --dep 
+      ClimaAtmos.jl/.buildkite/Manifest-v1.11.toml --dep ClimaAtmos.jl/src -s 
+      --gpus=1 -s --time=120 -- scripts/run-julia-script.sh 
+      --project=ClimaAtmos.jl/.buildkite scripts/run_progedmf_1m.jl
+    deps:
+    - path: ClimaAtmos.jl/.buildkite/Manifest-v1.11.toml
+      hash: md5
+      md5: 9b692a737555e739d3c4f38d6e08d6b8
+      size: 111693
+    - path: ClimaAtmos.jl/src
+      hash: md5
+      md5: e54ab48a653bd4031e34cb698c07d4a8.dir
+      size: 1506174
+      nfiles: 133
+    - path: config/climaatmos_progedmf_1m.yml
+      hash: md5
+      md5: dbfaa1f845ee248689bf738f5266cf6d
+      size: 1342
+    - path: scripts/run-julia-script.sh
+      hash: md5
+      md5: c982c866ef1cd9cab26d7c5b78a4224b
+      size: 560
+    - path: scripts/run_progedmf_1m.jl
+      hash: md5
+      md5: 0a8ef250f4638e4e4567145c2a2deee8
+      size: 1493
+    outs:
+    - path: .calkit/slurm/logs/amip-baseline.out
+      hash: md5
+      md5: 0864bcd40186e7ad830f49628707f048
+      size: 22469
+  amip-mod:
+    cmd: calkit slurm batch --name amip-mod --environment clima --dep 
+      config/climaatmos_progedmf_1m.yml --dep scripts/run_progedmf_1m.jl --dep 
+      ClimaAtmos.jl-mod/.buildkite/Manifest-v1.11.toml --dep 
+      ClimaAtmos.jl-mod/src -s --gpus=1 -s --time=120 -- 
+      scripts/run-julia-script.sh --project=ClimaAtmos.jl-mod/.buildkite 
+      scripts/run_progedmf_1m.jl
+    deps:
+    - path: ClimaAtmos.jl-mod/.buildkite/Manifest-v1.11.toml
+      hash: md5
+      md5: 9b692a737555e739d3c4f38d6e08d6b8
+      size: 111693
+    - path: ClimaAtmos.jl-mod/src
+      hash: md5
+      md5: e54ab48a653bd4031e34cb698c07d4a8.dir
+      size: 1506174
+      nfiles: 133
+    - path: config/climaatmos_progedmf_1m.yml
+      hash: md5
+      md5: dbfaa1f845ee248689bf738f5266cf6d
+      size: 1342
+    - path: scripts/run-julia-script.sh
+      hash: md5
+      md5: c982c866ef1cd9cab26d7c5b78a4224b
+      size: 560
+    - path: scripts/run_progedmf_1m.jl
+      hash: md5
+      md5: 0a8ef250f4638e4e4567145c2a2deee8
+      size: 1493
+    outs:
+    - path: .calkit/slurm/logs/amip-mod.out
+      hash: md5
+      md5: 285b5da6046db09e042cf569af391bd4
+      size: 20798
+  analyze-logs:
+    cmd: calkit nb execute --environment py --no-check --to html 
+      "notebooks/analyze-logs.ipynb"
+    deps:
+    - path: .calkit/envs/py/uv.lock
+      hash: md5
+      md5: 0882eaf66a48e31088a716a1d1bc8aa8
+      size: 98212
+    - path: .calkit/notebooks/cleaned/notebooks/analyze-logs.ipynb
+      hash: md5
+      md5: 02757473dab04aa9507bdae9b4fbdf6e
+      size: 2347
+    - path: .calkit/slurm/logs/amip-baseline.out
+      hash: md5
+      md5: 0864bcd40186e7ad830f49628707f048
+      size: 22469
+    - path: .calkit/slurm/logs/amip-mod.out
+      hash: md5
+      md5: 285b5da6046db09e042cf569af391bd4
+      size: 20798
+    outs:
+    - path: .calkit/notebooks/executed/notebooks/analyze-logs.ipynb
+      hash: md5
+      md5: 2db9629f01c04acd759155916767d3da
+      size: 43829
+    - path: .calkit/notebooks/html/notebooks/analyze-logs.html
+      hash: md5
+      md5: 64f451d1ab063ef999afd934ea2a5061
+      size: 325231
+    - path: figures/sypd-time-series.png
+      hash: md5
+      md5: 584b1d2a0b7e402b87090cf760fb2013
+      size: 30181

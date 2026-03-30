@@ -1,96 +1,10 @@
 Loading climacommon/2025_05_15
   Loading requirement: climaauth/2025_05_15 openmpi/4.1.5-mpitrampoline
     julia/1.11.5 cuda/julia-pref
-[ Info: Unpacking /tmp/jl_2bY54vwJW1-download.gz into /home/pbachant/.julia/artifacts/jl_9ZczuF...
 Precompiling project...
-   3461.6 ms  ✓ MPIABI_jll
-   3239.8 ms  ✓ HDF5_jll
-   4409.3 ms  ✓ NetCDF_jll
-   7014.6 ms  ✓ MPI
-   7480.3 ms  ✓ TempestRemap_jll
-  13633.8 ms  ✓ HDF5
-   8360.7 ms  ✓ ClimaComms → ClimaCommsMPIExt
-  11526.7 ms  ✓ NCDatasets
-  10940.9 ms  ✓ DiffEqBase → DiffEqBaseMPIExt
-   6526.9 ms  ✓ HDF5 → MPIExt
-  17406.9 ms  ✓ Flux → FluxMPIExt
-  18504.4 ms  ✓ MPI → CUDAExt
-   8670.9 ms  ✓ ClimaUtilities → ClimaUtilitiesNCDatasetsExt
-   9165.9 ms  ✓ RRTMGP → RRTMGPNCDatasetsExt
-  17799.1 ms  ✓ ClimaCore
-  13944.9 ms  ✓ ClimaCore → KrylovExt
-  14334.7 ms  ✓ ClimaCoreSpectra
-  13683.4 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreExt
-  17138.7 ms  ✓ ClimaCoreTempestRemap
-  32804.5 ms  ✓ ClimaAnalysis
-  11203.7 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreNCDatasetsExt
-  25747.4 ms  ✓ ClimaCore → ClimaCoreCUDAExt
-  13384.5 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreInterpolationsExt
-  14641.3 ms  ✓ ClimaDiagnostics
-  12696.2 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreTempestRemapExt
-  21998.8 ms  ✓ ClimaAnalysis → ClimaAnalysisMakieExt
-  22291.5 ms  ✓ ClimaAtmos
-  40028.7 ms  ✓ PrecompileCI
-  28 dependencies successfully precompiled in 135 seconds. 581 already precompiled.
-  2 dependencies had output during precompilation:
-┌ MPI → CUDAExt
-│  ┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/cuda/lib64/libcublasLt.so.13`.
-│  │ This may cause errors.
-│  │ 
-│  │ If you're running under a profiler, this situation is expected. Otherwise,
-│  │ ensure that your library path environment variable (e.g., `PATH` on Windows
-│  │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
-│  │ 
-│  │ In any other case, please file an issue.
-│  └ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
-│  ┌ Warning: CUDA runtime library `libnvJitLink.so.13` was loaded from a system path, `/usr/local/cuda/lib64/libnvJitLink.so.13`.
-│  │ This may cause errors.
-│  │ 
-│  │ If you're running under a profiler, this situation is expected. Otherwise,
-│  │ ensure that your library path environment variable (e.g., `PATH` on Windows
-│  │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
-│  │ 
-│  │ In any other case, please file an issue.
-│  └ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
-│  ┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/cuda/lib64/libcusparse.so.12`.
-│  │ This may cause errors.
-│  │ 
-│  │ If you're running under a profiler, this situation is expected. Otherwise,
-│  │ ensure that your library path environment variable (e.g., `PATH` on Windows
-│  │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
-│  │ 
-│  │ In any other case, please file an issue.
-│  └ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
-└  
-┌ ClimaCore → ClimaCoreCUDAExt
-│  ┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/cuda/lib64/libcublasLt.so.13`.
-│  │ This may cause errors.
-│  │ 
-│  │ If you're running under a profiler, this situation is expected. Otherwise,
-│  │ ensure that your library path environment variable (e.g., `PATH` on Windows
-│  │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
-│  │ 
-│  │ In any other case, please file an issue.
-│  └ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
-│  ┌ Warning: CUDA runtime library `libnvJitLink.so.13` was loaded from a system path, `/usr/local/cuda/lib64/libnvJitLink.so.13`.
-│  │ This may cause errors.
-│  │ 
-│  │ If you're running under a profiler, this situation is expected. Otherwise,
-│  │ ensure that your library path environment variable (e.g., `PATH` on Windows
-│  │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
-│  │ 
-│  │ In any other case, please file an issue.
-│  └ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
-│  ┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/cuda/lib64/libcusparse.so.12`.
-│  │ This may cause errors.
-│  │ 
-│  │ If you're running under a profiler, this situation is expected. Otherwise,
-│  │ ensure that your library path environment variable (e.g., `PATH` on Windows
-│  │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
-│  │ 
-│  │ In any other case, please file an issue.
-│  └ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
-└  
+  19426.7 ms  ✓ ClimaAtmos
+  41554.2 ms  ✓ PrecompileCI
+  2 dependencies successfully precompiled in 68 seconds. 584 already precompiled.
 ┌ Warning: CUDA runtime library `libcublasLt.so.13` was loaded from a system path, `/usr/local/cuda/lib64/libcublasLt.so.13`.
 │ This may cause errors.
 │ 
@@ -99,7 +13,7 @@ Precompiling project...
 │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
 │ 
 │ In any other case, please file an issue.
-└ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
+└ @ CUDA ~/.julia/packages/CUDA/Il00B/src/initialization.jl:198
 ┌ Warning: CUDA runtime library `libnvJitLink.so.13` was loaded from a system path, `/usr/local/cuda/lib64/libnvJitLink.so.13`.
 │ This may cause errors.
 │ 
@@ -108,7 +22,7 @@ Precompiling project...
 │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
 │ 
 │ In any other case, please file an issue.
-└ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
+└ @ CUDA ~/.julia/packages/CUDA/Il00B/src/initialization.jl:198
 ┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/cuda/lib64/libcusparse.so.12`.
 │ This may cause errors.
 │ 
@@ -117,29 +31,26 @@ Precompiling project...
 │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
 │ 
 │ In any other case, please file an issue.
-└ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
-Status `~/calkit/clima-local-geometry/ClimaAtmos.jl-mod/.buildkite/Project.toml`
+└ @ CUDA ~/.julia/packages/CUDA/Il00B/src/initialization.jl:198
+Status `~/calkit/climaatmos-opt/ClimaAtmos.jl-mod/.buildkite/Project.toml`
   [c7e460c6] ArgParse v1.2.0
-  [a14bc488] ArtifactWrappers v0.2.0
   [6e4b80f9] BenchmarkTools v1.6.3
-⌃ [052768ef] CUDA v5.10.1
+  [052768ef] CUDA v5.11.0
   [13f3f980] CairoMakie v0.15.9
   [29b5916a] ClimaAnalysis v0.5.21
-  [b2c96348] ClimaAtmos v0.37.0 `..`
+  [b2c96348] ClimaAtmos v0.37.3 `..`
   [3a4d1b5c] ClimaComms v0.6.10
   [d414da3d] ClimaCore v0.14.50
   [c2caaa1d] ClimaCoreSpectra v0.1.4
   [d934ef94] ClimaCoreTempestRemap v0.3.18
   [1ecacbb8] ClimaDiagnostics v0.3.3
-  [5c42b081] ClimaParams v1.0.14
-  [e0c89595] ClimaReproducibilityTests v0.1.2
-  [595c0a79] ClimaTimeSteppers v0.8.8
-  [b3f4f4ca] ClimaUtilities v0.1.27
-⌃ [2b5f629d] DiffEqBase v6.183.2
+  [5c42b081] ClimaParams v1.0.15
+  [595c0a79] ClimaTimeSteppers v0.8.11
+  [b3f4f4ca] ClimaUtilities v0.1.28
   [f67ccb44] HDF5 v0.17.2
 ⌅ [a98d9a8b] Interpolations v0.15.1
   [8197267c] IntervalSets v0.7.13
-  [033835bb] JLD2 v0.6.3
+  [033835bb] JLD2 v0.6.4
   [682c06a0] JSON v1.4.0
   [ba0b0d4f] Krylov v0.10.6
   [da04e1cc] MPI v0.20.24
@@ -147,9 +58,8 @@ Status `~/calkit/clima-local-geometry/ClimaAtmos.jl-mod/.buildkite/Project.toml`
   [0d71be07] NullBroadcasts v0.1.0
   [bac558e1] OrderedCollections v1.8.1
   [76d61242] PrecompileCI v0.1.0 `PrecompileCI`
-  [08abe8d2] PrettyTables v3.2.3
+  [08abe8d2] PrettyTables v3.3.2
   [efd6af41] ProfileCanvas v0.1.7
-⌅ [0bca4576] SciMLBase v2.112.0
 ⌅ [aa65fe97] SnoopCompile v3.1.4
 ⌅ [e2b509da] SnoopCompileCore v3.0.0
   [10745b16] Statistics v1.11.1
@@ -168,7 +78,7 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
 │ 
 │ In any other case, please file an issue.
-└ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
+└ @ CUDA ~/.julia/packages/CUDA/Il00B/src/initialization.jl:198
 ┌ Warning: CUDA runtime library `libnvJitLink.so.13` was loaded from a system path, `/usr/local/cuda/lib64/libnvJitLink.so.13`.
 │ This may cause errors.
 │ 
@@ -177,7 +87,7 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
 │ 
 │ In any other case, please file an issue.
-└ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
+└ @ CUDA ~/.julia/packages/CUDA/Il00B/src/initialization.jl:198
 ┌ Warning: CUDA runtime library `libcusparse.so.12` was loaded from a system path, `/usr/local/cuda/lib64/libcusparse.so.12`.
 │ This may cause errors.
 │ 
@@ -186,7 +96,7 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
 │ 
 │ In any other case, please file an issue.
-└ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
+└ @ CUDA ~/.julia/packages/CUDA/Il00B/src/initialization.jl:198
 ┌ Warning: CUDA runtime library `libcupti.so.13.1` was loaded from a system path, `/opt/nvidia/nsight-systems/2025.3.2/target-linux-x64/libcupti.so.13.1`.
 │ This may cause errors.
 │ 
@@ -195,11 +105,11 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │ or `LD_LIBRARY_PATH` on Linux) does not include CUDA library paths.
 │ 
 │ In any other case, please file an issue.
-└ @ CUDA ~/.julia/packages/CUDA/9jR7v/src/initialization.jl:198
+└ @ CUDA ~/.julia/packages/CUDA/Il00B/src/initialization.jl:198
 ┌ Warning: The configuration passed to ClimaAtmos contains unused keys: edmfx_upwinding
-└ @ ClimaAtmos ~/calkit/clima-local-geometry/ClimaAtmos.jl-mod/src/solver/yaml_helper.jl:89
+└ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl-mod/src/solver/yaml_helper.jl:89
 ┌ Info: Making AtmosConfig with config files: 
-│    /home/pbachant/calkit/clima-local-geometry/ClimaAtmos.jl-mod/src/solver/../../config/default_configs/default_config.yml
+│    /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.jl-mod/src/solver/../../config/default_configs/default_config.yml
 └    config/climaatmos_progedmf_1m.yml
 [ Info: Running on CUDADevice
 [ Info: Setting up single-process ClimaAtmos run
@@ -221,19 +131,19 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 └                     `hyperdiff`::`ClimaAtmos.Hyperdiffusion{Float32}`
 ┌ Info: AtmosModel: 
 │ 
-│                             `water`::`ClimaAtmos.AtmosWater{ClimaAtmos.NonEquilibriumMicrophysics1M, ClimaAtmos.QuadratureCloud, ClimaAtmos.Explicit, Nothing, ClimaAtmos.SGSQuadrature{3, StaticArraysCore.SVector{3, Float32}, StaticArraysCore.SVector{3, Float32}, ClimaAtmos.LogNormalSGS, Float32}}`
+│                             `water`::`ClimaAtmos.AtmosWater{ClimaAtmos.NonEquilibriumMicrophysics1M, ClimaAtmos.QuadratureCloud, ClimaAtmos.Implicit, Nothing, Nothing}`
 │                         `scm_setup`::`ClimaAtmos.SCMSetup{Nothing, Nothing, Nothing, Bool, Nothing}`
 │                         `radiation`::`ClimaAtmos.AtmosRadiation{ClimaAtmos.RRTMGPInterface.AllSkyRadiationWithClearSkyDiagnostics{ClimaAtmos.InteractiveCloudInRadiation}, ClimaAtmos.TimeVaryingInsolation}`
-│                          `turbconv`::`ClimaAtmos.AtmosTurbconv{ClimaAtmos.EDMFXModel{ClimaAtmos.InvZEntrainment, ClimaAtmos.BuoyancyVelocityDetrainment, Val{true}, Val{true}, Val{true}, Val{true}, Val{true}, ClimaAtmos.SmoothMinimumBlending}, ClimaAtmos.PrognosticEDMFX{1, true, Float32}, ClimaAtmos.Implicit, ClimaAtmos.Implicit, ClimaAtmos.Implicit, ClimaAtmos.Implicit, ClimaAtmos.Implicit, Nothing, Nothing, Nothing}`
+│                          `turbconv`::`ClimaAtmos.AtmosTurbconv{ClimaAtmos.EDMFXModel{ClimaAtmos.PiGroupsEntrainment, ClimaAtmos.BuoyancyVelocityDetrainment, Val{true}, Val{true}, Val{true}, Val{true}, Val{true}, ClimaAtmos.SmoothMinimumBlending}, ClimaAtmos.PrognosticEDMFX{1, true, Float32}, ClimaAtmos.Implicit, ClimaAtmos.Implicit, ClimaAtmos.Implicit, ClimaAtmos.Implicit, ClimaAtmos.Implicit, Nothing, Nothing, Nothing}`
 │                   `prescribed_flow`::`Nothing`
-│                      `gravity_wave`::`ClimaAtmos.AtmosGravityWave{Nothing, Nothing}`
+│                      `gravity_wave`::`ClimaAtmos.AtmosGravityWave{ClimaAtmos.NonOrographicGravityWave{Float32}, ClimaAtmos.FullOrographicGravityWave{Float32, Val{:raw_topo}, Val{:NoWarp}}}`
 │                `vertical_diffusion`::`Nothing`
 │                            `sponge`::`ClimaAtmos.AtmosSponge{ClimaAtmos.ViscousSponge{Float32}, ClimaAtmos.RayleighSponge{Float32}}`
 │                           `surface`::`ClimaAtmos.AtmosSurface{ClimaAtmos.ZonallySymmetricSST, ClimaAtmos.PrescribedSST, ClimaAtmos.ConstantAlbedo{Float32}}`
 └                          `numerics`::`ClimaAtmos.AtmosNumerics{Val{:vanleer_limiter}, Val{:vanleer_limiter}, Val{:first_order}, Val{:none}, Val{:first_order}, Nothing, Nothing, Nothing, ClimaAtmos.Implicit, ClimaAtmos.Hyperdiffusion{Float32}}`
 ┌ Info: Simulation info
 │   job_id = "default_config"
-└   output_dir = "output/default_config/output_0004"
+└   output_dir = "output/default_config/output_0001"
 ┌ Info: Simulation Grid: ExtrudedFiniteDifferenceGrid:
 │   horizontal:
 │     context: SingletonCommsContext using CUDADevice
@@ -241,22 +151,24 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │     quadrature: 4-point Gauss-Legendre-Lobatto quadrature
 │   vertical:
 └     mesh: 63-element IntervalMesh of IntervalDomain: z ∈ [0.0,60000.0] (:bottom, :top)
-[ Info: Allocating Y: 4.116 s (10996417 allocations: 524.31 MiB)
-[ Info: Allocating cache (p): 147.202 s (485588129 allocations: 26.79 GiB)
+[ Info: Allocating Y: 4.17 s (10471128 allocations: 502.81 MiB)
+[ Info: Local file not found, loading from ClimaArtifacts (h_elem=16)...
+[ Info: Loading from: /net/sampo/data1/ClimaArtifacts/artifacts/ogw_computed_drag_h16/computed_drag_Earth_false_1_16.hdf5
+[ Info: Allocating cache (p): 176.645 s (545341534 allocations: 29.95 GiB)
 [ Info: Using ODE config: `ClimaTimeSteppers.ARS343`
-[ Info: ode_configuration: 733.892 ms (1445615 allocations: 71.81 MiB)
-[ Info: get_callbacks: 244.981 ms (429719 allocations: 21.95 MiB)
+[ Info: ode_configuration: 790.453 ms (1445385 allocations: 71.81 MiB)
+[ Info: get_callbacks: 254.015 ms (484307 allocations: 24.92 MiB)
 [ Info: Saving accumulated diagnostics to disk with frequency: 1 month
 [ Info: DictWriter: String[]
 [ Info: HDF5Writer: String[]
 [ Info: NetCDFWriter: ["ts_1M_average", "ta_1M_average", "tas_1M_average", "uas_1M_average", "vas_1M_average", "thetaa_1M_average", "ha_1M_average", "pfull_1M_average", "zg_1M_average", "rhoa_1M_average", "ua_1M_average", "va_1M_average", "wa_1M_average", "hfes_1M_average", "hfss_1M_average", "ts_1M_min", "ts_1M_max", "hur_1M_average", "hus_1M_average", "cl_1M_average", "clw_1M_average", "cli_1M_average", "hussfc_1M_average", "evspsbl_1M_average", "hfls_1M_average", "pr_1M_average", "prra_1M_average", "prsn_1M_average", "prw_1M_average", "lwp_1M_average", "clwvi_1M_average", "clivi_1M_average", "husra_1M_average", "hussn_1M_average", "rsd_1M_average", "rsdt_1M_average", "rsds_1M_average", "rsu_1M_average", "rsut_1M_average", "rsus_1M_average", "rld_1M_average", "rlds_1M_average", "rlu_1M_average", "rlut_1M_average", "rlus_1M_average", "rsdcs_1M_average", "rsdscs_1M_average", "rsucs_1M_average", "rsutcs_1M_average", "rsuscs_1M_average", "rldcs_1M_average", "rldscs_1M_average", "rlucs_1M_average", "rlutcs_1M_average", "arup_1M_average", "rhoaup_1M_average", "waup_1M_average", "taup_1M_average", "thetaaup_1M_average", "haup_1M_average", "husup_1M_average", "hurup_1M_average", "clwup_1M_average", "cliup_1M_average", "aren_1M_average", "rhoaen_1M_average", "waen_1M_average", "taen_1M_average", "thetaaen_1M_average", "haen_1M_average", "husen_1M_average", "huren_1M_average", "clwen_1M_average", "clien_1M_average", "tke_1M_average", "lmix_1M_average"]
-[ Info: initializing diagnostics: 15.434 s (38394604 allocations: 1.94 GiB)
+[ Info: initializing diagnostics: 15.656 s (38299103 allocations: 1.94 GiB)
 ┌ Warning: The combination Dates.Second and 1 month was not covered. Please add a method to handle this case.
-└ @ ClimaAtmos ~/calkit/clima-local-geometry/ClimaAtmos.jl-mod/src/utils/utilities.jl:518
+└ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl-mod/src/utils/utilities.jl:518
 ┌ Warning: The checkpointing frequency (checkpoint_frequency = 30 days) should be an integer multiple of all diagnostics accumulation periods (1 month) so simulations can be safely restarted from any checkpoint
-└ @ ClimaAtmos ~/calkit/clima-local-geometry/ClimaAtmos.jl-mod/src/callbacks/get_callbacks.jl:327
-[ Info: Prepared SciMLBase.CallbackSet callbacks: 12.108 ms (561 allocations: 27.4 KiB)
-[ Info: n_steps_per_cycle_per_cb (non diagnostics): [1024, 1, 30, 1]
+└ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl-mod/src/callbacks/get_callbacks.jl:327
+[ Info: Prepared CTS.CallbackSet callbacks: 16.37 ms (549 allocations: 26.99 KiB)
+[ Info: n_steps_per_cycle_per_cb (non diagnostics): [1024, 1, 30, 15, 15, 1]
 [ Info: n_steps_per_cycle (non diagnostics): 15360
 ┌ Info: Jacobian algorithm: ManualSparseJacobian(
 │   topography_flag = ClimaAtmos.IgnoreDerivative(),
@@ -278,8 +190,8 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │   sgs_vertdiff_flag = ClimaAtmos.UseDerivative(),
 │   approximate_solve_iters = 2,
 └ )
-[ Info: init integrator: 79.892 s (110967431 allocations: 6.84 GiB)
-[ Info: Added diagnostics: 32.756 s (72297332 allocations: 3.58 GiB)
+[ Info: init integrator: 187.005 s (271005358 allocations: 14.52 GiB)
+[ Info: Added diagnostics: 35.83 s (70569711 allocations: 3.5 GiB)
 [ Info: Compiling benchmark_step!...
 ┌ Info: Progress
 │   simulation_time = "2 minutes, 4 microseconds"
@@ -290,50 +202,50 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │   wall_time_spent = "0 seconds"
 │   percent_complete = "0.0%"
 │   estimated_sypd = "Inf"
-│   date_now = 2026-03-16T07:20:56.844
-└   estimated_finish_date = 2026-03-16T07:20:56.841
+│   date_now = 2026-03-30T15:16:55.362
+└   estimated_finish_date = 2026-03-30T15:16:55.359
 ┌ Info: Progress
 │   simulation_time = "4 minutes, 8 microseconds"
 │   n_steps_completed = 2
-│   wall_time_per_step = "1 second, 149 milliseconds"
-│   wall_time_total = "1 day, 3 hours"
-│   wall_time_remaining = "1 day, 3 hours"
-│   wall_time_spent = "2 seconds, 299 milliseconds"
+│   wall_time_per_step = "1 second, 101 milliseconds"
+│   wall_time_total = "1 day, 2 hours"
+│   wall_time_remaining = "1 day, 2 hours"
+│   wall_time_spent = "2 seconds, 202 milliseconds"
 │   percent_complete = "0.0%"
-│   estimated_sypd = "0.286"
-│   date_now = 2026-03-16T07:20:57.992
-└   estimated_finish_date = 2026-03-17T10:56:41.992
+│   estimated_sypd = "0.298"
+│   date_now = 2026-03-30T15:16:56.461
+└   estimated_finish_date = 2026-03-31T17:43:00.461
 ┌ Info: Progress
 │   simulation_time = "8 minutes, 16 microseconds"
 │   n_steps_completed = 4
-│   wall_time_per_step = "918 milliseconds, 875 microseconds"
-│   wall_time_total = "22 hours, 3 minutes"
-│   wall_time_remaining = "22 hours, 3 minutes"
-│   wall_time_spent = "3 seconds, 675 milliseconds"
+│   wall_time_per_step = "870 milliseconds, 840 microseconds"
+│   wall_time_total = "20 hours, 54 minutes"
+│   wall_time_remaining = "20 hours, 53 minutes"
+│   wall_time_spent = "3 seconds, 483 milliseconds"
 │   percent_complete = "0.0%"
-│   estimated_sypd = "0.358"
-│   date_now = 2026-03-16T07:20:59.230
-└   estimated_finish_date = 2026-03-17T05:24:07.230
+│   estimated_sypd = "0.377"
+│   date_now = 2026-03-30T15:16:57.601
+└   estimated_finish_date = 2026-03-31T12:10:55.601
 ┌ Info: Progress
 │   simulation_time = "16 minutes, 32 microseconds"
 │   n_steps_completed = 8
-│   wall_time_per_step = "783 milliseconds, 129 microseconds"
-│   wall_time_total = "18 hours, 47 minutes"
-│   wall_time_remaining = "18 hours, 47 minutes"
-│   wall_time_spent = "6 seconds, 265 milliseconds"
+│   wall_time_per_step = "721 milliseconds, 60 microseconds"
+│   wall_time_total = "17 hours, 18 minutes"
+│   wall_time_remaining = "17 hours, 18 minutes"
+│   wall_time_spent = "5 seconds, 768 milliseconds"
 │   percent_complete = "0.0%"
-│   estimated_sypd = "0.42"
-│   date_now = 2026-03-16T07:21:01.819
-└   estimated_finish_date = 2026-03-17T02:08:38.819
+│   estimated_sypd = "0.456"
+│   date_now = 2026-03-30T15:16:59.886
+└   estimated_finish_date = 2026-03-31T08:35:13.886
 [ Info: Running benchmark_step!...
 [ Info: Using external CUDA profiler
 Capture range started in the application.
 Capture range ended in the application.
-Generating '/tmp/nsys-report-2583.qdstrm'
+Generating '/tmp/nsys-report-eb1d.qdstrm'
 [1/1] [0%                          ] mod.nsys-repProcessing events...
-[1/1] [0%                          ] mod.nsys-rep[1/1] [8%                          ] mod.nsys-rep[1/1] [5%                          ] mod.nsys-rep[1/1] [0%                          ] mod.nsys-rep[1/1] [0%                          ] mod.nsys-rep[1/1] [6%                          ] mod.nsys-rep[1/1] [7%                          ] mod.nsys-rep[1/1] [8%                          ] mod.nsys-rep[1/1] [10%                         ] mod.nsys-rep[1/1] [11%                         ] mod.nsys-rep[1/1] [12%                         ] mod.nsys-rep[1/1] [14%                         ] mod.nsys-rep[1/1] [=15%                        ] mod.nsys-rep[1/1] [=16%                        ] mod.nsys-rep[1/1] [==18%                       ] mod.nsys-rep[1/1] [==19%                       ] mod.nsys-rep[1/1] [==20%                       ] mod.nsys-rep[1/1] [===22%                      ] mod.nsys-rep[1/1] [===23%                      ] mod.nsys-rep[1/1] [====25%                     ] mod.nsys-rep[1/1] [====26%                     ] mod.nsys-rep[1/1] [====27%                     ] mod.nsys-rep[1/1] [=====29%                    ] mod.nsys-rep[1/1] [=====30%                    ] mod.nsys-rep[1/1] [=====31%                    ] mod.nsys-rep[1/1] [======33%                   ] mod.nsys-rep[1/1] [======34%                   ] mod.nsys-rep[1/1] [======35%                   ] mod.nsys-rep[1/1] [=======37%                  ] mod.nsys-rep[1/1] [=======38%                  ] mod.nsys-rep[1/1] [=======39%                  ] mod.nsys-rep[1/1] [========41%                 ] mod.nsys-rep[1/1] [========42%                 ] mod.nsys-rep[1/1] [=========43%                ] mod.nsys-rep[1/1] [=========45%                ] mod.nsys-rep[1/1] [=========46%                ] mod.nsys-rep[1/1] [==========47%               ] mod.nsys-rep[1/1] [==========49%               ] mod.nsys-rep[1/1] [===========50%              ] mod.nsys-rep[1/1] [===========51%              ] mod.nsys-rep[1/1] [===========53%              ] mod.nsys-rep[1/1] [============54%             ] mod.nsys-rep[1/1] [============55%             ] mod.nsys-rep[1/1] [============57%             ] mod.nsys-rep[1/1] [=============58%            ] mod.nsys-rep[1/1] [=============59%            ] mod.nsys-rep[1/1] [==============61%           ] mod.nsys-rep[1/1] [==============62%           ] mod.nsys-rep[1/1] [==============63%           ] mod.nsys-rep[1/1] [===============65%          ] mod.nsys-rep[1/1] [===============66%          ] mod.nsys-rep[1/1] [===============67%          ] mod.nsys-rep[1/1] [================69%         ] mod.nsys-rep[1/1] [================70%         ] mod.nsys-rep[1/1] [=================72%        ] mod.nsys-rep[1/1] [=================73%        ] mod.nsys-rep[1/1] [=================74%        ] mod.nsys-rep[1/1] [==================76%       ] mod.nsys-rep[1/1] [==================77%       ] mod.nsys-rep[1/1] [==================78%       ] mod.nsys-rep[1/1] [===================80%      ] mod.nsys-rep[1/1] [===================81%      ] mod.nsys-rep[1/1] [===================82%      ] mod.nsys-rep[1/1] [====================84%     ] mod.nsys-rep[1/1] [====================85%     ] mod.nsys-rep[1/1] [=====================86%    ] mod.nsys-rep[1/1] [=====================88%    ] mod.nsys-rep[1/1] [=====================89%    ] mod.nsys-rep[1/1] [======================90%   ] mod.nsys-rep[1/1] [======================92%   ] mod.nsys-rep[1/1] [=======================93%  ] mod.nsys-rep[1/1] [=======================94%  ] mod.nsys-rep[1/1] [=======================96%  ] mod.nsys-rep[1/1] [========================97% ] mod.nsys-rep[1/1] [========================100%] mod.nsys-rep[1/1] [========================100%] mod.nsys-rep
+[1/1] [0%                          ] mod.nsys-rep[1/1] [0%                          ] mod.nsys-rep[1/1] [5%                          ] mod.nsys-rep[1/1] [7%                          ] mod.nsys-rep[1/1] [8%                          ] mod.nsys-rep[1/1] [9%                          ] mod.nsys-rep[1/1] [10%                         ] mod.nsys-rep[1/1] [12%                         ] mod.nsys-rep[1/1] [13%                         ] mod.nsys-rep[1/1] [14%                         ] mod.nsys-rep[1/1] [=16%                        ] mod.nsys-rep[1/1] [=17%                        ] mod.nsys-rep[1/1] [==18%                       ] mod.nsys-rep[1/1] [==19%                       ] mod.nsys-rep[1/1] [==21%                       ] mod.nsys-rep[1/1] [===22%                      ] mod.nsys-rep[1/1] [===23%                      ] mod.nsys-rep[1/1] [===24%                      ] mod.nsys-rep[1/1] [====26%                     ] mod.nsys-rep[1/1] [====27%                     ] mod.nsys-rep[1/1] [====28%                     ] mod.nsys-rep[1/1] [=====30%                    ] mod.nsys-rep[1/1] [=====31%                    ] mod.nsys-rep[1/1] [=====32%                    ] mod.nsys-rep[1/1] [======33%                   ] mod.nsys-rep[1/1] [======35%                   ] mod.nsys-rep[1/1] [=======36%                  ] mod.nsys-rep[1/1] [=======37%                  ] mod.nsys-rep[1/1] [=======39%                  ] mod.nsys-rep[1/1] [========40%                 ] mod.nsys-rep[1/1] [========41%                 ] mod.nsys-rep[1/1] [========42%                 ] mod.nsys-rep[1/1] [=========44%                ] mod.nsys-rep[1/1] [=========45%                ] mod.nsys-rep[1/1] [=========46%                ] mod.nsys-rep[1/1] [==========47%               ] mod.nsys-rep[1/1] [==========49%               ] mod.nsys-rep[1/1] [===========50%              ] mod.nsys-rep[1/1] [===========51%              ] mod.nsys-rep[1/1] [===========53%              ] mod.nsys-rep[1/1] [============54%             ] mod.nsys-rep[1/1] [============55%             ] mod.nsys-rep[1/1] [============56%             ] mod.nsys-rep[1/1] [=============58%            ] mod.nsys-rep[1/1] [=============59%            ] mod.nsys-rep[1/1] [=============60%            ] mod.nsys-rep[1/1] [==============62%           ] mod.nsys-rep[1/1] [==============63%           ] mod.nsys-rep[1/1] [==============64%           ] mod.nsys-rep[1/1] [===============65%          ] mod.nsys-rep[1/1] [===============67%          ] mod.nsys-rep[1/1] [================68%         ] mod.nsys-rep[1/1] [================69%         ] mod.nsys-rep[1/1] [================70%         ] mod.nsys-rep[1/1] [=================72%        ] mod.nsys-rep[1/1] [=================73%        ] mod.nsys-rep[1/1] [=================74%        ] mod.nsys-rep[1/1] [==================76%       ] mod.nsys-rep[1/1] [==================77%       ] mod.nsys-rep[1/1] [==================78%       ] mod.nsys-rep[1/1] [===================79%      ] mod.nsys-rep[1/1] [===================81%      ] mod.nsys-rep[1/1] [===================82%      ] mod.nsys-rep[1/1] [====================83%     ] mod.nsys-rep[1/1] [====================85%     ] mod.nsys-rep[1/1] [=====================86%    ] mod.nsys-rep[1/1] [=====================87%    ] mod.nsys-rep[1/1] [=====================88%    ] mod.nsys-rep[1/1] [======================90%   ] mod.nsys-rep[1/1] [======================91%   ] mod.nsys-rep[1/1] [======================92%   ] mod.nsys-rep[1/1] [=======================93%  ] mod.nsys-rep[1/1] [=======================95%  ] mod.nsys-rep[1/1] [=======================96%  ] mod.nsys-rep[1/1] [========================97% ] mod.nsys-rep[1/1] [========================100%] mod.nsys-rep[1/1] [========================100%] mod.nsys-rep
 Generated:
-	/home/pbachant/calkit/clima-local-geometry/results/nsys/mod.nsys-rep
+	/home/pbachant/calkit/climaatmos-opt/results/nsys/mod.nsys-rep
 Generating SQLite file results/nsys/mod.sqlite from results/nsys/mod.nsys-rep
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/nvtx_sum.py]... 
 
@@ -341,41 +253,43 @@ Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/h
 
  Time (%)  Total Time (ns)  Instances   Avg (ns)     Med (ns)    Min (ns)   Max (ns)   StdDev (ns)   Style                                                   Range                                                
  --------  ---------------  ---------  -----------  -----------  ---------  ---------  -----------  --------  ----------------------------------------------------------------------------------------------------
-     27.3       3177921759          5  635584351.8  630206171.0  617697808  662328997   16570074.7  StartEnd  ClimaTimeSteppers:step_u!(integrator) /home/pbachant/.julia/packages/ClimaTimeSteppers/SJk7o/src/in…
-     12.8       1488951919         30   49631730.6   44938312.0    2647846  128768174   47917638.2  StartEnd  ClimaTimeSteppers:solve_newton!(alg::NewtonsMethod, cache, x, f!, j! = nothing, prepare_for_f! = no…
-      9.7       1128353957         65   17359291.6    4953254.0     645026   83028540   26369744.2  StartEnd  ClimaAtmos:constrain_state!(Y, p, t) /home/pbachant/calkit/clima-local-geometry/ClimaAtmos.jl-mod/s…
-      9.7       1128150727         65   17356165.0    4952164.0     643146   83008450   26366794.5  StartEnd  ClimaAtmos:dss!(Y, p, t) /home/pbachant/calkit/clima-local-geometry/ClimaAtmos.jl-mod/src/prognosti…
-      6.0        692588246         90    7695425.0    2640140.0     177129   66215942   10886518.2  StartEnd  ClimaAtmos:LinearAlgebra.ldiv!(ΔY::Fields.FieldVector, jacobian::Jacobian, R::Fields.FieldVector) /…
-      6.0        692474106         90    7694156.7    2638765.0     176469   66214262   10886466.0  StartEnd  ClimaCore.MatrixFields:field_matrix_solve!(solver::FieldMatrixSolver, x::Fields.FieldVector, A::Fie…
-      4.7        543703163       1800     302057.3     148069.0      15780   47415204    1390380.6  StartEnd  ClimaCore.MatrixFields:Base.Broadcast.materialize!(dest::FieldNameDict, vector_or_matrix::FieldName…
-      4.7        541541186       1800     300856.2     147094.0      15110   47409554    1390219.3  StartEnd  ClimaCore.MatrixFields:copyto_foreach!(dest::FieldNameDict, vector_or_matrix::FieldNameDict) /home/…
-      3.4        394573702         45    8768304.5    7074571.0    3658801   26753985    5245914.2  StartEnd  ClimaAtmos:update_jacobian!(jacobian, Y, p, dtγ, t) /home/pbachant/calkit/clima-local-geometry/Clim…
-      3.2        374553956         20   18727697.8   17935623.5    7875677   29514971    5215136.3  StartEnd  ClimaAtmos:remaining_tendency!(Yₜ, Yₜ_lim, Y, p, t) /home/pbachant/calkit/clima-local-geometry/Clim…
-      2.8        320971490         90    3566349.9    2072488.5    1052524   34977101    4534676.0  StartEnd  ClimaCore.MatrixFields:lazy_mul(A₂₂′::LazySchurComplement, x₂) /home/pbachant/.julia/packages/Clima…
-      2.7        317484121         20   15874206.1   15772174.5    4601175   27622181    5604030.8  StartEnd  ClimaAtmos:hyperdiffusion_tendency!(Yₜ, Yₜ_lim, Y, p, t) /home/pbachant/calkit/clima-local-geometry…
-      2.6        308231224         45    6849582.8    5857088.0    3092523   27602111    4333300.7  StartEnd  ClimaAtmos:implicit_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geometry/ClimaAtmos.jl…
-      1.1        127910868        115    1112268.4     949905.0     519637   23435403    2128773.9  StartEnd  ClimaAtmos:set_implicit_precomputed_quantities!(Y, p, t) /home/pbachant/calkit/clima-local-geometry…
-      1.0        121719434         40    3042985.9    2793120.0    1666031   18647749    2634863.6  StartEnd  ClimaAtmos:set_explicit_precomputed_quantities!(Y, p, t) /home/pbachant/calkit/clima-local-geometry…
-      0.3         38523737        540      71340.3      72624.5      30160     174380      23698.0  StartEnd  ClimaCoreCUDAExt:multiple_field_solve!(dev::ClimaComms.CUDADevice, cache, x, A, b, x1) /home/pbacha…
-      0.3         35361318         20    1768065.9    1978499.5    1142924    2780715     510360.4  StartEnd  ClimaAtmos:additional_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geometry/ClimaAtmos.…
-      0.3         30900194        115     268697.3     281748.0     154819     450237      89279.7  StartEnd  ClimaAtmos:set_prognostic_edmf_precomputed_quantities_environment!(Y, p, ᶠuₕ³, t) /home/pbachant/ca…
-      0.3         30664368         90     340715.2     353673.0     160099     537077      89768.7  StartEnd  ClimaCore.MatrixFields:apply_preconditioner(P_alg, P_cache, P, lazy_b) /home/pbachant/.julia/packag…
-      0.2         27602504        115     240021.8     248148.0     130829     460278      91581.4  StartEnd  ClimaAtmos:set_prognostic_edmf_precomputed_quantities_draft!(Y, p, ᶠuₕ³, t) /home/pbachant/calkit/c…
-      0.2         26802466         40     670061.7     697197.0     384878    1091114     190281.7  StartEnd  ClimaAtmos:set_prognostic_edmf_precomputed_quantities_explicit_closures!(Y, p, t) /home/pbachant/ca…
-      0.2         18112154          5    3622430.8    4127318.0    2495177    4588736     990731.7  StartEnd  ClimaAtmos:edmfx_filter_callback!(integrator) /home/pbachant/calkit/clima-local-geometry/ClimaAtmos…
-      0.1          8584106         20     429205.3     464668.0     290448     684956     115966.1  StartEnd  ClimaAtmos:explicit_vertical_advection_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geo…
-      0.1          8038423         45     178631.6     176299.0     110629     338708      57265.3  StartEnd  ClimaAtmos:implicit_tendency_sgs_u₃!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geometry/ClimaA…
-      0.1          7713637         45     171414.2     164279.0     105260     357338      58521.2  StartEnd  ClimaAtmos:update_jacobian_sgs_u₃!(jacobian, Y, p, dtγ, t) /home/pbachant/calkit/clima-local-geomet…
-      0.1          6542574         20     327128.7     346158.5     200419     469247      90909.6  StartEnd  ClimaAtmos:horizontal_tracer_advection_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geo…
-      0.1          6105065         20     305253.3     337968.0     202929     410047      78657.5  StartEnd  ClimaAtmos:apply_tracer_hyperdiffusion_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geo…
-      0.0          5340681         45     118681.8     119140.0      57960     221919      43448.7  StartEnd  ClimaCore.MatrixFields:lazy_or_concrete_preconditioner(P_alg, P_cache, A) /home/pbachant/.julia/pac…
-      0.0          5329661         20     266483.0     295268.5     171569     398908      73213.6  StartEnd  ClimaAtmos:apply_hyperdiffusion_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geometry/C…
-      0.0          5036604         20     251830.2     266253.5     156569     389478      63062.1  StartEnd  ClimaAtmos:horizontal_dynamics_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geometry/Cl…
-      0.0          4434816         20     221740.8     242578.5     136800     311228      62182.0  StartEnd  ClimaAtmos:prep_tracer_hyperdiffusion_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geom…
-      0.0          4321088         20     216054.4     229733.5     135750     321379      56339.0  StartEnd  ClimaAtmos:prep_hyperdiffusion_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/clima-local-geometry/Cl…
-      0.0          4013890         40     100347.3     110144.5      55040     163909      27250.9  StartEnd  ClimaAtmos:set_cloud_fraction!(Y, p, ::MoistMicrophysics, ::QuadratureCloud) /home/pbachant/calkit/…
-      0.0          2274397          5     454879.4     475957.0     367318     503537      52460.6  StartEnd  ClimaDiagnostics:orchestrate_diagnostics(integrator, diagnostic_handler::DiagnosticsHandler) /home/…
-      0.0            16230         20        811.5        715.0        400       1400        316.0  StartEnd  ClimaAtmos:limiters_func!(Y, p, t, ref_Y) /home/pbachant/calkit/clima-local-geometry/ClimaAtmos.jl-…
+     27.9       3103528448          5  620705689.6  614648096.0  573284502  678492334   43133602.9  StartEnd  ClimaTimeSteppers:step_u!(integrator) /home/pbachant/.julia/packages/ClimaTimeSteppers/4EiRu/src/in…
+     13.5       1500715423         30   50023847.4   60063981.5    2911387  183838201   48806686.8  StartEnd  ClimaTimeSteppers:solve_newton!(alg::NewtonsMethod, cache, x, f!, j! = nothing, prepare_for_f! = no…
+     10.8       1196193023         65   18402969.6    5161886.0     625737   82263982   27239501.9  StartEnd  ClimaAtmos:constrain_state!(Y, p, t) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.jl-mod/src/pro…
+     10.8       1196026525         65   18400408.1    5160846.0     624327   82254262   27237457.3  StartEnd  ClimaAtmos:dss!(Y, p, t) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.jl-mod/src/prognostic_equa…
+      5.4        604270150         90    6714112.8    2734972.0     179349   32791165    8347856.5  StartEnd  ClimaAtmos:LinearAlgebra.ldiv!(ΔY::Fields.FieldVector, jacobian::Jacobian, R::Fields.FieldVector) /…
+      5.4        604162310         90    6712914.6    2733317.0     178659   32788675    8347852.6  StartEnd  ClimaCore.MatrixFields:field_matrix_solve!(solver::FieldMatrixSolver, x::Fields.FieldVector, A::Fie…
+      4.0        444488339       1800     246938.0     147404.0      15230   19144760     605477.5  StartEnd  ClimaCore.MatrixFields:Base.Broadcast.materialize!(dest::FieldNameDict, vector_or_matrix::FieldName…
+      4.0        442243006       1800     245690.6     146394.0      14740   19142650     605406.0  StartEnd  ClimaCore.MatrixFields:copyto_foreach!(dest::FieldNameDict, vector_or_matrix::FieldNameDict) /home/…
+      3.6        397527940         45    8833954.2    7437765.0    3879321   76838207   10717447.7  StartEnd  ClimaAtmos:update_jacobian!(jacobian, Y, p, dtγ, t) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos…
+      3.2        351264912         45    7805886.9    6468889.0    3403114   49976714    7182663.1  StartEnd  ClimaAtmos:implicit_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.jl-mod/s…
+      2.3        260125243         90    2890280.5    1932046.0    1071084   21007701    3200849.3  StartEnd  ClimaCore.MatrixFields:lazy_mul(A₂₂′::LazySchurComplement, x₂) /home/pbachant/.julia/packages/Clima…
+      2.1        229191716         20   11459585.8   10066312.0    8182752   30827725    4745463.0  StartEnd  ClimaAtmos:remaining_tendency!(Yₜ, Yₜ_lim, Y, p, t) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos…
+      1.6        177058583         20    8852929.2    7889438.0    5850482   27372131    4636293.2  StartEnd  ClimaAtmos:hyperdiffusion_tendency!(Yₜ, Yₜ_lim, Y, p, t) /home/pbachant/calkit/climaatmos-opt/Clima…
+      1.3        140680365        115    1223307.5    1088025.0     638857    7602155     936185.1  StartEnd  ClimaAtmos:set_implicit_precomputed_quantities!(Y, p, t) /home/pbachant/calkit/climaatmos-opt/Clima…
+      1.2        130508158         40    3262704.0    2432098.5    1941591   17239349    2457896.1  StartEnd  ClimaAtmos:set_explicit_precomputed_quantities!(Y, p, t) /home/pbachant/calkit/climaatmos-opt/Clima…
+      0.4         43437166         45     965270.4     170199.0     113969   35547312    5272772.3  StartEnd  ClimaAtmos:implicit_tendency_sgs_u₃!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.j…
+      0.3         38117267        540      70587.5      61339.5      29869     178369      26940.7  StartEnd  ClimaCoreCUDAExt:multiple_field_solve!(dev::ClimaComms.CUDADevice, cache, x, A, b, x1) /home/pbacha…
+      0.3         34481736        115     299841.2     215279.0     155779    6572179     595559.4  StartEnd  ClimaAtmos:set_prognostic_edmf_precomputed_quantities_environment!(Y, p, ᶠuₕ³, t) /home/pbachant/ca…
+      0.3         33921326        115     294968.1     215249.0     134010    1391744     306364.8  StartEnd  ClimaAtmos:set_prognostic_edmf_precomputed_quantities_draft!(Y, p, ᶠuₕ³, t) /home/pbachant/calkit/c…
+      0.3         30527928         20    1526396.4    1208474.5     935786    2535528     508047.9  StartEnd  ClimaAtmos:additional_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.jl-mod…
+      0.3         29365926         90     326288.1     324609.0     165839     585337     119058.6  StartEnd  ClimaCore.MatrixFields:apply_preconditioner(P_alg, P_cache, P, lazy_b) /home/pbachant/.julia/packag…
+      0.2         24258334         40     606458.3     509637.0     369259    1397163     222893.1  StartEnd  ClimaAtmos:set_prognostic_edmf_precomputed_quantities_explicit_closures!(Y, p, t) /home/pbachant/ca…
+      0.2         20019355          5    4003871.0    3251404.0    2931136    5389285    1235443.2  StartEnd  ClimaAtmos:edmfx_filter_callback!(integrator) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.jl-mo…
+      0.2         19942766          1   19942766.0   19942766.0   19942766   19942766          0.0  StartEnd  ClimaAtmos:ogw_model_callback!(integrator) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.jl-mod/s…
+      0.1          8723037         20     436151.8     382463.0     261829     738107     134507.5  StartEnd  ClimaAtmos:explicit_vertical_advection_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/…
+      0.1          7967915         45     177064.8     165320.0     108210     388048      64783.4  StartEnd  ClimaAtmos:update_jacobian_sgs_u₃!(jacobian, Y, p, dtγ, t) /home/pbachant/calkit/climaatmos-opt/Cli…
+      0.1          6555738         20     327786.9     268059.0     209179     489787      99609.3  StartEnd  ClimaAtmos:horizontal_tracer_advection_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/…
+      0.1          6265072         80      78313.4      69814.5      48970     195799      28456.6  StartEnd  ClimaAtmos:set_cloud_fraction!(Y, p, ::MoistMicrophysics, ::QuadratureCloud) /home/pbachant/calkit/…
+      0.1          6009222         20     300461.1     235279.0     191389     472017      95335.6  StartEnd  ClimaAtmos:apply_tracer_hyperdiffusion_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/…
+      0.0          5338677         20     266933.8     220124.0     163840     488318      90250.5  StartEnd  ClimaAtmos:apply_hyperdiffusion_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/ClimaAt…
+      0.0          4751550         20     237577.5     202459.0     154359     383358      69740.5  StartEnd  ClimaAtmos:horizontal_dynamics_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/ClimaAtm…
+      0.0          4744237         45     105427.5     109610.0      57760     184309      30401.5  StartEnd  ClimaCore.MatrixFields:lazy_or_concrete_preconditioner(P_alg, P_cache, A) /home/pbachant/.julia/pac…
+      0.0          4334319         20     216716.0     175964.0     124640     452987      80755.1  StartEnd  ClimaAtmos:prep_hyperdiffusion_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/ClimaAtm…
+      0.0          4271720         20     213586.0     168824.0     138489     374419      69954.1  StartEnd  ClimaAtmos:prep_tracer_hyperdiffusion_tendency!(Yₜ, Y, p, t) /home/pbachant/calkit/climaatmos-opt/C…
+      0.0          3849902          1    3849902.0    3849902.0    3849902    3849902          0.0  StartEnd  ClimaAtmos:nogw_model_callback!(integrator) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.jl-mod/…
+      0.0          2775076          5     555015.2     586867.0     396948     678477     110795.6  StartEnd  ClimaDiagnostics:orchestrate_diagnostics(integrator, diagnostic_handler::DiagnosticsHandler) /home/…
+      0.0            14700         20        735.0        655.0        410       1200        260.6  StartEnd  ClimaAtmos:limiters_func!(Y, p, t, ref_Y) /home/pbachant/calkit/climaatmos-opt/ClimaAtmos.jl-mod/sr…
 
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/osrt_sum.py]... 
 
@@ -383,304 +297,380 @@ Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/h
 
  Time (%)  Total Time (ns)  Num Calls   Avg (ns)     Med (ns)    Min (ns)    Max (ns)   StdDev (ns)           Name         
  --------  ---------------  ---------  -----------  -----------  ---------  ----------  ------------  ---------------------
-     54.5       7915734238         15  527715615.9  209950275.0   13783484  5252760354  1310559203.5  sem_wait             
-     45.3       6580482667         64  102820041.7  100979703.5  100127369   110975069     3380952.0  poll                 
-      0.1         18522610          3    6174203.3    3139173.0      37100    15346337     8093314.6  pthread_cond_wait    
-      0.1          9543050          5    1908610.0     149439.0      68010     9016521     3973629.8  open64               
-      0.0           489687          1     489687.0     489687.0     489687      489687           0.0  pthread_create       
-      0.0           206159          1     206159.0     206159.0     206159      206159           0.0  pthread_rwlock_rdlock
-      0.0           131879          5      26375.8      24170.0      21949       36720        5987.7  close                
-      0.0           124399          2      62199.5      62199.5      46370       78029       22386.3  ioctl                
-      0.0            66440          2      33220.0      33220.0      27420       39020        8202.4  pthread_rwlock_wrlock
-      0.0            49207          5       9841.4      10140.0       5810       11879        2441.9  read                 
-      0.0            13000          4       3250.0       2755.0       1070        6420        2558.8  epoll_pwait          
-      0.0            11000          3       3666.7       3600.0       2570        4830        1131.5  pthread_cond_signal  
-      0.0             9610          2       4805.0       4805.0       4520        5090         403.1  mmap64               
-      0.0             7080          2       3540.0       3540.0       2970        4110         806.1  mprotect             
+     55.1       7841133589         15  522742239.3  202356504.0   18350092  5200977786  1296391729.2  sem_wait             
+     44.5       6333154084         62  102147646.5  100433030.0  100131647   109626682     2772090.1  poll                 
+      0.3         42955447          5    8591089.4      87060.0      63229    42512959    18963020.5  pthread_rwlock_wrlock
+      0.1         16288583          5    3257716.6     660697.0      39140    12620250     5309982.2  pthread_cond_wait    
+      0.0          2680796         61      43947.5      33970.0       6400      171379       36910.8  ioctl                
+      0.0           939808          5     187961.6     168750.0     126400      309669       71040.9  open64               
+      0.0           546867          2     273433.5     273433.5     224029      322838       69868.5  pthread_create       
+      0.0           435297          4     108824.3      83464.5      29530      238838       90652.3  pthread_rwlock_rdlock
+      0.0           287330          5      57466.0      31660.0      25790      168020       61945.6  close                
+      0.0            58588          5      11717.6      11800.0       9230       14090        2383.7  read                 
+      0.0            49700          3      16566.7      12040.0      11040       26620        8720.8  mmap                 
+      0.0            26490          3       8830.0       6190.0       5450       14850        5226.6  munmap               
+      0.0            18409          4       4602.3       4535.0       3420        5919        1286.4  mprotect             
+      0.0            14440          4       3610.0       3615.0       3460        3750         137.4  mmap64               
+      0.0            13870          5       2774.0       2620.0       1990        3740         655.3  pthread_cond_signal  
+      0.0             2960          2       1480.0       1480.0       1050        1910         608.1  epoll_pwait          
 
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/cuda_api_sum.py]... 
 
  ** CUDA API Summary (cuda_api_sum):
 
- Time (%)  Total Time (ns)  Num Calls   Avg (ns)    Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Name         
- --------  ---------------  ---------  ----------  ----------  --------  --------  -----------  ----------------------
-     60.9       1396477126         85  16429142.7   5560080.0    472667  82651593   23181681.2  cuStreamSynchronize   
-     32.2        738552190      43865     16836.9      6250.0      2670  46546698     245622.3  cuLaunchKernel        
-      4.5        102733949     798786       128.6       120.0        59  11085270      12430.3  cuCtxGetId            
-      1.8         40955692     316295       129.5       130.0        79     44930        209.7  cuStreamGetCaptureInfo
-      0.7         15154858          1  15154858.0  15154858.0  15154858  15154858          0.0  cuEventSynchronize    
-      0.0           181118        257       704.7       670.0       510      2890        175.4  cuEventQuery          
-      0.0            60950          1     60950.0     60950.0     60950     60950          0.0  cuMemGetInfo_v2       
-      0.0            36690          2     18345.0     18345.0     11260     25430      10019.7  cuEventRecord         
-      0.0            21420          1     21420.0     21420.0     21420     21420          0.0  cuProfilerStart       
-      0.0            16290          2      8145.0      8145.0      1370     14920       9581.3  cuEventCreate         
-      0.0             8850          1      8850.0      8850.0      8850      8850          0.0  cuCtxSynchronize      
-      0.0             1180          1      1180.0      1180.0      1180      1180          0.0  cuCtxSetCurrent       
-      0.0              630          1       630.0       630.0       630       630          0.0  cuProfilerStop        
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)           Name         
+ --------  ---------------  ---------  ----------  ---------  --------  --------  -----------  ----------------------
+     64.1       1336568017         87  15362850.8  5288235.0      3070  82018323   24093234.0  cuStreamSynchronize   
+     28.8        601082668      46182     13015.5     5570.0      2620  17040270      89928.0  cuLaunchKernel        
+      4.7         97250368     842218       115.5      100.0        59   6144971       6701.2  cuCtxGetId            
+      2.0         42575472     333921       127.5      120.0        79   1520313       2636.0  cuStreamGetCaptureInfo
+      0.2          4186011         23    182000.5   189379.0     13780    591417     152749.3  cuMemAlloc_v2         
+      0.1          2360469          1   2360469.0  2360469.0   2360469   2360469          0.0  cuEventSynchronize    
+      0.0           124599        257       484.8      470.0       380      2540        145.9  cuEventQuery          
+      0.0            80150          1     80150.0    80150.0     80150     80150          0.0  cuMemcpyDtoHAsync_v2  
+      0.0            54230          2     27115.0    27115.0     15390     38840      16581.7  cuEventRecord         
+      0.0            48280          1     48280.0    48280.0     48280     48280          0.0  cuMemGetInfo_v2       
+      0.0            24590          1     24590.0    24590.0     24590     24590          0.0  cuProfilerStart       
+      0.0            21209          2     10604.5    10604.5      1550     19659      12805.0  cuEventCreate         
+      0.0             9280          1      9280.0     9280.0      9280      9280          0.0  cuCtxSynchronize      
+      0.0             2500          2      1250.0     1250.0       820      1680        608.1  cuCtxSetCurrent       
+      0.0              730          1       730.0      730.0       730       730          0.0  cuProfilerStop        
 
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/cuda_gpu_kern_sum.py]... 
+[ Info: Ran step! with CUDA 5 times in 3.156522 s, (631.304 ms per step)
 
  ** CUDA GPU Kernel Summary (cuda_gpu_kern_sum):
 
  Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)  StdDev (ns)                                                  Name                                                
  --------  ---------------  ---------  ---------  ---------  --------  --------  -----------  ----------------------------------------------------------------------------------------------------
-     11.5        360442244         40  9011056.1  8997917.5   8963022   9343021      76918.0  set_microphysics_tendency_cache__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1144       
-     10.4        326979954       7020    46578.3    37760.0     19648    262463      38485.5  foreach_FILE_ClimaCore_vVw9t_src_MatrixFields_field_name_set_jl_L81                                 
-      8.6        269329460        540   498758.3   647567.0     21184    730975     240866.0  run_field_matrix_solver__FILE_ClimaCore_vVw9t_src_MatrixFields_field_matrix_solver_jl_L352          
-      8.0        250107187        990   252633.5   220351.0    213631    447839      66578.9  run_field_matrix_solver__FILE_ClimaCore_vVw9t_src_MatrixFields_field_matrix_solver_jl_L354          
-      2.8         87772253       4185    20973.1    20640.0     20159     26240       1237.8  regridded_snapshot__FILE_ClimaUtilities_5ClV5_ext_DataHandlingExt_jl_L666                           
-      1.5         45607302        360   126686.9   123600.0    121376    156864       7262.1  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1344           
-      1.4         42443242        180   235795.8   232447.5    230464    285056      12751.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1377           
-      1.3         40238830        360   111774.5    21583.5     20896    328799     120399.7  _FILE_ClimaCore_vVw9t_src_MatrixFields_field_name_dict_jl_L993                                      
-      1.2         37225615        345   107900.3   109856.0     98336    124319       6299.5  set_velocity_quantities__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L444            
-      1.2         36580118        360   101611.4    28144.0     20031    659998     192368.9  copyto_foreach__NVTX                                                                                
-      1.1         35500566        920    38587.6    32720.0     24224     82304      14709.5  set_implicit_precomputed_quantities__NVTX                                                           
-      1.0         30878086        240   128658.7   130319.5    121408    148576       5711.6  horizontal_tracer_advection_tendency__NVTX                                                          
-      1.0         30708641        460    66757.9    73807.5     47808     91615      10601.7  set_prognostic_edmf_precomputed_quantities_environment__NVTX                                        
-      1.0         30569763        180   169832.0   167456.0    166336    204576       9027.6  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1352           
-      1.0         29912679        180   166181.5   159999.5    155520    219615      14466.8  edmfx_vertical_diffusion_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closur…
-      0.9         28562854        230   124186.3    97247.5     21024    329216     105482.4  step_u__FILE_ClimaTimeSteppers_SJk7o_src_solvers_imex_ark_jl_L88                                    
-      0.8         25315491        405    62507.4    66848.0     53376     84672       7942.2  materialize__FILE_ClimaCore_vVw9t_src_Operators_common_jl_L58                                       
-      0.8         24389358        760    32091.3    22368.0      6816    128319      29665.8  set_prognostic_edmf_precomputed_quantities_explicit_closures__NVTX                                  
-      0.8         24097711        180   133876.2   134671.5     31584    247487     100724.6  _FILE_ClimaTimeSteppers_SJk7o_src_solvers_imex_ark_jl_L223                                          
-      0.7         22411439        180   124508.0   125760.0    119551    137599       3910.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L650            
-      0.7         22344813        225    99310.3    98624.0     91968    118079       4717.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.7         21551161        370    58246.4    13663.5      8512    286976      89991.9  weighted_dss_internal__FILE_ClimaCore_vVw9t_src_Spaces_dss_jl_L251                                  
-      0.7         21303702        180   118353.9   116928.0    116415    138944       5360.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L128                            
-      0.7         21234102        180   117967.2   117088.0    110368    142560       6101.3  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1030           
-      0.6         20201078        220    91823.1    80431.5     21248    331839      68370.5  explicit_vertical_advection_tendency__NVTX                                                          
-      0.6         19968313        225    88748.1    88000.0     82655    105024       4120.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.6         19842968        270    73492.5    72447.5     71904     88640       3847.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.6         19686454        805    24455.2    22400.0     20992     34720       3272.6  set_prognostic_edmf_precomputed_quantities_draft__NVTX                                              
-      0.6         19542877        200    97714.4    96288.0     92928    127296       7018.1  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L64                
-      0.6         19467485        340    57257.3    33839.5     20224    342783      64560.9  additional_tendency__NVTX                                                                           
-      0.6         19408319        180   107824.0   108448.0     25823    206400      81874.3  solve_newton__NVTX                                                                                  
-      0.6         19263925        180   107021.8   105664.0    104927    126688       5169.4  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L170
-      0.6         19211353        180   106729.7   105472.0    104512    125664       4911.1  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1356           
-      0.6         18853206        180   104740.0   103744.0    100608    123743       4761.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L116                            
-      0.6         18729143        180   104050.8   102495.5    101920    126752       5858.5  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1370           
-      0.6         18709180        180   103939.9   102655.0    100383    126432       5679.2  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1038           
-      0.6         17844026        225    79306.8    78656.0     75328     93088       3448.7  updraft_sedimentation__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L573            
-      0.6         17318458        180    96213.7    95008.0     92735    116800       5261.4  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1049           
-      0.5         17196032        810    21229.7    20800.0     20512     26784       1260.0  _FILE_ClimaCore_vVw9t_src_MatrixFields_field_matrix_solver_jl_L286                                  
-      0.5         16993534        180    94408.5    93152.0     92288    111584       4256.5  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
-      0.5         16380134        270    60667.2    60032.0     58464     72288       3003.9  edmfx_sgs_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl…
-      0.5         16306170        180    90589.8    89248.0     88384    110208       5060.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.5         16198367        180    89990.9    88608.0     87872    109472       5052.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.5         15486819         45   344151.5   338847.0    337887    417407      18229.7  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
-      0.5         15146526        370    40936.6    20064.0     16160    131008      39989.1  weighted_dss_internal__FILE_ClimaCore_vVw9t_src_Spaces_dss_jl_L242                                  
-      0.5         15029790         90   166997.7   161152.0    156287    219360      14129.1  edmfx_vertical_diffusion_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closur…
-      0.5         14857861        180    82543.7    81760.0     76256    100384       4491.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1296           
-      0.5         14597155        120   121643.0   120480.0    119776    139200       4004.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_remaining_tendency_jl_L209                         
-      0.5         14513925        370    39226.8    16959.0     14048    134335      42823.5  weighted_dss_internal__FILE_ClimaCore_vVw9t_src_Spaces_dss_jl_L257                                  
-      0.5         14306340        675    21194.6    20800.0     20447     26464       1248.6  compute_lwp__FILE_ClimaAtmos_jl_mod_src_diagnostics_core_diagnostics_jl_L1278                       
-      0.5         14146943        190    74457.6    33087.5     32608    207871      50950.9  horizontal_dynamics_tendency__NVTX                                                                  
-      0.5         14102714        180    78348.4    77184.0     76704     95423       4432.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1303           
-      0.4         13863681        225    61616.4    60896.0     59872     74016       3151.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.4         13475079        120   112292.3    85007.5     21120    263199      89119.6  prep_hyperdiffusion_tendency__NVTX                                                                  
-      0.4         13314658        180    73970.3    73888.0     73120     76448        552.4  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L76                             
-      0.4         12895966        180    71644.3    70944.0     69824     83040       2878.4  updraft_sedimentation__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L577            
-      0.4         12804036        160    80025.2    60464.0     22016    256320      68228.1  apply_hyperdiffusion_tendency__NVTX                                                                 
-      0.4         12307655         40   307691.4   306895.5    288576    371775      16348.6  set_microphysics_tendency_cache__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1150       
-      0.4         12266600        180    68147.8    67167.5     66624     82976       3828.9  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L152
-      0.4         12010694        180    66726.1    65920.0     65216     78720       3045.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.4         11734569        180    65192.1    64224.0     63904     79168       3654.6  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L161
-      0.4         11448587        140    81775.6    78832.0     77120    109023       6562.3  apply_tracer_hyperdiffusion_tendency__NVTX                                                          
-      0.4         11024234        180    61245.7    60160.0     59488     73696       3085.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.4         10983757        180    61020.9    60832.0     60032     63424        676.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L112                            
-      0.3         10546859        120    87890.5    86671.5     84768    103072       3302.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_hyperdiffusion_jl_L310                             
-      0.3         10151526        360    28198.7    22592.0     20448     55264      11057.3  implicit_tendency_sgs_u___NVTX                                                                      
-      0.3         10137198        180    56317.8    55520.0     55136     67712       2996.5  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr_jl_L522                            
-      0.3         10124038        345    29345.0    29344.0     28640     32928        440.2  set_velocity_quantities__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L443            
-      0.3          9943399         80   124292.5   123248.0    111583    152032       6418.9  set_microphysics_tendency_cache__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1118       
-      0.3          9618897        260    36995.8    37376.0      9760     77856      27151.9  remaining_tendency__NVTX                                                                            
-      0.3          9597165         90   106635.2   105280.0    104864    126432       5203.9  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L88 
-      0.3          9440368         80   118004.6   115616.0    113664    153023       7638.6  set_covariance_cache__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud_fracti…
-      0.3          9198188        135    68134.7    67167.0     66176     82751       3791.5  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
-      0.3          9068780        270    33588.1    33728.0     29824     37536       1320.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.3          8164946        120    68041.2    66079.5     65728     80512       3864.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L135                               
-      0.3          8121265         90    90236.3    89568.0     87584    100896       2719.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.3          8026262        345    23264.5    22880.0     22208     28480       1240.1  set_velocity_quantities__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L442            
-      0.3          8007827         45   177951.7   171904.0    167776    234048      14835.0  edmfx_vertical_diffusion_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closur…
-      0.3          7956594        360    22101.7    21856.0     21024     27552       1322.4  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L471                                  
-      0.3          7856560        180    43647.6    43407.5     42208     48192       1169.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L644            
-      0.3          7838131        360    21772.6    21488.0     20928     26976       1276.4  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L72                             
-      0.2          7735280        100    77352.8    75903.5     75392     91583       3792.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L143                               
-      0.2          7657521        340    22522.1    22384.0     21280     27904       1266.1  set_precipitation_surface_fluxes__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1452      
-      0.2          7560086        180    42000.5    41664.0     40864     47392       1344.6  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L637            
-      0.2          7387405        120    61561.7    60960.0     59776     68768       2030.5  prep_tracer_hyperdiffusion_tendency__NVTX                                                           
-      0.2          7167636        100    71676.4    70832.0     69567     78976       2144.6  _FILE_ClimaAtmos_jl_mod_src_utils_variable_manipulations_jl_L179                                    
-      0.2          7075987        225    31448.8    31008.0     30656     37664       1588.3  vertical_advection_of_water_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advecti…
-      0.2          6853199        180    38073.3    37504.0     37280     46464       2168.2  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L66                             
-      0.2          6662870        225    29612.8    29536.0     29088     31616        396.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.2          6565685        180    36476.0    35935.5     35616     44352       2000.5  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L78                             
-      0.2          6528151        315    20724.3    20416.0     20032     25568       1213.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.2          6300848         90    70009.4    70112.0     67104     81984       3171.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.2          6206904        135    45977.1    45344.0     44672     54720       2222.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.2          5981943         45   132932.1   130880.0    130624    161951       7732.9  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
-      0.2          5904824        270    21869.7    21568.0     21024     27071       1273.5  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
-      0.2          5876788         40   146919.7   145279.5    144671    178656       7322.5  set_microphysics_tendency_cache__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1161       
-      0.2          5738294        180    31879.4    31647.5     31136     35648        985.3  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1026           
-      0.2          5676081        225    25227.0    24864.0     24256     30784       1299.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.2          5619506         45   124877.9   126304.0    109152    148736       9354.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.2          5559379         80    69492.2    71296.0     21536    143936      48029.3  set_explicit_precomputed_quantities__NVTX                                                           
-      0.2          5538806         40   138470.1   138143.5    130752    166528       6596.5  compute__T_____FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud_fraction_jl_L…
-      0.2          5531219        240    23046.7    22912.0     21599     28288       1322.5  _mixing_length_FILE_ClimaAtmos_jl_mod_src_prognostic_equations_eddy_diffusion_closures_jl_L426      
-      0.2          5516341         90    61292.7    60799.5     59615     72960       3023.5  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.2          5240850         45   116463.3   115552.0    110592    135583       4885.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.2          5149661        115    44779.7    44256.0     43520     53312       2091.4  set_sgs__u___FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L451                        
-      0.2          5116662         45   113703.6   111967.0    111551    138335       6586.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.2          4939096         45   109757.7   106079.0     92288    173632      18464.7  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
-      0.2          4938232        180    27434.6    27264.0     25632     32352       1226.2  updraft_sedimentation__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L575            
-      0.1          4674970         45   103888.2   102816.0    101984    119392       3914.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          4657401         45   103497.8   103456.0     92096    123552       5899.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          4617656         40   115441.4   114175.5    113760    140735       5783.8  set_microphysics_tendency_cache__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1125       
-      0.1          4610363         45   102452.5   101696.0     95392    121984       5093.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          4462931         45    99176.2    98079.0     92928    119392       5141.9  edmfx_sgs_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl…
-      0.1          4438807        180    24660.0    24480.0     22656     29856       1291.6  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L141
-      0.1          4388697         45    97526.6    96928.0     88160    114111       4643.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          4323352         45    96074.5    95871.0     88512    115744       5525.4  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
-      0.1          4266679        160    26666.7    26336.0     26080     32799       1373.3  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L177           
-      0.1          4212185         45    93604.1    92351.0     91776    112192       4905.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          4185300        180    23251.7    22912.0     22304     28416       1321.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L634            
-      0.1          4163255         45    92516.8    91519.0     90367    105983       3539.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          4157592         45    92390.9    91488.0     88704    109024       4245.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          4021404         45    89364.5    86400.0     83040    120768       8260.8  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
-      0.1          4019802        180    22332.2    21984.0     21536     27552       1292.9  updraft_sedimentation__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L576            
-      0.1          3999926         45    88887.2    87776.0     83008    106688       4612.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3970999        180    22061.1    21744.0     21504     26656       1195.5  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L113                            
-      0.1          3952183        180    21956.6    21632.0     21312     26752       1220.2  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L126                            
-      0.1          3918330         45    87074.0    86272.0     84992     99584       3340.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3868662         45    85970.3    85216.0     80479    102624       4310.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3773721         45    83860.5    82720.0     82016    100736       4494.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3704661         45    82325.8    81215.0     80768     98048       4152.8  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
-      0.1          3657940         45    81287.6    80063.0     79680     98848       4714.1  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L80 
-      0.1          3640825         45    80907.2    80543.0     74655     97631       4643.4  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L109
-      0.1          3625753         45    80572.3    78816.0     76063    104479       6118.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3625722        160    22660.8    22400.0     21664     28000       1177.0  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L192           
-      0.1          3603866        160    22524.2    22304.0     21824     27680       1153.9  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L191           
-      0.1          3595701        160    22473.1    22208.0     21856     27488       1115.1  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L184           
-      0.1          3593118         40    89827.9    89392.0     88352     98848       2117.4  update_surface_conditions__FILE_ClimaAtmos_jl_mod_src_surface_conditions_surface_conditions_jl_L41  
-      0.1          3540123        160    22125.8    21856.0     21152     27424       1184.9  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L196           
-      0.1          3465433        160    21659.0    21408.0     20992     26687       1112.7  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L197           
-      0.1          3426204         40    85655.1    84608.0     84031    105695       4473.2  set_cloud_fraction__NVTX                                                                            
-      0.1          3395422         90    37726.9    37296.0     36640     45088       1869.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3395033         45    75445.2    74560.0     74176     88255       3366.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3393564         40    84839.1    83872.0     83296    103552       4346.6  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L207           
-      0.1          3380759         40    84519.0    83584.0     82815    102944       4290.6  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L171           
-      0.1          3370521         45    74900.5    73951.0     73568     88832       3716.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3362233         45    74716.3    73920.0     73408     85920       2933.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3361757         40    84043.9    83072.0     82656    102496       4278.1  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L243           
-      0.1          3358616         40    83965.4    83040.0     82272    102336       4276.2  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L280           
-      0.1          3273179         45    72737.3    73056.0     68992     75999       1710.0  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
-      0.1          3268026         45    72622.8    71552.0     71072     88095       4080.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3246589         45    72146.4    71072.0     70816     87328       4015.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3208473         45    71299.4    70239.0     69824     86336       4067.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          3177497         40    79437.4    78496.0     77728     96352       3919.9  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L315           
-      0.1          3019768         90    33553.0    33184.0     32671     39424       1516.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2986332         45    66362.9    65536.0     65024     77952       3065.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2902234         45    64494.1    63903.0     62528     78304       3687.3  edmfx_entr_detr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr_jl_L512   
-      0.1          2868089         45    63735.3    64352.0     55968     75487       4019.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2851961        135    21125.6    20800.0     20544     25920       1241.9  lazy_mul_NVTX                                                                                       
-      0.1          2850778         45    63350.6    62464.0     61984     76832       3590.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2695992         90    29955.5    29536.0     29152     36160       1631.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2647001         45    58822.2    58176.0     55552     70080       2992.5  edmfx_entr_detr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr_jl_L514   
-      0.1          2646778         90    29408.6    28960.0     28672     35808       1673.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2503613         45    55635.8    54816.0     54399     66400       2850.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2456794         45    54595.4    53856.0     53568     64576       2653.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2437214         45    54160.3    53664.0     53248     61440       1907.4  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
-      0.1          2412504         45    53611.2    54015.0     47296     62591       3559.0  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L523            
-      0.1          2343036         45    52067.5    50464.0     47359     75743       5924.6  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
-      0.1          2327421         45    51720.5    51072.0     50624     60864       2427.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2324956         45    51665.7    51008.0     50496     60320       2316.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2277753         45    50616.7    49952.0     49184     59871       2469.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2251901         45    50042.2    49471.0     49152     57984       2121.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2223193         45    49404.3    48960.0     48288     55840       1777.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2175964         45    48354.8    48736.0     46240     51936       1686.5  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2175867         90    24176.3    24000.0     23232     26752        768.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          2120411         45    47120.2    46560.0     46080     55744       2288.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          1978779         90    21986.4    21727.5     20896     26592       1207.4  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L64 
-      0.1          1975868         90    21954.1    21632.0     21408     26784       1221.0  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L78 
-      0.1          1957467         45    43499.3    42847.0     42591     52832       2483.2  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
-      0.1          1950719         90    21674.7    21312.0     21184     26688       1276.5  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          1923583         45    42746.3    42336.0     41664     45056        991.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          1910587         45    42457.5    41984.0     41728     49152       1812.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          1901086         40    47527.2    46960.0     46848     58272       2449.8  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L170           
-      0.1          1898718         45    42193.7    42016.0     41279     44768        753.9  edmfx_sgs_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl…
-      0.1          1898458         40    47461.4    46912.0     46752     58240       2436.3  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L279           
-      0.1          1897723         40    47443.1    46880.0     46751     57984       2421.8  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L242           
-      0.1          1896570         40    47414.3    46863.5     46655     57952       2418.5  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L206           
-      0.1          1858459         90    20649.5    20512.0     19936     25504       1241.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          1841403         80    23017.5    22640.0     21920     28224       1184.1  microphysics_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_tendency_jl…
-      0.1          1790494         80    22381.2    22144.0     21536     27168       1114.0  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L235           
-      0.1          1765979         80    22074.7    21840.0     21440     27008       1089.1  microphysics_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_tendency_jl…
-      0.1          1735643         45    38569.8    38304.0     35552     46880       2134.8  edmfx_sgs_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl…
-      0.1          1726941         80    21586.8    21312.0     21120     26496       1082.7  microphysics_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_tendency_jl…
-      0.1          1725312         45    38340.3    38432.0     33920     45760       2309.8  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L94 
-      0.1          1711038         40    42775.9    42400.0     42176     49888       1635.0  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L326           
-      0.1          1693755         45    37639.0    37152.0     36832     44640       1869.7  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
-      0.1          1682878         45    37397.3    37024.0     36576     42752       1427.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.1          1629019        230     7082.7     7008.0      6527      8736        390.2  set_velocity_at_surface__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L403            
-      0.1          1612604         45    35835.6    35424.0     34848     42336       1680.4  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
-      0.0          1548349         45    34407.8    34272.0     33280     37375        818.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.0          1515486         40    37887.2    37536.0     37119     45248       1684.9  _apply_edmf_cloud_weighting__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud…
-      0.0          1452894         45    32286.5    30496.0     28128     51392       5187.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.0          1415806         45    31462.4    31103.0     30784     36384       1234.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.0          1388764         45    30861.4    30400.0     30208     37312       1724.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.0          1368992         20    68449.6    67728.0     66944     82208       3259.3  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L105               
-      0.0          1359132         45    30202.9    29952.0     28127     36352       1535.4  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L65 
-      0.0          1272190         45    28270.9    27712.0     25920     40448       2908.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.0          1249179         20    62458.9    61856.0     61696     73568       2618.4  surface_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L114         
-      0.0          1229437         45    27320.8    26784.0     26528     33216       1513.7  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
-      0.0          1201657         45    26703.5    26496.0     26335     29504        723.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.0          1196029         45    26578.4    26240.0     25952     31584       1344.5  copy_FILE_ClimaCore_vVw9t_src_Fields_broadcast_jl_L119                                              
-      0.0          1195839         45    26574.2    26208.0     25888     31808       1412.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.0          1182334         45    26274.1    25664.0     24352     36768       2495.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.0          1109179         80    13864.7    14591.5     12032     16832       1603.4  set_precipitation_surface_fluxes__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1473      
-      0.0          1088829         45    24196.2    23808.0     23615     29568       1404.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
-      0.0          1068061         45    23734.7    23296.0     22880     28288       1271.8  edmfx_entr_detr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr_jl_L510   
-      0.0          1015903        115     8833.9     8704.0      8544     10560        425.5  set_velocity_at_surface__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L399            
-      0.0           970302         20    48515.1    47104.0     45632     56864       3126.0  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L81                
-      0.0           945053         20    47252.7    46816.0     46208     56896       2285.6  surface_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L123         
-      0.0           932830         45    20729.6    20384.0     20320     25248       1211.3  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
-      0.0           920639         45    20458.6    20160.0     20000     25024       1215.5  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
-      0.0           916734         40    22918.3    22592.0     22304     27744       1139.1  _apply_edmf_cloud_weighting__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud…
-      0.0           910303         40    22757.6    22496.0     22336     27616       1114.5  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L324           
-      0.0           904094         40    22602.3    22352.0     21856     27136       1082.1  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L272           
-      0.0           897886         45    19953.0    19744.0     19232     23200        793.9  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
-      0.0           896028         45    19911.7    19712.0     19328     22111        598.8  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
-      0.0           872859         40    21821.5    21568.0     21376     26592       1085.0  set_covariance_cache__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud_fracti…
-      0.0           856223         40    21405.6    21184.0     20864     26272       1143.1  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L199           
-      0.0           845918         40    21148.0    20879.5     20768     25824       1082.6  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L258           
-      0.0           845855         45    18796.8    18688.0     18143     21024        619.7  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
-      0.0           844895         40    21122.4    20832.0     20704     25984       1124.1  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L221           
-      0.0           843934         40    21098.3    20832.0     20704     25856       1100.8  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L296           
-      0.0           832862         40    20821.5    20576.0     20352     25472       1072.6  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L185           
-      0.0           815519         20    40775.9    40720.0     38912     46720       1601.0  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L86                
-      0.0           781664         20    39083.2    38656.0     38496     47296       1935.9  surface_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L119         
-      0.0           747295         45    16606.6    16512.0     15744     19136        599.6  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
-      0.0           745117         20    37255.8    36064.0     34880     42976       2565.1  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L79                
-      0.0           714432         25    28577.3    28256.0     27392     30272        863.2  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L265   
-      0.0           602269         20    30113.5    29920.0     29120     33120        825.2  radiation_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_radiation_radiation_jl_L435 
-      0.0           588669        115     5118.9     5056.0      5024      6272        290.9  set_velocity_at_top__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L426                
-      0.0           540606         20    27030.3    26896.0     26336     28992        641.2  radiation_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_radiation_radiation_jl_L426 
-      0.0           368736         45     8194.1     8096.0      7936      9632        378.7  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
-      0.0           336896         15    22459.7    22144.0     21984     27168       1305.4  initialize_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_implicit_tendency_sgs_u…
-      0.0           332928         40     8323.2     8224.0      8128      9952        383.6  set_precipitation_surface_fluxes__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1475      
-      0.0           296479         80     3706.0     3648.0      3616      4640        188.5  copyto__FILE_ClimaCore_vVw9t_src_Fields_broadcast_jl_L501                                           
-      0.0           153599          5    30719.8    30688.0     30624     30847         93.0  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L249   
-      0.0           138240          5    27648.0    27744.0     27168     28320        478.9  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L253   
-      0.0           130144          5    26028.8    26016.0     25152     26912        639.4  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L263   
-      0.0           107360          5    21472.0    21472.0     21440     21536         39.2  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L244   
-      0.0           105215          5    21043.0    21055.0     20960     21088         53.5  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L259   
-      0.0           103040          5    20608.0    20608.0     20512     20768         98.6  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L245   
-      0.0            93536         20     4676.8     4608.0      4544      5440        194.3  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L130                               
+     11.3        327435249       7020    46643.2    37760.0     19680    265856      38621.9  foreach_FILE_ClimaCore_vVw9t_src_MatrixFields_field_name_set_jl_L81                                 
+      9.4        270879385        540   501628.5   650496.0     21152    734144     242207.3  run_field_matrix_solver__FILE_ClimaCore_vVw9t_src_MatrixFields_field_matrix_solver_jl_L352          
+      8.7        252268831        990   254817.0   222208.0    217376    446656      66572.6  run_field_matrix_solver__FILE_ClimaCore_vVw9t_src_MatrixFields_field_matrix_solver_jl_L354          
+      3.1         90367566       4305    20991.3    20640.0     20160     26400       1224.7  set_covariance_cache_and_cloud_fraction__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microp…
+      1.6         45624689        360   126735.2   123552.0    121504    155936       7229.3  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1344           
+      1.5         42483480        180   236019.3   232672.0    230848    285824      12696.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1377           
+      1.4         40294870        360   111930.2    21744.0     20832    329248     120557.7  _FILE_ClimaCore_vVw9t_src_MatrixFields_field_name_dict_jl_L993                                      
+      1.3         37229756        345   107912.3   109376.0     98016    123744       6644.9  set_velocity_quantities__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L451            
+      1.3         36514298        360   101428.6    28064.0     20064    658496     191982.0  copyto_foreach__NVTX                                                                                
+      1.2         35740222        920    38848.1    32864.0     24352     82656      14850.0  set_implicit_precomputed_quantities__NVTX                                                           
+      1.1         30925306        460    67228.9    73856.0     47712     91488      11016.8  set_prognostic_edmf_precomputed_quantities_environment__NVTX                                        
+      1.1         30883163        240   128679.8   130320.0    121536    148448       5791.9  horizontal_tracer_advection_tendency__NVTX                                                          
+      1.1         30644985        180   170249.9   167904.0    166336    205568       9046.4  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1352           
+      1.0         29893400        180   166074.4   159584.0    155456    218112      14420.3  edmfx_vertical_diffusion_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closur…
+      1.0         29883606        240   124515.0   121951.5    119008    162816       7859.5  set_covariance_cache__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud_fracti…
+      1.0         28688082        230   124730.8    97552.0     20992    325376     106051.7  step_u__FILE_ClimaTimeSteppers_4EiRu_src_solvers_imex_ark_jl_L122                                   
+      0.9         25311863        405    62498.4    66816.0     53248     84672       7959.4  materialize__FILE_ClimaCore_vVw9t_src_Operators_common_jl_L58                                       
+      0.8         24151257        180   134173.6   134832.0     31584    248032     101026.2  _FILE_ClimaTimeSteppers_4EiRu_src_solvers_imex_ark_jl_L316                                          
+      0.8         22484731        180   124915.2   125424.0    120448    136896       3307.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L650            
+      0.8         22331865        225    99252.7    98656.0     92032    117504       4663.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.8         21719966        370    58702.6    13600.0      8640    286304      90641.1  weighted_dss_internal__FILE_ClimaCore_vVw9t_src_Spaces_dss_jl_L251                                  
+      0.7         21405629        720    29730.0    22240.0      6816    126528      25913.7  set_prognostic_edmf_precomputed_quantities_explicit_closures__NVTX                                  
+      0.7         21304219        180   118356.8   116912.0    116288    138912       5350.2  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L128                            
+      0.7         21244890        180   118027.2   117104.0    110400    142496       6084.3  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1030           
+      0.7         21021436        200   105107.2   101584.0     99008    137504       7773.0  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L64                
+      0.7         20364986        220    92568.1    80624.0     21216    330240      69213.2  explicit_vertical_advection_tendency__NVTX                                                          
+      0.7         19914012        225    88506.7    87744.0     82304    104576       4112.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.7         19833978        270    73459.2    72432.0     71904     88192       3819.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.7         19805854        805    24603.5    22272.0     20992     34848       3386.0  set_prognostic_edmf_precomputed_quantities_draft__NVTX                                              
+      0.7         19650648        340    57796.0    33824.0     20224    343008      65126.4  additional_tendency__NVTX                                                                           
+      0.7         19439796        180   107998.9   108175.5     25472    206592      82247.5  solve_newton__NVTX                                                                                  
+      0.7         19249438        180   106941.3   105552.0    105024    127040       5162.8  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L170
+      0.7         19195132        180   106639.6   105408.0    104416    125376       4860.0  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1356           
+      0.7         18867003        180   104816.7   103808.0    100608    123776       4764.4  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L116                            
+      0.7         18843838        180   104688.0   103360.0    100800    127040       5688.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1038           
+      0.6         18685691        180   103809.4   102240.0    101728    125855       5777.0  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1370           
+      0.6         17972635        800    22465.8    22080.0     21376     27648       1406.0  set_precipitation_surface_fluxes__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1487      
+      0.6         17833595        225    79260.4    78688.0     75488     93280       3459.3  updraft_sedimentation__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L574            
+      0.6         17447962        810    21540.7    20864.0     20512     26528       1661.3  _FILE_ClimaCore_vVw9t_src_MatrixFields_field_matrix_solver_jl_L286                                  
+      0.6         17328762        180    96270.9    95040.0     92703    116736       5222.6  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1049           
+      0.6         16982906        180    94349.5    93280.0     92224    110976       4191.4  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
+      0.6         16631198        120   138593.3   138224.0    131135    166464       6506.8  compute__T_____FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud_fraction_jl_L…
+      0.6         16393532        270    60716.8    60032.0     58848     72096       2944.0  edmfx_sgs_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl…
+      0.6         16342429          2  8171214.5  8171214.5   8138367   8204062      46453.4  non_orographic_gravity_wave_forcing_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wav…
+      0.6         16292346        180    90513.0    89088.0     88352    110560       5104.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.6         16201662        180    90009.2    88672.0     87904    109792       5023.5  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.5         15484605         45   344102.3   338880.0    338112    415712      18022.8  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
+      0.5         15240603        370    41190.8    20096.0     16224    130976      40147.3  weighted_dss_internal__FILE_ClimaCore_vVw9t_src_Spaces_dss_jl_L242                                  
+      0.5         15017244         90   166858.3   160720.0    156192    218976      14098.5  edmfx_vertical_diffusion_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closur…
+      0.5         14857946        180    82544.1    81760.0     76128    100672       4502.5  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1296           
+      0.5         14710750        120   122589.6   120624.0    119840    140127       5464.0  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_remaining_tendency_jl_L209                         
+      0.5         14592408        370    39438.9    17024.0     13984    135712      42912.9  weighted_dss_internal__FILE_ClimaCore_vVw9t_src_Spaces_dss_jl_L257                                  
+      0.5         14416764        679    21232.3    20800.0     20511     33216       1358.7  non_orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_g…
+      0.5         14134973        190    74394.6    33056.0     32640    206688      50919.7  horizontal_dynamics_tendency__NVTX                                                                  
+      0.5         14108158        180    78378.7    77216.0     76608     95296       4392.9  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1303           
+      0.5         13861920        225    61608.5    60864.0     59680     73568       3135.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.5         13546043        120   112883.7    85536.0     21088    262016      89559.9  prep_hyperdiffusion_tendency__NVTX                                                                  
+      0.5         13306653        180    73925.9    73792.0     72991     76224        531.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L76                             
+      0.4         12950366        180    71946.5    71263.5     69952     83072       2850.7  updraft_sedimentation__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L578            
+      0.4         12914302        160    80714.4    60288.0     22112    258432      68777.8  apply_hyperdiffusion_tendency__NVTX                                                                 
+      0.4         12861722         40   321543.0   317936.0    315744    392703      16321.5  set_microphysics_tendency_cache__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1182       
+      0.4         12329853        180    68499.2    67488.0     66688     83328       3834.3  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L152
+      0.4         12003388        180    66685.5    65887.5     65216     78816       3003.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.4         11730816        180    65171.2    64192.0     63840     78848       3614.4  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L161
+      0.4         11701532        120    97512.8    96752.0     94496    116352       4287.7  picard_step__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud_fraction_jl_L65 
+      0.4         11537599        140    82411.4    78848.0     77376    109504       7170.8  apply_tracer_hyperdiffusion_tendency__NVTX                                                          
+      0.4         11041881        180    61343.8    60256.0     59712     73120       3015.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.4         10982077        180    61011.5    60864.0     60160     63936        665.2  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L112                            
+      0.4         10883358        360    30231.5    30400.0     25568     34976       1605.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1426           
+      0.4         10656894        120    88807.4    87040.0     84672    103456       4118.1  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_hyperdiffusion_jl_L310                             
+      0.4         10236381        360    28434.4    23072.0     20352     54688      10826.7  implicit_tendency_sgs_u___NVTX                                                                      
+      0.4         10168384        345    29473.6    29472.0     28800     32128        397.4  set_velocity_quantities__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L450            
+      0.3         10119550        180    56219.7    55408.0     55104     67744       2999.6  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr_jl_L522                            
+      0.3         10035358         80   125442.0   125408.0    111584    154400       6621.1  set_microphysics_tendency_cache__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1153       
+      0.3          9634812        260    37057.0    37280.0      9760     77568      27186.6  remaining_tendency__NVTX                                                                            
+      0.3          9605724         90   106730.3   105391.5    104896    126176       5126.7  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L88 
+      0.3          9202459        135    68166.4    67200.0     66432     82720       3776.6  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
+      0.3          8986654        270    33283.9    33344.0     29184     37472       1362.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.3          8823003         40   220575.1   218144.0    216000    268160      11050.5  set_microphysics_tendency_cache__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1198       
+      0.3          8254368        120    68786.4    66144.0     65664     83168       4814.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L135                               
+      0.3          8054814        345    23347.3    22880.0     21984     28896       1460.7  set_velocity_quantities__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L449            
+      0.3          8010174         45   178003.9   171264.0    168160    234272      14809.0  edmfx_vertical_diffusion_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closur…
+      0.3          7992990         90    88811.0    88208.0     86208     99968       2754.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.3          7972799        360    22146.7    21952.0     20992     27264       1291.6  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L472                                  
+      0.3          7839679        360    21776.9    21472.0     20928     26720       1249.4  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L72                             
+      0.3          7819807        180    43443.4    43168.0     42112     48224       1226.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L644            
+      0.3          7808702        100    78087.0    75888.0     75232     94336       4930.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L143                               
+      0.3          7533920        180    41855.1    41504.0     40608     47552       1402.2  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L637            
+      0.3          7363135        120    61359.5    60624.0     59552     68096       2168.5  prep_tracer_hyperdiffusion_tendency__NVTX                                                           
+      0.3          7341694        320    22942.8    22752.0     21600     28064       1221.5  _mixing_length_FILE_ClimaAtmos_jl_mod_src_prognostic_equations_eddy_diffusion_closures_jl_L427      
+      0.2          7153822        100    71538.2    70656.0     69216     78816       2077.4  _FILE_ClimaAtmos_jl_mod_src_utils_variable_manipulations_jl_L179                                    
+      0.2          7075901        225    31448.4    31040.0     30688     37536       1569.5  vertical_advection_of_water_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advecti…
+      0.2          6843776        180    38021.0    37456.0     37216     46112       2127.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L66                             
+      0.2          6659838        225    29599.3    29504.0     29088     31040        375.5  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          6571232        180    36506.8    35936.0     35584     44288       1984.4  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L78                             
+      0.2          6529024        315    20727.1    20416.0     20032     25408       1203.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          6283263         90    69814.0    69904.0     66752     81088       3071.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          6196510         80    77456.4    76544.0     75840     95264       3943.7  set_cloud_fraction__NVTX                                                                            
+      0.2          6193824        135    45880.2    45184.0     44640     54720       2211.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          5977440         45   132832.0   130752.0    130592    161280       7679.0  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
+      0.2          5902878        270    21862.5    21568.0     21024     26720       1237.2  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
+      0.2          5722974        180    31794.3    31552.0     30528     35520        960.2  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L1026           
+      0.2          5680158        225    25245.1    24928.0     24288     30656       1305.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          5627840         45   125063.1   126624.0    109152    148000       9209.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          5516863         90    61298.5    61056.0     59488     73056       3050.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          5231263         45   116250.3   115424.0    110048    134368       4766.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          5189534        115    45126.4    44320.0     43936     53216       2530.6  set_sgs__u___FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L458                        
+      0.2          5114271         45   113650.5   111936.0    111552    138016       6521.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          4983229        180    27684.6    27328.0     26784     32640       1170.5  microphysics_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_tendency_jl…
+      0.2          4982336        180    27679.6    27392.0     26016     32736       1246.8  updraft_sedimentation__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L576            
+      0.2          4938463         45   109743.6   105568.0     92704    173088      18493.5  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
+      0.2          4691680         40   117292.0   115488.0    115296    142848       6507.1  set_covariance_cache_and_cloud_fraction__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microp…
+      0.2          4676447         45   103921.0   102912.0    101920    118688       3983.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          4664223         45   103649.4   103264.0     92352    123392       5860.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          4603999         45   102311.1   101376.0     95264    121728       5055.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          4465757         45    99239.0    98272.0     92864    118688       5051.1  edmfx_sgs_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl…
+      0.2          4434368        180    24635.4    24448.0     22688     29664       1279.9  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L141
+      0.2          4386015         45    97467.0    97120.0     88384    114112       4624.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.2          4369503        164    26643.3    26336.0     26048     32832       1333.4  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L167           
+      0.1          4338716        180    24104.0    23824.0     22912     28960       1118.8  microphysics_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_tendency_jl…
+      0.1          4318558         45    95968.0    95840.0     88320    114496       5475.6  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
+      0.1          4298304        310    13865.5    14480.0     11968     16896       1570.7  set_precipitation_surface_fluxes__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1508      
+      0.1          4220959         45    93799.1    92544.0     92128    111424       4729.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          4190400        180    23280.0    22976.0     22432     28256       1298.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L634            
+      0.1          4156477         45    92366.2    91552.0     88256    109312       4266.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          4144063         45    92090.3    91232.0     89952    104480       3363.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          4031231         45    89582.9    86720.0     83264    120992       8249.0  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
+      0.1          4023264        180    22351.5    22016.0     21792     27264       1251.6  updraft_sedimentation__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl_L577            
+      0.1          3994752         45    88772.3    87776.0     82720    106208       4585.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3958336        180    21990.8    21664.0     21440     26656       1196.3  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L113                            
+      0.1          3954143        180    21967.5    21632.0     21376     26720       1217.2  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_water_advection_jl_L126                            
+      0.1          3911452         45    86921.2    86048.0     84959     99424       3323.5  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3851581         45    85590.7    84864.0     80608    102303       4350.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3783712         45    84082.5    82944.0     82304    100864       4506.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3754303         45    83429.0    81248.0     80544     97760       5653.1  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
+      0.1          3659037         45    81311.9    80032.0     79712     98976       4755.1  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L80 
+      0.1          3645918         45    81020.4    80512.0     74752     97152       4517.8  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L109
+      0.1          3634815        160    22717.6    22512.0     21728     27904       1140.3  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L182           
+      0.1          3622848         45    80507.7    78560.0     76032    104448       6136.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3608799        160    22555.0    22272.0     21824     27968       1163.4  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L181           
+      0.1          3590944        160    22443.4    22208.0     21824     27360       1081.4  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L174           
+      0.1          3548735        160    22179.6    21936.0     21216     27584       1160.2  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L186           
+      0.1          3513376         40    87834.4    87248.0     86080     96320       2329.5  update_surface_conditions__FILE_ClimaAtmos_jl_mod_src_surface_conditions_surface_conditions_jl_L41  
+      0.1          3467936        160    21674.6    21424.0     21120     26720       1097.8  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L187           
+      0.1          3403167         90    37813.0    37360.0     36832     44992       1821.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3396096         40    84902.4    83888.0     83104    103168       4228.5  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L197           
+      0.1          3394656         45    75436.8    74592.0     74016     87904       3331.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3387968         40    84699.2    83648.0     83360    103104       4265.7  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L161           
+      0.1          3378270         45    75072.7    74112.0     73664     88768       3666.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3366910         45    74820.2    74112.0     73312     86080       3018.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3360256         40    84006.4    83040.0     81952    102560       4259.4  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L270           
+      0.1          3359677         40    83991.9    83040.0     81920    102464       4263.8  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L233           
+      0.1          3268448         45    72632.2    71584.0     71168     87872       4081.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3249854         45    72219.0    71168.0     70624     87136       3979.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3237439         45    71943.1    72288.0     68352     74976       1874.5  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
+      0.1          3216126         45    71469.5    70432.0     70048     86496       3989.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          3178943         40    79473.6    78528.0     77664     96160       3887.9  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L305           
+      0.1          3035294         80    37941.2    37568.0     37344     45120       1637.9  _apply_edmf_cloud_weighting__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud…
+      0.1          3015391         90    33504.3    33184.0     32672     39232       1462.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2988351         45    66407.8    65600.0     64928     77632       2993.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2924032         45    64978.5    64192.0     63072     78464       3594.8  edmfx_entr_detr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr_jl_L512   
+      0.1          2863966         45    63643.7    64480.0     56096     74240       3870.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2852768        135    21131.6    20800.0     20576     25728       1213.2  lazy_mul_NVTX                                                                                       
+      0.1          2851616         45    63369.2    62464.0     61856     76288       3443.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2686464         90    29849.6    29584.0     28736     36288       1662.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2666400         45    59253.3    58400.0     58112     71200       3209.6  microphysics_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_tendency_jl…
+      0.1          2664128         45    59202.8    58368.0     58048     71264       3214.5  microphysics_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_tendency_jl…
+      0.1          2660959         45    59132.4    58304.0     57984     71168       3221.6  microphysics_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_tendency_jl…
+      0.1          2651872         45    58930.5    58112.0     57312     71104       3289.7  microphysics_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_tendency_jl…
+      0.1          2643520         90    29372.4    28928.0     28704     35584       1645.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2642911         45    58731.4    57952.0     55200     70144       3046.1  edmfx_entr_detr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr_jl_L514   
+      0.1          2619007        120    21825.1    21568.0     21344     26464       1053.8  set_covariance_cache__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud_fracti…
+      0.1          2503200         45    55626.7    54880.0     54528     66176       2807.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2457312         45    54606.9    53888.0     53632     64384       2609.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2425760         45    53905.8    53408.0     53056     60800       1848.4  implicit_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_impl…
+      0.1          2418592         45    53746.5    53984.0     47584     62336       3453.7  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl_L523            
+      0.1          2341375         45    52030.6    50368.0     47296     75392       5986.6  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
+      0.1          2332224         45    51827.2    51232.0     50464     60672       2390.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2325471         45    51677.1    51008.0     50624     60384       2341.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2274207         45    50537.9    49856.0     49344     59840       2482.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2249408         45    49986.8    49408.0     49216     58016       2136.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2223680         45    49415.1    48992.0     48128     56224       1850.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2180000         40    54500.0    53904.0     53664     65600       2577.9  set_microphysics_tendency_cache__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1160       
+      0.1          2162976         90    24033.1    23840.0     23200     27136        773.6  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2140511         45    47566.9    46784.0     46400     53920       1606.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          2117280         45    47050.7    46464.0     46016     55072       2159.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          1979264         90    21991.8    21680.0     21440     26464       1181.9  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L78 
+      0.1          1973247         90    21925.0    21664.0     21184     26688       1205.8  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L64 
+      0.1          1966271         45    43694.9    43072.0     42656     52832       2418.8  edmfx_sgs_diffusive_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_j…
+      0.1          1951871         90    21687.5    21344.0     21152     26720       1265.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          1932352         45    42941.2    42688.0     41792     46016        840.6  edmfx_sgs_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl…
+      0.1          1918144         80    23976.8    23696.0     22944     28768       1134.9  _apply_edmf_cloud_weighting__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microphysics_cloud…
+      0.1          1917631         45    42614.0    42144.0     41888     49280       1799.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          1914144         45    42536.5    42368.0     41664     44800        668.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          1911360         40    47784.0    47760.0     46624     49472        617.1  non_orographic_gravity_wave_apply_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gra…
+      0.1          1902336         40    47558.4    46976.0     46688     58240       2477.4  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L232           
+      0.1          1900864         40    47521.6    46960.0     46848     58144       2436.4  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L160           
+      0.1          1897216         40    47430.4    46880.0     46688     57952       2417.6  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L269           
+      0.1          1895392         40    47384.8    46848.0     46688     57856       2404.8  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L196           
+      0.1          1859359         90    20659.5    20512.0     19904     25536       1244.3  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          1785920         80    22324.0    22080.0     21632     27040       1094.8  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L225           
+      0.1          1738368         45    38630.4    38144.0     36064     46944       2136.5  edmfx_sgs_vertical_advection_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_advection_jl…
+      0.1          1729504         45    38433.4    38432.0     33856     45408       2277.9  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L94 
+      0.1          1718655         40    42966.4    42624.0     42336     49760       1562.2  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L316           
+      0.1          1711616         45    38035.9    37056.0     36800     44768       2574.1  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
+      0.1          1680096         45    37335.5    36992.0     36416     42720       1424.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          1627455         45    36165.7    35296.0     34816     42176       2253.2  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
+      0.1          1577376        230     6858.2     6720.0      6432      8288        413.8  set_velocity_at_surface__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L410            
+      0.1          1525376         45    33897.2    33824.0     32480     37184        889.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.1          1478687         53    27899.8    26240.0     20416     44768       4767.8  copy_FILE_ClimaCore_vVw9t_src_Fields_broadcast_jl_L119                                              
+      0.1          1457664         45    32392.5    30528.0     28128     51776       5268.8  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.0          1425632         45    31680.7    31360.0     30848     36064       1195.9  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.0          1384446         45    30765.5    30304.0     30143     37216       1699.2  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.0          1362912         20    68145.6    66800.0     65952     81152       4386.1  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L106               
+      0.0          1357600         45    30168.9    30016.0     28064     35872       1499.2  edmfx_sgs_mass_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_sgs_flux_jl_L65 
+      0.0          1305536        155     8422.8     8288.0      8064     10080        488.2  set_precipitation_surface_fluxes__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L1510      
+      0.0          1270656         45    28236.8    27648.0     25920     40384       2952.1  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.0          1264064         20    63203.2    61984.0     61824     73856       3604.3  surface_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L114         
+      0.0          1248285         45    27739.7    26752.0     26496     33152       2005.7  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
+      0.0          1209664         45    26881.4    26688.0     26432     29792        769.7  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.0          1194432         45    26542.9    26208.0     26016     31648       1351.0  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.0          1182559         45    26279.1    25632.0     24352     36576       2494.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.0          1082816         45    24062.6    23648.0     23424     29088       1350.4  update_jacobian__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jacobian_jl…
+      0.0          1076320         45    23918.2    23616.0     22912     28480       1233.4  edmfx_entr_detr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr_jl_L510   
+      0.0          1029216        115     8949.7     8800.0      8608     10592        505.5  set_velocity_at_surface__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L406            
+      0.0           984640         20    49232.0    47312.0     45536     64128       4701.1  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L81                
+      0.0           957888         20    47894.4    46864.0     46304     57760       3348.4  surface_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L123         
+      0.0           947968         45    21066.0    20416.0     20352     25376       1691.1  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
+      0.0           945823         25    37832.9    36384.0     35712     44544       3191.9  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L265   
+      0.0           936287         45    20806.4    20160.0     20031     25184       1680.7  update_jacobian_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_manual_sparse_jaco…
+      0.0           910272         40    22756.8    22496.0     22368     27552       1107.9  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L314           
+      0.0           905824         45    20129.4    19904.0     19584     22592        690.1  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
+      0.0           903168         40    22579.2    22288.0     21856     27360       1127.3  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L262           
+      0.0           892351         45    19830.0    19680.0     19168     22496        724.1  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
+      0.0           878495         40    21962.4    21632.0     21248     26592       1268.3  set_covariance_cache_and_cloud_fraction__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microp…
+      0.0           869023         40    21725.6    21456.0     21152     26784       1186.2  set_covariance_cache_and_cloud_fraction__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_microp…
+      0.0           856064         40    21401.6    21168.0     20864     26304       1144.1  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L189           
+      0.0           848256         40    21206.4    20960.0     20736     26080       1127.4  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L286           
+      0.0           848160         45    18848.0    18752.0     18080     20864        593.6  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
+      0.0           847840         40    21196.0    20864.0     20768     25888       1093.4  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L248           
+      0.0           847296         40    21182.4    20896.0     20768     25760       1068.3  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L211           
+      0.0           834528         40    20863.2    20608.0     20352     25568       1084.3  set_precipitation_velocities__FILE_ClimaAtmos_jl_mod_src_cache_microphysics_cache_jl_L175           
+      0.0           822752         20    41137.6    40656.0     38752     48736       2383.9  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L87                
+      0.0           792000         20    39600.0    38752.0     38528     47488       2678.4  surface_flux_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L119         
+      0.0           755967         20    37798.3    36112.0     34848     49312       3674.9  edmfx_tke_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_tke_jl_L79                
+      0.0           740288         45    16450.8    16352.0     15744     17984        488.5  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
+      0.0           608288         20    30414.4    30176.0     29120     33632       1150.0  radiation_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_radiation_radiation_jl_L435 
+      0.0           593600        115     5161.7     5056.0      5024      6272        355.5  set_velocity_at_top__FILE_ClimaAtmos_jl_mod_src_cache_precomputed_quantities_jl_L433                
+      0.0           549536          1   549536.0   549536.0    549536    549536          0.0  calc_saturation_profile__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orog…
+      0.0           545088         20    27254.4    26992.0     26528     29504        800.3  radiation_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_radiation_radiation_jl_L426 
+      0.0           369408         45     8209.1     8096.0      7968      9792        406.6  edmfx_first_interior_entr_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_edmfx_entr_detr…
+      0.0           342240         15    22816.0    22112.0     22016     27552       1878.7  initialize_sgs_u___FILE_ClimaAtmos_jl_mod_src_prognostic_equations_implicit_implicit_tendency_sgs_u…
+      0.0           298975         80     3737.2     3648.0      3615      4576        240.9  copyto__FILE_ClimaCore_vVw9t_src_Fields_broadcast_jl_L501                                           
+      0.0           196736          1   196736.0   196736.0    196736    196736          0.0  calc_saturation_profile__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orog…
+      0.0           153344          5    30668.8    30656.0     30464     30976        188.8  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L249   
+      0.0           149056          1   149056.0   149056.0    149056    149056          0.0  get_pbl_z__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gravity…
+      0.0           142304          1   142304.0   142304.0    142304    142304          0.0  non_orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_g…
+      0.0           141632          5    28326.4    28672.0     26688     29088        950.2  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L253   
+      0.0           130944          5    26188.8    26208.0     25728     26496        307.4  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L263   
+      0.0           124128          1   124128.0   124128.0    124128    124128          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0           106720          5    21344.0    21376.0     21216     21408         75.0  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L244   
+      0.0           105728          5    21145.6    21120.0     21056     21248         82.8  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L259   
+      0.0           103872          5    20774.4    20736.0     20704     20928         94.4  edmfx_filter_tendency__FILE_ClimaAtmos_jl_mod_src_prognostic_equations_mass_flux_closures_jl_L245   
+      0.0            94560         20     4728.0     4624.0      4544      5696        302.8  _FILE_ClimaAtmos_jl_mod_src_prognostic_equations_surface_flux_jl_L130                               
+      0.0            84032          4    21008.0    20992.0     20832     21216        166.3  non_orographic_gravity_wave_forcing_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wav…
+      0.0            83776          1    83776.0    83776.0     83776     83776          0.0  calc_nonpropagating_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_…
+      0.0            82240          4    20560.0    20592.0     20288     20768        231.5  non_orographic_gravity_wave_forcing_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wav…
+      0.0            75008          1    75008.0    75008.0     75008     75008          0.0  calc_nonpropagating_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_…
+      0.0            67072          2    33536.0    33536.0     33504     33568         45.3  calc_nonpropagating_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_…
+      0.0            63264          3    21088.0    21088.0     21024     21152         64.0  orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravi…
+      0.0            62304          1    62304.0    62304.0     62304     62304          0.0  gpu_broadcast_kernel_cartesian(CompilerMetadata<DynamicSize, DynamicCheck, void, CartesianIndices<(…
+      0.0            62304          2    31152.0    31152.0     31040     31264        158.4  non_orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_g…
+      0.0            60832          1    60832.0    60832.0     60832     60832          0.0  gpu_broadcast_kernel_cartesian(CompilerMetadata<DynamicSize, DynamicCheck, void, CartesianIndices<(…
+      0.0            57856          2    28928.0    28928.0     28672     29184        362.0  calc_propagate_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orogr…
+      0.0            53248          1    53248.0    53248.0     53248     53248          0.0  calc_saturation_profile__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orog…
+      0.0            49632          2    24816.0    24816.0     23744     25888       1516.0  _ddz_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gravity_wave_…
+      0.0            45792          2    22896.0    22896.0     22816     22976        113.1  _d2dz2_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gravity_wav…
+      0.0            43168          2    21584.0    21584.0     21280     21888        429.9  non_orographic_gravity_wave_forcing_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wav…
+      0.0            41472          2    20736.0    20736.0     20672     20800         90.5  non_orographic_gravity_wave_forcing_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wav…
+      0.0            40192          2    20096.0    20096.0     20032     20160         90.5  orographic_gravity_wave_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_d…
+      0.0            31776          1    31776.0    31776.0     31776     31776          0.0  non_orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_g…
+      0.0            26080          1    26080.0    26080.0     26080     26080          0.0  calc_saturation_profile__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orog…
+      0.0            25568          1    25568.0    25568.0     25568     25568          0.0  calc_nonpropagating_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_…
+      0.0            24992          1    24992.0    24992.0     24992     24992          0.0  calc_propagate_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orogr…
+      0.0            22176          1    22176.0    22176.0     22176     22176          0.0  calc_nonpropagating_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_…
+      0.0            21728          1    21728.0    21728.0     21728     21728          0.0  calc_nonpropagating_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_…
+      0.0            21568          1    21568.0    21568.0     21568     21568          0.0  orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravi…
+      0.0            21088          1    21088.0    21088.0     21088     21088          0.0  non_orographic_gravity_wave_forcing_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wav…
+      0.0            20896          1    20896.0    20896.0     20896     20896          0.0  calc_nonpropagating_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_…
+      0.0            20800          1    20800.0    20800.0     20800     20800          0.0  calc_nonpropagating_forcing__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_…
+      0.0            20384          1    20384.0    20384.0     20384     20384          0.0  orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravi…
+      0.0            19296          3     6432.0     6464.0      6240      6592        178.2  non_orographic_gravity_wave_forcing_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wav…
+      0.0            11552          2     5776.0     5776.0      5536      6016        339.4  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0            11264          2     5632.0     5632.0      5472      5792        226.3  non_orographic_gravity_wave_forcing_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wav…
+      0.0            10656          1    10656.0    10656.0     10656     10656          0.0  orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravi…
+      0.0             9920          1     9920.0     9920.0      9920      9920          0.0  orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravi…
+      0.0             9856          2     4928.0     4928.0      4832      5024        135.8  fill__FILE_ClimaCore_vVw9t_src_Fields_Fields_jl_L307                                                
+      0.0             8864          1     8864.0     8864.0      8864      8864          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0             8800          1     8800.0     8800.0      8800      8800          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0             7936          1     7936.0     7936.0      7936      7936          0.0  orographic_gravity_wave_compute_tendency__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravi…
+      0.0             7264          1     7264.0     7264.0      7264      7264          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0             6976          1     6976.0     6976.0      6976      6976          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0             6944          1     6944.0     6944.0      6944      6944          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0             6944          1     6944.0     6944.0      6944      6944          0.0  gpu_broadcast_kernel_cartesian(CompilerMetadata<DynamicSize, DynamicCheck, void, CartesianIndices<(…
+      0.0             6784          1     6784.0     6784.0      6784      6784          0.0  non_orographic_gravity_wave_forcing_FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wav…
+      0.0             6656          1     6656.0     6656.0      6656      6656          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0             6400          1     6400.0     6400.0      6400      6400          0.0  gpu_broadcast_kernel_cartesian(CompilerMetadata<DynamicSize, DynamicCheck, void, CartesianIndices<(…
+      0.0             6336          1     6336.0     6336.0      6336      6336          0.0  partial_mapreduce_grid(identity, _, Bool, CartesianIndices<(int)4, Tuple<OneTo<Int64>, OneTo<Int64>…
+      0.0             5568          1     5568.0     5568.0      5568      5568          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0             4768          1     4768.0     4768.0      4768      4768          0.0  partial_mapreduce_grid(identity, _, Bool, CartesianIndices<(int)5, Tuple<OneTo<Int64>, OneTo<Int64>…
+      0.0             4096          1     4096.0     4096.0      4096      4096          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
+      0.0             3712          1     3712.0     3712.0      3712      3712          0.0  calc_base_flux__FILE_ClimaAtmos_jl_mod_src_parameterized_tendencies_gravity_wave_drag_orographic_gr…
 
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/cuda_gpu_mem_time_sum.py]... 
-SKIPPED: results/nsys/mod.sqlite does not contain GPU memory data.
+
+ ** CUDA GPU MemOps Summary (by Time) (cuda_gpu_mem_time_sum):
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ----------------------------
+    100.0             3904      1    3904.0    3904.0      3904      3904          0.0  [CUDA memcpy Device-to-Host]
 
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/cuda_gpu_mem_size_sum.py]... 
-SKIPPED: results/nsys/mod.sqlite does not contain GPU memory data.
+
+ ** CUDA GPU MemOps Summary (by Size) (cuda_gpu_mem_size_sum):
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+      0.000      1     0.000     0.000     0.000     0.000        0.000  [CUDA memcpy Device-to-Host]
 
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/openmp_sum.py]... 
 SKIPPED: results/nsys/mod.sqlite does not contain OpenMP event data.
@@ -710,10 +700,10 @@ Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/h
 SKIPPED: results/nsys/mod.sqlite does not contain WDDM context data.
 
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/um_sum.py]... 
-SKIPPED: results/nsys/mod.sqlite does not contain CUDA memory transfers data.
+SKIPPED: results/nsys/mod.sqlite does not contain CUDA Unified Memory CPU page faults data.
 
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/um_total_sum.py]... 
-SKIPPED: results/nsys/mod.sqlite does not contain CUDA memory transfers data.
+SKIPPED: results/nsys/mod.sqlite does not contain CUDA Unified Memory CPU page faults data.
 
 Processing [results/nsys/mod.sqlite] with [/opt/nvidia/nsight-systems/2025.3.2/host-linux-x64/reports/um_cpu_page_faults_sum.py]... 
 SKIPPED: results/nsys/mod.sqlite does not contain CUDA Unified Memory CPU page faults data.

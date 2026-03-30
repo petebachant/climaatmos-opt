@@ -1,3 +1,4 @@
+# From ClimaCoupler.jl/config/atmos_configs
 aerosol_radiation: true
 approximate_linear_solve_iters: 2
 cloud_model: "quadrature"
@@ -7,7 +8,7 @@ dt_rad: "1hours"
 dt_save_state_to_disk: "30days"
 dz_bottom: 30.0
 edmfx_detr_model: "Generalized"
-edmfx_entr_model: "Generalized"
+edmfx_entr_model: "PiGroups"
 edmfx_filter: true
 edmfx_nh_pressure: true
 edmfx_sgs_diffusive_flux: true
@@ -23,7 +24,6 @@ implicit_sgs_nh_pressure: true
 implicit_sgs_vertdiff: true
 insolation: "timevarying"
 max_newton_iters_ode: 3
-microphysics_model: "1M"
 netcdf_output_at_levels: true
 prescribed_aerosols:
   [
@@ -49,8 +49,12 @@ rayleigh_sponge: true
 surface_setup: "DefaultMoninObukhov"
 t_end: "120days"
 time_varying_trace_gases: ["CO2", "O3"]
-toml: [ClimaAtmos.jl/toml/longrun_aquaplanet_diagedmf.toml]
+toml: [toml/longrun_aquaplanet_diagedmf.toml]
 turbconv: "prognostic_edmfx"
+use_sgs_quadrature: false
 viscous_sponge: true
 z_elem: 63
 z_max: 60000.0
+microphysics_model: "1M"
+non_orographic_gravity_wave: true
+orographic_gravity_wave: "raw_topo"
