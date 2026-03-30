@@ -1,13 +1,8 @@
 owner: petebachant
-name: clima-local-geometry
-title: CliMA LocalGeometry
-description: Assessing the impact of a simpler LocalGeometry struct on
-  CUDA kernel performance.
-git_repo_url: https://github.com/petebachant/clima-local-geometry
-questions:
-  - What potential speedup could be gained by simplifying the
-    LocalGeometry struct in ClimaCore?
-
+name: climaatmos-opt
+title: ClimaAtmos optimization
+description: Attempting to speed up ClimaAtmos when run with CUDA.
+git_repo_url: https://github.com/petebachant/climaatmos-opt
 environments:
   main:
     kind: julia
@@ -171,21 +166,19 @@ pipeline:
 notebooks:
   - path: notebooks/analyze-logs.ipynb
     title: Analyze logs
-    description: Analyzes the logs from the AMIP baseline and modified
-      runs to compare performance metrics and visualize any
-      differences.
+    description: Analyzes the logs from the AMIP baseline and modified runs
+      to compare performance metrics and visualize any differences.
     stage: analyze-logs
   - path: notebooks/compare-kernels.ipynb
     title: Compare kernels
-    description: Compares the CUDA kernels between the baseline and
-      modified runs using the Nsight profiling results to identify any
-      performance differences.
+    description: Compares the CUDA kernels between the baseline and modified
+      runs using the Nsight profiling results to identify any performance
+      differences.
     stage: compare-kernels
   - path: notebooks/benchmark-localgeom.ipynb
     title: Benchmark LocalGeometry
-    description: Benchmarks the performance of the original and
-      modified LocalGeometry struct implementations to assess
-      potential speedups.
+    description: Benchmarks the performance of the original and modified
+      LocalGeometry struct implementations to assess potential speedups.
     stage: benchmark-notebook
   - path: notebooks/benchmark-localgeom-tr.ipynb
     title: Benchmark LocalGeometry TR
@@ -200,3 +193,7 @@ figures:
 
 showcase:
   - notebook: notebooks/benchmark-localgeom.ipynb
+derived_from:
+  project: petebachant/clima-local-geometry
+  git_repo_url: https://github.com/petebachant/clima-local-geometry
+  git_rev: ece59fefe42359b1594c90bea4b59ad886d3f9b5

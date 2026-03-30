@@ -2,4 +2,5 @@
     autostage = true
     remote = calkit
 ['remote "calkit"']
-    url = ck://petebachant/clima-local-geometry
+    url = https://api.calkit.io/projects/petebachant/climaatmos-opt/dvc
+    auth = custom
