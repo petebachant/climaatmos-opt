@@ -58,6 +58,7 @@ pipeline:
         - ClimaAtmos.jl-mod/src
         - ClimaCore.jl-mod/Project.toml
         - ClimaCore.jl-mod/src
+        - ClimaCore.jl-mod/ext
         - config/climaatmos_progedmf_1m.yml
         - ClimaAtmos.jl-mod/perf/benchmark_step.jl
       outputs:
@@ -108,6 +109,7 @@ pipeline:
         - ClimaAtmos.jl-mod/src
         - ClimaCore.jl-mod/Project.toml
         - ClimaCore.jl-mod/src
+        - ClimaCore.jl-mod/ext
     analyze-logs:
       kind: jupyter-notebook
       notebook_path: notebooks/analyze-logs.ipynb
