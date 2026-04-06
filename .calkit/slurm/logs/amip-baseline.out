@@ -2,45 +2,22 @@ Loading climacommon/2025_05_15
   Loading requirement: climaauth/2025_05_15 openmpi/4.1.5-mpitrampoline
     julia/1.11.5 cuda/julia-pref
 Precompiling project...
-   2656.1 ms  ✓ CUDA_Compiler_jll
-   5740.1 ms  ✓ NCDatasets
-   6962.6 ms  ✓ ClimaUtilities → ClimaUtilitiesNCDatasetsExt
-   7227.1 ms  ✓ RRTMGP → RRTMGPNCDatasetsExt
-  12766.5 ms  ✓ Flux → FluxMPIExt
-  20387.5 ms  ✓ ClimaCore
-  28813.6 ms  ✓ ClimaAnalysis
-  22519.4 ms  ✓ ClimaCoreSpectra
-  22674.8 ms  ✓ ClimaCore → KrylovExt
-  21891.6 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreExt
-  23863.4 ms  ✓ ClimaCoreTempestRemap
-   8927.0 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreInterpolationsExt
-  14338.0 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreNCDatasetsExt
-  15548.8 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreTempestRemapExt
-  21443.5 ms  ✓ ClimaDiagnostics
-  33912.3 ms  ✓ ClimaAnalysis → ClimaAnalysisMakieExt
-  95960.6 ms  ✓ CUDA
-  41422.4 ms  ✓ MultiBroadcastFusion → MultiBroadcastFusionCUDAExt
-  42867.1 ms  ✓ CUDA → ChainRulesCoreExt
-  41903.5 ms  ✓ RRTMGP → RRTMGPCUDAExt
-  42878.3 ms  ✓ Atomix → AtomixCUDAExt
-  42902.9 ms  ✓ ArrayInterface → ArrayInterfaceCUDAExt
-  43553.0 ms  ✓ LinearOperators → LinearOperatorsCUDAExt
-  43223.9 ms  ✓ MLDataDevices → CUDAExt
-  44823.2 ms  ✓ CUDA → SpecialFunctionsExt
-  43229.6 ms  ✓ SparseMatrixColorings → SparseMatrixColoringsCUDAExt
-  44431.5 ms  ✓ CUDA → EnzymeCoreExt
-  44977.6 ms  ✓ ClimaInterpolations → ClimaInterpolationsCUDAExt
-  43344.8 ms  ✓ MPI → CUDAExt
-  44575.4 ms  ✓ ClimaComms → ClimaCommsCUDAExt
-  44633.8 ms  ✓ NNlib → NNlibCUDAExt
-  46991.1 ms  ✓ ClimaTimeSteppers → ClimaTimeSteppersBenchmarkToolsExt
-  83456.4 ms  ✓ ClimaAtmos
-  15924.2 ms  ✓ ClimaCore → ClimaCoreCUDAExt
-  42033.8 ms  ✓ PrecompileCI
-  35 dependencies successfully precompiled in 200 seconds. 551 already precompiled.
+   9079.0 ms  ✓ ClimaCore
+  10671.4 ms  ✓ ClimaCore → KrylovExt
+  10334.8 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreExt
+  11701.3 ms  ✓ ClimaCoreSpectra
+  12551.6 ms  ✓ ClimaCoreTempestRemap
+  11631.0 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreNCDatasetsExt
+  12310.1 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreInterpolationsExt
+  23698.0 ms  ✓ ClimaCore → ClimaCoreCUDAExt
+  11772.2 ms  ✓ ClimaUtilities → ClimaUtilitiesClimaCoreTempestRemapExt
+  14191.8 ms  ✓ ClimaDiagnostics
+  18276.3 ms  ✓ ClimaAtmos
+  42296.3 ms  ✓ PrecompileCI
+  12 dependencies successfully precompiled in 103 seconds. 574 already precompiled.
 Status `~/calkit/climaatmos-opt/ClimaAtmos.jl/.buildkite/Project.toml`
   [c7e460c6] ArgParse v1.2.0
-  [6e4b80f9] BenchmarkTools v1.6.3
+⌃ [6e4b80f9] BenchmarkTools v1.6.3
   [052768ef] CUDA v5.11.0
   [13f3f980] CairoMakie v0.15.9
   [29b5916a] ClimaAnalysis v0.5.21
@@ -57,7 +34,7 @@ Status `~/calkit/climaatmos-opt/ClimaAtmos.jl/.buildkite/Project.toml`
 ⌅ [a98d9a8b] Interpolations v0.15.1
   [8197267c] IntervalSets v0.7.13
   [033835bb] JLD2 v0.6.4
-  [682c06a0] JSON v1.4.0
+⌃ [682c06a0] JSON v1.4.0
   [ba0b0d4f] Krylov v0.10.6
   [da04e1cc] MPI v0.20.24
 ⌃ [85f8d34a] NCDatasets v0.14.8
@@ -112,7 +89,7 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 └                          `numerics`::`ClimaAtmos.AtmosNumerics{Val{:vanleer_limiter}, Val{:vanleer_limiter}, Val{:first_order}, Val{:none}, Val{:first_order}, Nothing, Nothing, Nothing, ClimaAtmos.Implicit, ClimaAtmos.Hyperdiffusion{Float32}}`
 ┌ Info: Simulation info
 │   job_id = "progedmf_1m"
-└   output_dir = "output/progedmf_1m/output_0002"
+└   output_dir = "output/progedmf_1m/output_0006"
 ┌ Info: Simulation Grid: ExtrudedFiniteDifferenceGrid:
 │   horizontal:
 │     context: SingletonCommsContext using CUDADevice
@@ -120,19 +97,19 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │     quadrature: 4-point Gauss-Legendre-Lobatto quadrature
 │   vertical:
 └     mesh: 63-element IntervalMesh of IntervalDomain: z ∈ [0.0,60000.0] (:bottom, :top)
-[ Info: Allocating Y: 6.424 s (12861471 allocations: 618.15 MiB)
+[ Info: Allocating Y: 7.132 s (12861594 allocations: 618.06 MiB)
 [ Info: Local file not found, loading from ClimaArtifacts (h_elem=16)...
 [ Info: Loading from: /net/sampo/data1/ClimaArtifacts/artifacts/ogw_computed_drag_h16/computed_drag_Earth_false_1_16.hdf5
-[ Info: Allocating cache (p): 152.212 s (546088685 allocations: 29.99 GiB)
+[ Info: Allocating cache (p): 163.53 s (546088286 allocations: 29.99 GiB)
 [ Info: Using ODE config: `ClimaTimeSteppers.ARS343`
-[ Info: ode_configuration: 689.737 ms (1441779 allocations: 71.69 MiB)
-[ Info: get_callbacks: 225.732 ms (483635 allocations: 24.92 MiB)
+[ Info: ode_configuration: 763.2 ms (1441771 allocations: 71.69 MiB)
+[ Info: get_callbacks: 240.991 ms (483640 allocations: 24.93 MiB)
 [ Info: Saving accumulated diagnostics to disk with frequency: 1 hour
 [ Info: DictWriter: String[]
 [ Info: HDF5Writer: String[]
 [ Info: NetCDFWriter: ["ts_1h_average", "ta_1h_average", "tas_1h_average", "uas_1h_average", "vas_1h_average", "thetaa_1h_average", "ha_1h_average", "pfull_1h_average", "zg_1h_average", "rhoa_1h_average", "ua_1h_average", "va_1h_average", "wa_1h_average", "hfes_1h_average", "hfss_1h_average", "ts_1h_min", "ts_1h_max", "hur_1h_average", "hus_1h_average", "cl_1h_average", "clw_1h_average", "cli_1h_average", "hussfc_1h_average", "evspsbl_1h_average", "hfls_1h_average", "pr_1h_average", "prra_1h_average", "prsn_1h_average", "prw_1h_average", "lwp_1h_average", "clwvi_1h_average", "clivi_1h_average", "husra_1h_average", "hussn_1h_average", "rsd_1h_average", "rsdt_1h_average", "rsds_1h_average", "rsu_1h_average", "rsut_1h_average", "rsus_1h_average", "rld_1h_average", "rlds_1h_average", "rlu_1h_average", "rlut_1h_average", "rlus_1h_average", "rsdcs_1h_average", "rsdscs_1h_average", "rsucs_1h_average", "rsutcs_1h_average", "rsuscs_1h_average", "rldcs_1h_average", "rldscs_1h_average", "rlucs_1h_average", "rlutcs_1h_average", "arup_1h_average", "rhoaup_1h_average", "waup_1h_average", "taup_1h_average", "thetaaup_1h_average", "haup_1h_average", "husup_1h_average", "hurup_1h_average", "clwup_1h_average", "cliup_1h_average", "aren_1h_average", "rhoaen_1h_average", "waen_1h_average", "taen_1h_average", "thetaaen_1h_average", "haen_1h_average", "husen_1h_average", "huren_1h_average", "clwen_1h_average", "clien_1h_average", "tke_1h_average", "lmix_1h_average"]
-[ Info: initializing diagnostics: 13.525 s (38243726 allocations: 1.94 GiB)
-[ Info: Prepared CTS.CallbackSet callbacks: 14.318 ms (549 allocations: 26.99 KiB)
+[ Info: initializing diagnostics: 15.216 s (38243776 allocations: 1.94 GiB)
+[ Info: Prepared CTS.CallbackSet callbacks: 15.649 ms (549 allocations: 26.99 KiB)
 [ Info: n_steps_per_cycle_per_cb (non diagnostics): [1024, 1, 30, 15, 15, 1]
 [ Info: n_steps_per_cycle (non diagnostics): 15360
 ┌ Info: Jacobian algorithm: ManualSparseJacobian(
@@ -155,11 +132,11 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │   sgs_vertdiff_flag = ClimaAtmos.UseDerivative(),
 │   approximate_solve_iters = 2,
 └ )
-[ Info: init integrator: 138.217 s (267240472 allocations: 14.34 GiB)
-[ Info: Added diagnostics: 32.233 s (70016072 allocations: 3.47 GiB)
+[ Info: init integrator: 145.197 s (267246941 allocations: 14.33 GiB)
+[ Info: Added diagnostics: 32.135 s (70024426 allocations: 3.47 GiB)
 ┌ Info: Running
 │   job_id = "progedmf_1m"
-│   output_dir = "output/progedmf_1m/output_0002"
+│   output_dir = "output/progedmf_1m/output_0006"
 └   tspan = (0.0f0, 14400.0f0)
 ┌ Info: Progress
 │   simulation_time = "2 minutes, 4 microseconds"
@@ -170,257 +147,257 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
 │   wall_time_spent = "0 seconds"
 │   percent_complete = "0.8%"
 │   estimated_sypd = "Inf"
-│   date_now = 2026-03-30T18:46:42.260
-└   estimated_finish_date = 2026-03-30T18:46:42.257
+│   date_now = 2026-04-05T20:05:00.192
+└   estimated_finish_date = 2026-04-05T20:05:00.189
 ┌ Info: Progress
 │   simulation_time = "4 minutes, 8 microseconds"
 │   n_steps_completed = 2
-│   wall_time_per_step = "16 seconds, 58 milliseconds"
-│   wall_time_total = "32 minutes, 7 seconds"
-│   wall_time_remaining = "31 minutes, 34 seconds"
-│   wall_time_spent = "32 seconds, 117 milliseconds"
+│   wall_time_per_step = "16 seconds, 807 milliseconds"
+│   wall_time_total = "33 minutes, 36 seconds"
+│   wall_time_remaining = "33 minutes, 3 seconds"
+│   wall_time_spent = "33 seconds, 614 milliseconds"
 │   percent_complete = "1.7%"
 │   estimated_sypd = "0.02"
-│   date_now = 2026-03-30T18:46:58.243
-└   estimated_finish_date = 2026-03-30T19:18:33.243
+│   date_now = 2026-04-05T20:05:16.917
+└   estimated_finish_date = 2026-04-05T20:38:20.917
 ┌ Info: Progress
 │   simulation_time = "8 minutes, 16 microseconds"
 │   n_steps_completed = 4
-│   wall_time_per_step = "8 seconds, 332 milliseconds"
-│   wall_time_total = "16 minutes, 39 seconds"
-│   wall_time_remaining = "16 minutes, 6 seconds"
-│   wall_time_spent = "33 seconds, 329 milliseconds"
+│   wall_time_per_step = "8 seconds, 709 milliseconds"
+│   wall_time_total = "17 minutes, 25 seconds"
+│   wall_time_remaining = "16 minutes, 50 seconds"
+│   wall_time_spent = "34 seconds, 837 milliseconds"
 │   percent_complete = "3.3%"
-│   estimated_sypd = "0.039"
-│   date_now = 2026-03-30T18:46:59.384
-└   estimated_finish_date = 2026-03-30T19:03:06.384
+│   estimated_sypd = "0.038"
+│   date_now = 2026-04-05T20:05:18.063
+└   estimated_finish_date = 2026-04-05T20:22:09.063
 ┌ Info: Progress
 │   simulation_time = "16 minutes, 32 microseconds"
 │   n_steps_completed = 8
-│   wall_time_per_step = "4 seconds, 452 milliseconds"
-│   wall_time_total = "8 minutes, 54 seconds"
-│   wall_time_remaining = "8 minutes, 18 seconds"
-│   wall_time_spent = "35 seconds, 622 milliseconds"
+│   wall_time_per_step = "4 seconds, 642 milliseconds"
+│   wall_time_total = "9 minutes, 17 seconds"
+│   wall_time_remaining = "8 minutes, 39 seconds"
+│   wall_time_spent = "37 seconds, 139 milliseconds"
 │   percent_complete = "6.7%"
-│   estimated_sypd = "0.074"
-│   date_now = 2026-03-30T18:47:01.678
-└   estimated_finish_date = 2026-03-30T18:55:20.678
+│   estimated_sypd = "0.071"
+│   date_now = 2026-04-05T20:05:20.365
+└   estimated_finish_date = 2026-04-05T20:14:00.365
 ┌ Info: Progress
 │   simulation_time = "29 minutes, 59 seconds"
 │   n_steps_completed = 15
-│   wall_time_per_step = "2 seconds, 642 milliseconds"
-│   wall_time_total = "5 minutes, 17 seconds"
-│   wall_time_remaining = "4 minutes, 37 seconds"
-│   wall_time_spent = "39 seconds, 635 milliseconds"
+│   wall_time_per_step = "2 seconds, 744 milliseconds"
+│   wall_time_total = "5 minutes, 29 seconds"
+│   wall_time_remaining = "4 minutes, 48 seconds"
+│   wall_time_spent = "41 seconds, 160 milliseconds"
 │   percent_complete = "12.5%"
-│   estimated_sypd = "0.124"
-│   date_now = 2026-03-30T18:47:05.690
-└   estimated_finish_date = 2026-03-30T18:51:43.690
+│   estimated_sypd = "0.12"
+│   date_now = 2026-04-05T20:05:24.386
+└   estimated_finish_date = 2026-04-05T20:10:13.386
 ┌ Info: Progress
 │   simulation_time = "32 minutes, 65 microseconds"
 │   n_steps_completed = 16
-│   wall_time_per_step = "2 seconds, 514 milliseconds"
-│   wall_time_total = "5 minutes, 1 second"
-│   wall_time_remaining = "4 minutes, 21 seconds"
-│   wall_time_spent = "40 seconds, 227 milliseconds"
+│   wall_time_per_step = "2 seconds, 609 milliseconds"
+│   wall_time_total = "5 minutes, 13 seconds"
+│   wall_time_remaining = "4 minutes, 31 seconds"
+│   wall_time_spent = "41 seconds, 754 milliseconds"
 │   percent_complete = "13.3%"
-│   estimated_sypd = "0.131"
-│   date_now = 2026-03-30T18:47:06.282
-└   estimated_finish_date = 2026-03-30T18:51:28.282
+│   estimated_sypd = "0.126"
+│   date_now = 2026-04-05T20:05:24.980
+└   estimated_finish_date = 2026-04-05T20:09:56.980
 ┌ Info: Progress
 │   simulation_time = "45 minutes, 59 seconds"
 │   n_steps_completed = 23
-│   wall_time_per_step = "1 second, 924 milliseconds"
-│   wall_time_total = "3 minutes, 50 seconds"
-│   wall_time_remaining = "3 minutes, 6 seconds"
-│   wall_time_spent = "44 seconds, 265 milliseconds"
+│   wall_time_per_step = "1 second, 991 milliseconds"
+│   wall_time_total = "3 minutes, 58 seconds"
+│   wall_time_remaining = "3 minutes, 13 seconds"
+│   wall_time_spent = "45 seconds, 804 milliseconds"
 │   percent_complete = "19.2%"
-│   estimated_sypd = "0.171"
-│   date_now = 2026-03-30T18:47:10.321
-└   estimated_finish_date = 2026-03-30T18:50:17.321
+│   estimated_sypd = "0.165"
+│   date_now = 2026-04-05T20:05:29.030
+└   estimated_finish_date = 2026-04-05T20:08:43.030
 ┌ Info: Progress
 │   simulation_time = "59 minutes, 59 seconds"
 │   n_steps_completed = 30
-│   wall_time_per_step = "1 second, 613 milliseconds"
-│   wall_time_total = "3 minutes, 13 seconds"
-│   wall_time_remaining = "2 minutes, 25 seconds"
-│   wall_time_spent = "48 seconds, 405 milliseconds"
+│   wall_time_per_step = "1 second, 665 milliseconds"
+│   wall_time_total = "3 minutes, 19 seconds"
+│   wall_time_remaining = "2 minutes, 29 seconds"
+│   wall_time_spent = "49 seconds, 955 milliseconds"
 │   percent_complete = "25.0%"
-│   estimated_sypd = "0.204"
-│   date_now = 2026-03-30T18:47:14.461
-└   estimated_finish_date = 2026-03-30T18:49:40.461
+│   estimated_sypd = "0.197"
+│   date_now = 2026-04-05T20:05:33.181
+└   estimated_finish_date = 2026-04-05T20:08:03.181
 ┌ Warning: NaN encountered in weight sum calculation of orographic gravity wave drag
 └ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl/src/parameterized_tendencies/gravity_wave_drag/orographic_gravity_wave.jl:507
 ┌ Info: Progress
 │   simulation_time = "1 hour, 4 minutes"
 │   n_steps_completed = 32
-│   wall_time_per_step = "2 seconds, 623 milliseconds"
-│   wall_time_total = "5 minutes, 14 seconds"
-│   wall_time_remaining = "3 minutes, 50 seconds"
-│   wall_time_spent = "1 minute, 23 seconds"
+│   wall_time_per_step = "2 seconds, 762 milliseconds"
+│   wall_time_total = "5 minutes, 31 seconds"
+│   wall_time_remaining = "4 minutes, 3 seconds"
+│   wall_time_spent = "1 minute, 28 seconds"
 │   percent_complete = "26.7%"
-│   estimated_sypd = "0.125"
-│   date_now = 2026-03-30T18:47:50.035
-└   estimated_finish_date = 2026-03-30T18:51:41.035
+│   estimated_sypd = "0.119"
+│   date_now = 2026-04-05T20:06:11.648
+└   estimated_finish_date = 2026-04-05T20:10:15.648
 ┌ Info: Progress
 │   simulation_time = "1 hour, 18 minutes"
 │   n_steps_completed = 39
-│   wall_time_per_step = "2 seconds, 265 milliseconds"
-│   wall_time_total = "4 minutes, 31 seconds"
-│   wall_time_remaining = "3 minutes, 3 seconds"
-│   wall_time_spent = "1 minute, 28 seconds"
+│   wall_time_per_step = "2 seconds, 376 milliseconds"
+│   wall_time_total = "4 minutes, 45 seconds"
+│   wall_time_remaining = "3 minutes, 12 seconds"
+│   wall_time_spent = "1 minute, 32 seconds"
 │   percent_complete = "32.5%"
-│   estimated_sypd = "0.145"
-│   date_now = 2026-03-30T18:47:54.400
-└   estimated_finish_date = 2026-03-30T18:50:58.400
+│   estimated_sypd = "0.138"
+│   date_now = 2026-04-05T20:06:15.896
+└   estimated_finish_date = 2026-04-05T20:09:28.896
 ┌ Warning: NaN encountered in weight sum calculation of orographic gravity wave drag
 └ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl/src/parameterized_tendencies/gravity_wave_drag/orographic_gravity_wave.jl:507
 ┌ Info: Progress
 │   simulation_time = "1 hour, 31 minutes"
 │   n_steps_completed = 46
-│   wall_time_per_step = "2 seconds, 10 milliseconds"
-│   wall_time_total = "4 minutes, 1 second"
-│   wall_time_remaining = "2 minutes, 28 seconds"
-│   wall_time_spent = "1 minute, 32 seconds"
+│   wall_time_per_step = "2 seconds, 105 milliseconds"
+│   wall_time_total = "4 minutes, 12 seconds"
+│   wall_time_remaining = "2 minutes, 35 seconds"
+│   wall_time_spent = "1 minute, 36 seconds"
 │   percent_complete = "38.3%"
-│   estimated_sypd = "0.163"
-│   date_now = 2026-03-30T18:47:58.545
-└   estimated_finish_date = 2026-03-30T18:50:27.545
+│   estimated_sypd = "0.156"
+│   date_now = 2026-04-05T20:06:20.067
+└   estimated_finish_date = 2026-04-05T20:08:56.067
 ┌ Info: Progress
 │   simulation_time = "1 hour, 45 minutes"
 │   n_steps_completed = 53
-│   wall_time_per_step = "1 second, 823 milliseconds"
-│   wall_time_total = "3 minutes, 38 seconds"
-│   wall_time_remaining = "2 minutes, 2 seconds"
-│   wall_time_spent = "1 minute, 36 seconds"
+│   wall_time_per_step = "1 second, 905 milliseconds"
+│   wall_time_total = "3 minutes, 48 seconds"
+│   wall_time_remaining = "2 minutes, 7 seconds"
+│   wall_time_spent = "1 minute, 40 seconds"
 │   percent_complete = "44.2%"
-│   estimated_sypd = "0.18"
-│   date_now = 2026-03-30T18:48:02.687
-└   estimated_finish_date = 2026-03-30T18:50:05.687
+│   estimated_sypd = "0.172"
+│   date_now = 2026-04-05T20:06:24.222
+└   estimated_finish_date = 2026-04-05T20:08:32.222
 ┌ Info: Progress
 │   simulation_time = "1 hour, 59 minutes"
 │   n_steps_completed = 60
-│   wall_time_per_step = "1 second, 679 milliseconds"
-│   wall_time_total = "3 minutes, 21 seconds"
-│   wall_time_remaining = "1 minute, 40 seconds"
-│   wall_time_spent = "1 minute, 40 seconds"
+│   wall_time_per_step = "1 second, 752 milliseconds"
+│   wall_time_total = "3 minutes, 30 seconds"
+│   wall_time_remaining = "1 minute, 45 seconds"
+│   wall_time_spent = "1 minute, 45 seconds"
 │   percent_complete = "50.0%"
-│   estimated_sypd = "0.196"
-│   date_now = 2026-03-30T18:48:06.827
-└   estimated_finish_date = 2026-03-30T18:49:47.827
+│   estimated_sypd = "0.187"
+│   date_now = 2026-04-05T20:06:28.381
+└   estimated_finish_date = 2026-04-05T20:08:14.381
 ┌ Warning: NaN encountered in weight sum calculation of orographic gravity wave drag
 └ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl/src/parameterized_tendencies/gravity_wave_drag/orographic_gravity_wave.jl:507
 ┌ Info: Progress
 │   simulation_time = "2 hours, 8 minutes"
 │   n_steps_completed = 64
-│   wall_time_per_step = "1 second, 668 milliseconds"
-│   wall_time_total = "3 minutes, 20 seconds"
-│   wall_time_remaining = "1 minute, 33 seconds"
-│   wall_time_spent = "1 minute, 46 seconds"
+│   wall_time_per_step = "1 second, 739 milliseconds"
+│   wall_time_total = "3 minutes, 28 seconds"
+│   wall_time_remaining = "1 minute, 37 seconds"
+│   wall_time_spent = "1 minute, 51 seconds"
 │   percent_complete = "53.3%"
-│   estimated_sypd = "0.197"
-│   date_now = 2026-03-30T18:48:12.834
-└   estimated_finish_date = 2026-03-30T18:49:46.834
+│   estimated_sypd = "0.189"
+│   date_now = 2026-04-05T20:06:34.565
+└   estimated_finish_date = 2026-04-05T20:08:12.565
 ┌ Info: Progress
 │   simulation_time = "2 hours, 21 minutes"
 │   n_steps_completed = 71
-│   wall_time_per_step = "1 second, 562 milliseconds"
-│   wall_time_total = "3 minutes, 7 seconds"
-│   wall_time_remaining = "1 minute, 16 seconds"
-│   wall_time_spent = "1 minute, 50 seconds"
+│   wall_time_per_step = "1 second, 626 milliseconds"
+│   wall_time_total = "3 minutes, 15 seconds"
+│   wall_time_remaining = "1 minute, 19 seconds"
+│   wall_time_spent = "1 minute, 55 seconds"
 │   percent_complete = "59.2%"
-│   estimated_sypd = "0.21"
-│   date_now = 2026-03-30T18:48:16.973
-└   estimated_finish_date = 2026-03-30T18:49:33.973
+│   estimated_sypd = "0.202"
+│   date_now = 2026-04-05T20:06:38.729
+└   estimated_finish_date = 2026-04-05T20:07:58.729
 ┌ Warning: NaN encountered in weight sum calculation of orographic gravity wave drag
 └ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl/src/parameterized_tendencies/gravity_wave_drag/orographic_gravity_wave.jl:507
 ┌ Info: Progress
 │   simulation_time = "2 hours, 36 minutes"
 │   n_steps_completed = 78
-│   wall_time_per_step = "1 second, 475 milliseconds"
-│   wall_time_total = "2 minutes, 57 seconds"
-│   wall_time_remaining = "1 minute, 1 second"
-│   wall_time_spent = "1 minute, 55 seconds"
+│   wall_time_per_step = "1 second, 534 milliseconds"
+│   wall_time_total = "3 minutes, 4 seconds"
+│   wall_time_remaining = "1 minute, 4 seconds"
+│   wall_time_spent = "1 minute, 59 seconds"
 │   percent_complete = "65.0%"
-│   estimated_sypd = "0.223"
-│   date_now = 2026-03-30T18:48:21.119
-└   estimated_finish_date = 2026-03-30T18:49:23.119
+│   estimated_sypd = "0.214"
+│   date_now = 2026-04-05T20:06:42.887
+└   estimated_finish_date = 2026-04-05T20:07:47.887
 ┌ Info: Progress
 │   simulation_time = "2 hours, 49 minutes"
 │   n_steps_completed = 85
-│   wall_time_per_step = "1 second, 402 milliseconds"
-│   wall_time_total = "2 minutes, 48 seconds"
-│   wall_time_remaining = "49 seconds, 84 milliseconds"
-│   wall_time_spent = "1 minute, 59 seconds"
+│   wall_time_per_step = "1 second, 456 milliseconds"
+│   wall_time_total = "2 minutes, 54 seconds"
+│   wall_time_remaining = "50 seconds, 981 milliseconds"
+│   wall_time_spent = "2 minutes, 3 seconds"
 │   percent_complete = "70.8%"
-│   estimated_sypd = "0.234"
-│   date_now = 2026-03-30T18:48:25.260
-└   estimated_finish_date = 2026-03-30T18:49:15.260
+│   estimated_sypd = "0.226"
+│   date_now = 2026-04-05T20:06:47.037
+└   estimated_finish_date = 2026-04-05T20:07:38.037
 ┌ Warning: NaN encountered in weight sum calculation of orographic gravity wave drag
 └ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl/src/parameterized_tendencies/gravity_wave_drag/orographic_gravity_wave.jl:507
 ┌ Info: Progress
 │   simulation_time = "3 hours, 3 minutes"
 │   n_steps_completed = 92
-│   wall_time_per_step = "1 second, 376 milliseconds"
-│   wall_time_total = "2 minutes, 45 seconds"
-│   wall_time_remaining = "38 seconds, 548 milliseconds"
-│   wall_time_spent = "2 minutes, 6 seconds"
+│   wall_time_per_step = "1 second, 428 milliseconds"
+│   wall_time_total = "2 minutes, 51 seconds"
+│   wall_time_remaining = "39 seconds, 996 milliseconds"
+│   wall_time_spent = "2 minutes, 11 seconds"
 │   percent_complete = "76.7%"
-│   estimated_sypd = "0.239"
-│   date_now = 2026-03-30T18:48:32.715
-└   estimated_finish_date = 2026-03-30T18:49:11.715
+│   estimated_sypd = "0.23"
+│   date_now = 2026-04-05T20:06:54.641
+└   estimated_finish_date = 2026-04-05T20:07:34.641
 ┌ Info: Progress
 │   simulation_time = "3 hours, 18 minutes"
 │   n_steps_completed = 99
-│   wall_time_per_step = "1 second, 321 milliseconds"
-│   wall_time_total = "2 minutes, 38 seconds"
-│   wall_time_remaining = "27 seconds, 745 milliseconds"
-│   wall_time_spent = "2 minutes, 10 seconds"
+│   wall_time_per_step = "1 second, 369 milliseconds"
+│   wall_time_total = "2 minutes, 44 seconds"
+│   wall_time_remaining = "28 seconds, 756 milliseconds"
+│   wall_time_spent = "2 minutes, 15 seconds"
 │   percent_complete = "82.5%"
-│   estimated_sypd = "0.249"
-│   date_now = 2026-03-30T18:48:36.854
-└   estimated_finish_date = 2026-03-30T18:49:04.854
+│   estimated_sypd = "0.24"
+│   date_now = 2026-04-05T20:06:58.793
+└   estimated_finish_date = 2026-04-05T20:07:27.793
 ┌ Warning: NaN encountered in weight sum calculation of orographic gravity wave drag
 └ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl/src/parameterized_tendencies/gravity_wave_drag/orographic_gravity_wave.jl:507
 ┌ Info: Progress
 │   simulation_time = "3 hours, 31 minutes"
 │   n_steps_completed = 106
-│   wall_time_per_step = "1 second, 273 milliseconds"
-│   wall_time_total = "2 minutes, 32 seconds"
-│   wall_time_remaining = "17 seconds, 822 milliseconds"
-│   wall_time_spent = "2 minutes, 14 seconds"
+│   wall_time_per_step = "1 second, 318 milliseconds"
+│   wall_time_total = "2 minutes, 38 seconds"
+│   wall_time_remaining = "18 seconds, 453 milliseconds"
+│   wall_time_spent = "2 minutes, 19 seconds"
 │   percent_complete = "88.3%"
-│   estimated_sypd = "0.258"
-│   date_now = 2026-03-30T18:48:41
-└   estimated_finish_date = 2026-03-30T18:48:59
+│   estimated_sypd = "0.249"
+│   date_now = 2026-04-05T20:07:02.947
+└   estimated_finish_date = 2026-04-05T20:07:21.947
 ┌ Info: Progress
 │   simulation_time = "3 hours, 46 minutes"
 │   n_steps_completed = 113
-│   wall_time_per_step = "1 second, 230 milliseconds"
-│   wall_time_total = "2 minutes, 27 seconds"
-│   wall_time_remaining = "8 seconds, 615 milliseconds"
-│   wall_time_spent = "2 minutes, 19 seconds"
+│   wall_time_per_step = "1 second, 273 milliseconds"
+│   wall_time_total = "2 minutes, 32 seconds"
+│   wall_time_remaining = "8 seconds, 912 milliseconds"
+│   wall_time_spent = "2 minutes, 23 seconds"
 │   percent_complete = "94.2%"
-│   estimated_sypd = "0.267"
-│   date_now = 2026-03-30T18:48:45.139
-└   estimated_finish_date = 2026-03-30T18:48:54.139
+│   estimated_sypd = "0.258"
+│   date_now = 2026-04-05T20:07:07.098
+└   estimated_finish_date = 2026-04-05T20:07:16.098
 ┌ Info: Progress
 │   simulation_time = "3 hours, 59 minutes"
 │   n_steps_completed = 120
-│   wall_time_per_step = "1 second, 193 milliseconds"
-│   wall_time_total = "2 minutes, 23 seconds"
+│   wall_time_per_step = "1 second, 233 milliseconds"
+│   wall_time_total = "2 minutes, 28 seconds"
 │   wall_time_remaining = "0 seconds"
-│   wall_time_spent = "2 minutes, 23 seconds"
+│   wall_time_spent = "2 minutes, 28 seconds"
 │   percent_complete = "100.0%"
-│   estimated_sypd = "0.275"
-│   date_now = 2026-03-30T18:48:49.278
-└   estimated_finish_date = 2026-03-30T18:48:49.278
+│   estimated_sypd = "0.266"
+│   date_now = 2026-04-05T20:07:11.272
+└   estimated_finish_date = 2026-04-05T20:07:11.272
 ┌ Warning: NaN encountered in weight sum calculation of orographic gravity wave drag
 └ @ ClimaAtmos ~/calkit/climaatmos-opt/ClimaAtmos.jl/src/parameterized_tendencies/gravity_wave_drag/orographic_gravity_wave.jl:507
-[ Info: solve! walltime = 115.048
-[ Info: sypd: 0.343
-[ Info: wall_time_per_timestep: 958 milliseconds, 736 microseconds
-[ Info: Memory currently used (after solve!) by the process (RSS): 16.47 GiB
+[ Info: solve! walltime = 118.404
+[ Info: sypd: 0.333
+[ Info: wall_time_per_timestep: 986 milliseconds, 698 microseconds
+[ Info: Memory currently used (after solve!) by the process (RSS): 16.44 GiB
 ┌ Info: Simulation complete
 │   job_id = "progedmf_1m"
-└   output_dir = "output/progedmf_1m/output_0002"
+└   output_dir = "output/progedmf_1m/output_0006"
